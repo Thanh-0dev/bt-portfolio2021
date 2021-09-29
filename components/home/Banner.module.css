@@ -1,0 +1,60 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 210px;
+  position: relative;
+}
+
+.glassOne {
+  position: absolute;
+  z-index: 1;
+  left: -63px;
+  top: 50px;
+}
+
+.glassTwo {
+  position: absolute;
+  z-index: 2;
+  bottom: 60px;
+  left: 50px;
+}
+
+.projectId {
+  color: #767676;
+  font-size: 16px;
+}
+
+.arrow {
+  height: 484px;
+  position: absolute;
+  left: -10px;
+  z-index: 3;
+}
+
+.bannerRow {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.bannerColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 110px;
+}
+
+.projectImg {
+  width: 940px;
+  height: 484px;
+  object-fit: cover;
+  background: url("/Image Home/vall-1.jpeg") center no-repeat;
+  background-size: 1180px 786px;
+  transform: rotate(2deg);
+}
+
+.title {
+  font-size: 30px;
+  line-height: 37px;
+  margin: 16px 0;
+}

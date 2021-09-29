@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 18px;
+  color: #515151;
+  font-size: 16px;
+}
+
+.header a {
+  padding-bottom: 10px;
+}
+
+.header a:hover:not(:nth-child(1)) {
+  background: url("/Icons habillage/Highlight.svg") bottom no-repeat;
+}
+
+.header a:hover:not(:nth-child(2)) {
+  background: url("/Icons habillage/highlight-2.svg") bottom no-repeat;
+}
