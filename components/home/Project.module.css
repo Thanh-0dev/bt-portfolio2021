@@ -1,0 +1,232 @@
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1192px;
+  margin: 0 clamp(64px, 8.6vw, 124px);
+}
+
+.blur {
+  position: absolute;
+  width: clamp(1px, 79vw, 1135px);
+  top: clamp(1px, 45vw, 650px);
+  left: clamp(1px, 10vw, 150px);
+  transform: rotate(180deg);
+  z-index: -2;
+}
+
+.projectId {
+  color: #767676;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.projectTitle {
+  margin: 16px 0;
+  font-size: 30px;
+}
+
+.project p:not(.projectId, .projectTitle, .sixthProject > p) {
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+.sixthProject > p:not(.projectId, .projectTitle) {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.left {
+  position: relative;
+}
+
+.left .projectCard,
+.left p:not(.projectId) {
+  margin-left: clamp(1px, 7vw, 100px);
+}
+
+.right {
+  position: relative;
+  margin-top: 450px;
+}
+
+.right .projectCard {
+  margin-right: clamp(1px, 7vw, 100px);
+  margin-left: auto;
+}
+
+.right .projectId {
+  margin-right: clamp(1px, 33.5vw, 483px);
+  margin-left: auto;
+}
+
+.shadowLeft {
+  position: absolute;
+  z-index: -5;
+  top: clamp(-750px, -52vw, -1px);
+  left: clamp(1px, 14vw, 200px);
+  height: clamp(1px, 231vw, 3329px);
+}
+
+.shadowRight {
+  position: absolute;
+  z-index: -5;
+  top: clamp(-1150px, -80vw, -1px);
+  height: clamp(1px, 231vw, 3329px);
+}
+
+/* Second project */
+
+.secondProject {
+  position: relative;
+}
+
+.secondProject .projectCard {
+  width: clamp(1px, 28vw, 402px);
+  height: clamp(1px, 49.6vw, 714px);
+  background: url("/Image Home/Chance-1.jpeg") center no-repeat;
+  background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
+  mask: url("/Image Home/SVG/home-1.svg") no-repeat;
+  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+}
+
+.secondProject img:nth-of-type(1) {
+  position: absolute;
+  height: clamp(1px, 48.4vw, 697px);
+  top: clamp(1px, 2.4vw, 35px);
+  left: clamp(1px, 7vw, 100px);
+}
+
+.secondProject img:nth-of-type(2) {
+  height: clamp(1px, 16vw, 230px);
+  width: clamp(1px, 9.3vw, 134px);
+  position: absolute;
+  top: clamp(1px, 1.7vw, 25px);
+  left: clamp(1px, 29.5vw, 425px);
+  z-index: -1;
+}
+
+/* Third project */
+
+.thirdProject {
+  position: relative;
+}
+
+.thirdProject .projectCard {
+  width: clamp(1px, 28vw, 402px);
+  height: clamp(1px, 49.6vw, 714px);
+  background: url("/Image Home/Smatch-1.jpeg") center no-repeat;
+  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
+  mask: url("/Image Home/SVG/home-2.svg") no-repeat;
+  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+}
+
+.thirdProject img:nth-of-type(1) {
+  position: absolute;
+  top: clamp(1px, 2.7vw, 40px);
+  width: clamp(1px, 26vw, 373px);
+}
+
+.thirdProject img:nth-of-type(2) {
+  height: clamp(1px, 18.2vw, 263px);
+  width: clamp(1px, 17.4vw, 251px);
+  position: absolute;
+  top: clamp(1px, 7vw, 100px);
+  right: clamp(1px, 0.7vw, 10px);
+  z-index: -1;
+}
+
+/* Fourth project */
+
+.fourthProject {
+  position: relative;
+}
+
+.fourthProject .projectCard {
+  width: clamp(1px, 28vw, 402px);
+  height: clamp(1px, 49.6vw, 714px);
+  background: url("/Image Home/Kanamoji-1.jpeg") center no-repeat;
+  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
+  mask: url("/Image Home/SVG/home-3.svg") no-repeat;
+  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+}
+
+.fourthProject img:nth-of-type(1) {
+  position: absolute;
+  top: clamp(1px, 4.1vw, 60px);
+  left: clamp(1px, 32.6vw, 470px);
+  height: clamp(1px, 49.3vw, 710px);
+}
+
+.fourthProject img:nth-of-type(2) {
+  height: clamp(1px, 22vw, 316px);
+  width: clamp(1px, 20.8vw, 300px);
+  position: absolute;
+  top: clamp(-85px, -5.9vw, -1px);
+  left: clamp(1px, 16.6vw, 240px);
+  z-index: -1;
+}
+
+/* Fifth project */
+
+.fifthProject {
+  position: relative;
+}
+
+.fifthProject .projectCard {
+  width: clamp(1px, 28vw, 402px);
+  height: clamp(1px, 49.6vw, 714px);
+  background: url("/Image Home/nishio-1.jpeg") center no-repeat;
+  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
+  mask: url("/Image Home/SVG/home-4.svg") no-repeat;
+  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+}
+
+.fifthProject img:nth-of-type(1) {
+  position: absolute;
+  top: clamp(1px, 49.3vw, 710px);
+  left: clamp(1px, 0.5vw, 8px);
+  width: clamp(1px, 27.6vw, 397px);
+}
+
+.fifthProject img:nth-of-type(2) {
+  height: clamp(1px, 17.1vw, 246px);
+  width: clamp(1px, 12.8vw, 185px);
+  position: absolute;
+  top: clamp(-100px, -6.9vw, -1px);
+  right: clamp(1px, 3.5vw, 50px);
+  z-index: -1;
+  transform: rotate(-15deg);
+}
+
+/* Sixth project */
+
+.sixthProject {
+  position: relative;
+}
+
+.sixthProject .projectCard {
+  width: clamp(1px, 28vw, 402px);
+  height: clamp(1px, 49.6vw, 714px);
+  background: url("/Image Home/wip-1.jpeg") center no-repeat;
+  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
+  mask: url("/Image Home/SVG/home-5.svg") no-repeat;
+  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+}
+
+.sixthProject img:nth-of-type(1) {
+  position: absolute;
+  top: clamp(1px, 2.8vw, 40px);
+  left: clamp(1px, 4.2vw, 60px);
+  height: clamp(1px, 49.4vw, 711px);
+}
+
+.sixthProject img:nth-of-type(2) {
+  height: clamp(1px, 22vw, 316px);
+  width: clamp(1px, 20.8vw, 300px);
+  position: absolute;
+  top: clamp(1px, 28.3vw, 408px);
+  left: clamp(-75px, -5.2vw, -1px);
+  z-index: -1;
+}

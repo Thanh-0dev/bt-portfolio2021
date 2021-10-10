@@ -1,7 +1,8 @@
 .header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  max-width: 1192px;
+  margin: 0 clamp(64px, 8.6vw, 124px) 100px clamp(64px, 8.6vw, 124px);
 }
 
 .nav {

@@ -1,0 +1,27 @@
+.bannerPannel {
+  margin-top: 40px;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.pannel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 clamp(1px, 15.7vw, 226px) 0 clamp(1px, 15.7vw, 226px);
+  padding-top: clamp(1px, 19.9vw, 286px);
+}
+
+.pannel img {
+  width: clamp(1px, 28vw, 403px);
+  height: clamp(1px, 49.6vw, 714px);
+}
+
+.pannel img:nth-of-type(2) {
+  margin-top: clamp(1px, 12.2vw, 176px);
+}

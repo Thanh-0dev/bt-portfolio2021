@@ -1,0 +1,19 @@
+.sideBySide {
+  display: flex;
+  margin: 0 clamp(64px, 8.6vw, 124px) 70px clamp(64px, 8.6vw, 124px);
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.sideBySide > * {
+  width: clamp(1px, 41vw, 596px);
+}
+
+.sideBySide div {
+  margin: auto 0 auto clamp(1px, 8.6vw, 124px);
+}
+
+.sideBySide p {
+  line-height: 28px;
+  font-size: 20px;
+}

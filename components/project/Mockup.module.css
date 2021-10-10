@@ -1,0 +1,9 @@
+.mockup {
+  max-width: 1192px;
+  margin: 0 clamp(64px, 8.6vw, 124px) 72px clamp(64px, 8.6vw, 124px);
+}
+
+.mockup img {
+  width: clamp(1px, 100%, 1192px);
+  height: clamp(1px, 42vw, 605px);
+}

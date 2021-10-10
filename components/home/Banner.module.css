@@ -1,22 +1,32 @@
 .banner {
   display: flex;
   flex-direction: column;
-  margin-bottom: 210px;
   position: relative;
+  max-width: 1192px;
+  margin: 0 clamp(64px, 8.6vw, 124px) 210px clamp(64px, 8.6vw, 124px);
 }
 
 .glassOne {
   position: absolute;
+  width: clamp(1px, 30vw, 432px);
   z-index: 1;
-  left: -63px;
-  top: 50px;
+  left: -4.6vw;
+  top: 3.4vw;
 }
 
 .glassTwo {
   position: absolute;
+  width: clamp(1px, 12vw, 177px);
   z-index: 2;
-  bottom: 60px;
-  left: 50px;
+  top: 25.5vw;
+  left: 3.4vw;
+}
+
+.blur {
+  position: absolute;
+  width: clamp(1px, 79vw, 1135px);
+  left: -10vw;
+  top: -7vw;
 }
 
 .projectId {
@@ -25,9 +35,11 @@
 }
 
 .arrow {
-  height: 484px;
+  height: clamp(1px, 33vw, 484px);
+  width: 20px;
   position: absolute;
-  left: -10px;
+  left: -0.7vw;
+  top: 0.7vw;
   z-index: 3;
 }
 
@@ -41,15 +53,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: 110px;
+  margin-left: clamp(1px, 7.6vw, 110px);
 }
 
 .projectImg {
-  width: 940px;
-  height: 484px;
-  object-fit: cover;
+  width: clamp(1px, 65vw, 940px);
+  height: clamp(1px, 33vw, 484px);
   background: url("/Image Home/vall-1.jpeg") center no-repeat;
-  background-size: 1180px 786px;
+  background-size: clamp(1px, 85vw, 1227px) auto;
   transform: rotate(2deg);
 }
 
