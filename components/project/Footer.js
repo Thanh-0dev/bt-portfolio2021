@@ -12,12 +12,15 @@ function Footer(props) {
   });
   return (
     <section className={styles.footer}>
-      <img src="/Icons habillage/0-glass-projet/projet-glass-3.svg" alt="" />
+      <img
+        src="/Icons habillage/0-glass-projet/projet-glass-3.svg"
+        alt="Glass footer"
+      />
       <img src="/Icons habillage/footer-projet.svg" alt="Footer line" />
       <div className={styles.timelineFolder}>
         <p>.timeline folder</p>
+        <div className={styles.fade}></div>
         <div id="project" className={styles.project}>
-          <div className={styles.fade}></div>
           <div>
             <p className={styles.detail}>2021</p>
             <p className={styles.name}>chance/</p>

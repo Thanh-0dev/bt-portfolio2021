@@ -17,3 +17,9 @@
   width: clamp(1px, 42.6vw, 614px);
   height: clamp(1px, 44.9vw, 646px);
 }
+
+@media (min-width: 1440px) {
+  .firstMockup {
+    margin: 0 auto 72px auto;
+  }
+}

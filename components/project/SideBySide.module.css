@@ -3,6 +3,7 @@
   margin: 0 clamp(64px, 8.6vw, 124px) 70px clamp(64px, 8.6vw, 124px);
   justify-content: space-between;
   flex-direction: row;
+  max-width: 1192px;
 }
 
 .sideBySide > * {
@@ -16,4 +17,10 @@
 .sideBySide p {
   line-height: 28px;
   font-size: 20px;
+}
+
+@media (min-width: 1440px) {
+  .sideBySide {
+    margin: 0 auto 70px auto;
+  }
 }

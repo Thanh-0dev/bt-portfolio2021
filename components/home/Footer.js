@@ -6,18 +6,18 @@ function Footer(props) {
     <section className={styles.footer}>
       <img
         className={styles.footerLine}
-        src="./Icons habillage/Footer-line.svg"
+        src="/Icons habillage/Footer-line.svg"
         alt="Footer Line"
       />
       <div className={styles.info}>
         <img
           className={styles.footerGlass1}
-          src="./Icons habillage/Glass/glass-footer-1.svg"
+          src="/Icons habillage/Glass/glass-footer-1.svg"
           alt="Glass footer 1"
         />
         <div className={styles.footerGlass2}>
           <img
-            src="./Icons habillage/Glass/glass-footer-2.svg"
+            src="/Icons habillage/Glass/glass-footer-2.svg"
             alt="Glass footer 2"
           />
         </div>

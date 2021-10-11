@@ -1,6 +1,7 @@
 .bannerPannel {
-  margin-top: 40px;
+  margin: 40px auto 0 auto;
   position: relative;
+  max-width: 1440px;
 }
 
 .banner {

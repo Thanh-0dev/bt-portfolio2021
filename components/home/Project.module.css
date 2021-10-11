@@ -230,3 +230,9 @@
   left: clamp(-75px, -5.2vw, -1px);
   z-index: -1;
 }
+
+@media (min-width: 1440px) {
+  .project {
+    margin: 0 auto 100px auto;
+  }
+}
