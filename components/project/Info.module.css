@@ -19,7 +19,7 @@
   line-height: 28px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .info {
     margin: 192px auto 105px auto;
   }

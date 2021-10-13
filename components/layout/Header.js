@@ -20,10 +20,14 @@ function Header(props) {
 
   return (
     <header className={styles.header}>
-      <div className={styles.nav}>
-        <Link href="/pages/index.js">.tram/workshop</Link>
-        <Link href="#About">/statistics</Link>
-      </div>
+      <ul>
+        <li>
+          <Link href="/">.tram/workshop</Link>
+        </li>
+        <li>
+          <Link href="/about">/statistics</Link>
+        </li>
+      </ul>
       <div className={styles.info}>
         <span>.actually in France</span>
         <span>.open to opportunities</span>

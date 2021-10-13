@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Banner.module.css";
 
 function Banner(props) {
@@ -22,7 +23,9 @@ function Banner(props) {
           alt="Arrow"
         />
         <div className={styles.bannerColumn}>
-          <div className={styles.projectImg}></div>
+          <Link href="/project/01">
+            <div className={styles.projectImg}></div>
+          </Link>
           <p className={styles.title}>.Vall’s Artwork Streaming Service</p>
           <p>
             WEB-DESIGNER/ <br />

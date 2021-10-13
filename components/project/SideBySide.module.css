@@ -19,7 +19,7 @@
   font-size: 20px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .sideBySide {
     margin: 0 auto 70px auto;
   }

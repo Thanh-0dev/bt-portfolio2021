@@ -30,11 +30,13 @@
 .project p:not(.projectId, .projectTitle, .sixthProject > p) {
   margin-bottom: 70px;
   text-transform: uppercase;
+  line-height: 20px;
 }
 
 .sixthProject > p:not(.projectId, .projectTitle) {
   margin-bottom: 40px;
   text-transform: uppercase;
+  line-height: 20px;
 }
 
 .left {
@@ -146,7 +148,7 @@
 .fourthProject .projectCard {
   width: clamp(1px, 28vw, 402px);
   height: clamp(1px, 49.6vw, 714px);
-  background: url("/Image Home/Kanamoji-1.jpeg") center no-repeat;
+  background: url("/Image Home/kanamoji-1.jpeg") center no-repeat;
   background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
   mask: url("/Image Home/SVG/home-3.svg") no-repeat;
   mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
@@ -231,7 +233,7 @@
   z-index: -1;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .project {
     margin: 0 auto 100px auto;
   }

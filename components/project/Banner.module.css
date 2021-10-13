@@ -29,7 +29,7 @@
 .arrow {
   position: absolute;
   width: 19px;
-  height: clamp(1px, 33.4vw, 486px);
+  height: clamp(1px, 33.4vw, 484px);
   margin-top: clamp(-190px, -13.2vw, -60px);
   margin-left: clamp(-10px, -0.7vw, -1px);
   z-index: 1;
@@ -44,9 +44,11 @@
   margin-top: clamp(1px, 5.5vw, 80px);
 }
 
-.title,
-.info {
+.flex {
   margin-left: clamp(1px, 7vw, 100px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .title p:nth-of-type(1) {
@@ -57,24 +59,21 @@
   text-transform: uppercase;
   margin-bottom: 44px;
   margin-top: 16px;
+  line-height: 20px;
 }
 
-.info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 120px;
-}
-
-.info p:nth-of-type(1):not(div.desc p) {
+.title p:nth-of-type(3) {
   font-size: 32px;
   color: #585858;
-  width: 270px;
   line-height: 46px;
+  white-space: nowrap;
 }
 
 .desc {
-  width: 600px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 128px 0 120px 30px;
 }
 
 .desc > p:nth-of-type(1) {
@@ -110,7 +109,7 @@
   top: 30px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .banner {
     margin: 0 auto;
   }

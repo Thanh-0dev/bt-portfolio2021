@@ -23,18 +23,16 @@ function Banner(props) {
         <img
           className={styles.glass}
           src="/Icons habillage/0-glass-projet/projet-glass-1.svg"
-          alt="Arrow"
+          alt="Glass"
         />
-        <div className={styles.title}>
-          <p>.Vall’s Artwork Streaming Service</p>
-          <p>
-            digital-designer/
-            <br />
-            Japan/2019/
-          </p>
-        </div>
-        <div className={styles.info}>
-          <div>
+        <div className={styles.flex}>
+          <div className={styles.title}>
+            <p>.Vall’s Artwork Streaming Service</p>
+            <p>
+              digital-designer/
+              <br />
+              Japan/2019/
+            </p>
             <p>
               &gt;Web designer <br />
               &gt;Front developer

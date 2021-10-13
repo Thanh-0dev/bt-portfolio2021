@@ -8,7 +8,7 @@
   height: clamp(1px, 42vw, 605px);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .mockup {
     margin: 0 auto 72px auto;
   }

@@ -18,7 +18,7 @@
   height: clamp(1px, 44.9vw, 646px);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .firstMockup {
     margin: 0 auto 72px auto;
   }

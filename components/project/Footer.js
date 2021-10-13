@@ -3,11 +3,34 @@ import styles from "./Footer.module.css";
 
 function Footer(props) {
   useEffect(() => {
-    const scrollTimelineFolder = document.getElementById("project");
-    scrollTimelineFolder.addEventListener("wheel", (event) => {
+    /* Scroll */
+    const slider = document.getElementById("project");
+    slider.addEventListener("wheel", (event) => {
       event.preventDefault();
-      scrollTimelineFolder.scrollLeft += event.deltaY;
-      console.log(scrollTimelineFolder.scrollLeft);
+      slider.scrollLeft += event.deltaY;
+    });
+
+    /* Drag */
+    let isDown = false;
+    let startX;
+    let dragLeft;
+    slider.addEventListener("mousedown", (event) => {
+      isDown = true;
+      startX = event.pageX - slider.offsetLeft;
+      dragLeft = slider.scrollLeft;
+    });
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+    slider.addEventListener("mousemove", (event) => {
+      if (!isDown) return;
+      event.preventDefault();
+      const x = event.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      slider.scrollLeft = dragLeft - walk;
     });
   });
   return (
@@ -20,6 +43,9 @@ function Footer(props) {
       <div className={styles.timelineFolder}>
         <p>.timeline folder</p>
         <div className={styles.fade}></div>
+        <div className={styles.blur}>
+          <img src="/Icons habillage/Blur.png" alt="Blur" />
+        </div>
         <div id="project" className={styles.project}>
           <div>
             <p className={styles.detail}>2021</p>
