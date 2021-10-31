@@ -23,7 +23,7 @@ function Banner(props) {
           alt="Arrow"
         />
         <div className={styles.bannerColumn}>
-          <Link href="/project/1">
+          <Link href="/project/1" passHref>
             <div className={styles.projectImg}></div>
           </Link>
           <p className={styles.title}>{props.children.projects[0]["name"]}</p>

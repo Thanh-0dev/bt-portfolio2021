@@ -73,7 +73,9 @@ function Project(props) {
         />
         <div className={styles.thirdProject}>
           <p className={styles.projectId}>03</p>
-          <div className={styles.projectCard}></div>
+          <Link href="/project/3" passHref>
+            <div className={styles.projectCard}></div>
+          </Link>
           <img src="./Icons habillage/Cadre-2.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-4.svg" alt="Glass" />
           <p className={styles.projectTitle}>
@@ -87,7 +89,9 @@ function Project(props) {
         </div>
         <div className={styles.fifthProject}>
           <p className={styles.projectId}>05</p>
-          <div className={styles.projectCard}></div>
+          <Link href="/project/5" passHref>
+            <div className={styles.projectCard}></div>
+          </Link>
           <img src="./Icons habillage/Cadre-4.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-6.svg" alt="Glass" />
           <p className={styles.projectTitle}>
