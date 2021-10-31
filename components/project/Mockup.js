@@ -3,7 +3,10 @@ import styles from "./Mockup.module.css";
 function Mockup(props) {
   return (
     <section className={styles.mockup}>
-      <img src="/Projets/vall/Vall-projet-3.png" alt="Mockup" />
+      <img
+        src={`/Projets/${props.children[0].project.id}/Mockup${props.children[1]}.png`}
+        alt="Mockup"
+      />
     </section>
   );
 }

@@ -23,13 +23,14 @@ function Banner(props) {
           alt="Arrow"
         />
         <div className={styles.bannerColumn}>
-          <Link href="/project/01">
+          <Link href="/project/1">
             <div className={styles.projectImg}></div>
           </Link>
-          <p className={styles.title}>.Vall’s Artwork Streaming Service</p>
+          <p className={styles.title}>{props.children.projects[0]["name"]}</p>
           <p>
-            WEB-DESIGNER/ <br />
-            JAPAN/2019/
+            {props.children.projects[0]["job"]}
+            <br />
+            {props.children.projects[0]["detail"]}
           </p>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Project.module.css";
 
 function Project(props) {
@@ -16,38 +17,50 @@ function Project(props) {
         />
         <div className={styles.secondProject}>
           <p className={styles.projectId}>02</p>
-          <div className={styles.projectCard}></div>
+          <Link href="/project/2" passHref>
+            <div className={styles.projectCard}></div>
+          </Link>
           <img src="./Icons habillage/Cadre-1.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-3.svg" alt="Glass" />
-          <p className={styles.projectTitle}>.Growth with Chance</p>
+          <p className={styles.projectTitle}>
+            {props.children.projects[1]["name"]}
+          </p>
           <p>
-            digital-designer/
+            {props.children.projects[1]["job"]}
             <br />
-            France/2021/
+            {props.children.projects[1]["detail"]}
           </p>
         </div>
         <div className={styles.fourthProject}>
           <p className={styles.projectId}>04</p>
-          <div className={styles.projectCard}></div>
+          <Link href="/project/4" passHref>
+            <div className={styles.projectCard}></div>
+          </Link>
           <img src="./Icons habillage/Cadre-3.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-5.svg" alt="Glass" />
-          <p className={styles.projectTitle}>.あ, か, さ, kanamoji</p>
+          <p className={styles.projectTitle}>
+            {props.children.projects[3]["name"]}
+          </p>
           <p>
-            digital-designer/
+            {props.children.projects[3]["job"]}
             <br />
-            japan/2019/
+            {props.children.projects[3]["detail"]}
           </p>
         </div>
         <div className={styles.sixthProject}>
           <p className={styles.projectId}>06</p>
-          <div className={styles.projectCard}></div>
+          <Link href="/project/6" passHref>
+            <div className={styles.projectCard}></div>
+          </Link>
           <img src="./Icons habillage/Cadre-5.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-7.svg" alt="Glass" />
-          <p className={styles.projectTitle}>.workInProgress</p>
+          <p className={styles.projectTitle}>
+            {props.children.projects[5]["name"]}
+          </p>
           <p>
-            trying-hard/
+            {props.children.projects[5]["job"]}
             <br />
-            house/always
+            {props.children.projects[5]["detail"]}
           </p>
         </div>
       </div>
@@ -64,13 +77,12 @@ function Project(props) {
           <img src="./Icons habillage/Cadre-2.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-4.svg" alt="Glass" />
           <p className={styles.projectTitle}>
-            .Smatch, matching <br />
-            student x school
+            {props.children.projects[2]["name"]}
           </p>
           <p>
-            digital-designer/
+            {props.children.projects[2]["job"]}
             <br />
-            france/2020/
+            {props.children.projects[2]["detail"]}
           </p>
         </div>
         <div className={styles.fifthProject}>
@@ -78,11 +90,13 @@ function Project(props) {
           <div className={styles.projectCard}></div>
           <img src="./Icons habillage/Cadre-4.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-6.svg" alt="Glass" />
-          <p className={styles.projectTitle}>.株式会社カチ Kati Inc.</p>
+          <p className={styles.projectTitle}>
+            {props.children.projects[4]["name"]}
+          </p>
           <p>
-            digital-designer/
+            {props.children.projects[4]["job"]}
             <br />
-            japan/2019/
+            {props.children.projects[4]["detail"]}
           </p>
         </div>
       </div>

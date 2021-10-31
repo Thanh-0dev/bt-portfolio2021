@@ -5,12 +5,18 @@ function BannerPannel(props) {
     <section className={styles.bannerPannel}>
       <img
         className={styles.banner}
-        src="/Projets/vall/Vall-projet-0.png"
+        src={`/Projets/${props.children.project.id}/BannerPannel.png`}
         alt="Second project banner"
       />
       <div className={styles.pannel}>
-        <img src="/Projets/vall/vall-rectangle-1.png" alt="Project pannel 1" />
-        <img src="/Projets/vall/vall-rectangle-2.png" alt="Project pannel 2" />
+        <img
+          src={`/Projets/${props.children.project.id}/Pannel1.png`}
+          alt="Project pannel 1"
+        />
+        <img
+          src={`/Projets/${props.children.project.id}/Pannel2.png`}
+          alt="Project pannel 2"
+        />
       </div>
     </section>
   );

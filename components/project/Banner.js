@@ -1,7 +1,15 @@
 import Link from "next/link";
+import {useEffect} from "react";
 import styles from "./Banner.module.css";
 
 function Banner(props) {
+  useEffect(() => {
+    let alljobs = "";
+    for (let nbRole in props.children.roles) {
+      alljobs += "&gt" + props.children.roles[nbRole].role + "<br />";
+    }
+    document.getElementById("jobs").innerHTML = alljobs;
+  });
   return (
     <section className={styles.banner}>
       <img
@@ -11,7 +19,7 @@ function Banner(props) {
       />
       <img
         className={styles.bannerImg}
-        src="/Image Home/Hover/vall-2.jpeg"
+        src={`/Image Home/Hover/${props.children.project.id}.jpeg`}
         alt="Banner image"
       />
       <div className={styles.underBanner}>
@@ -27,30 +35,18 @@ function Banner(props) {
         />
         <div className={styles.flex}>
           <div className={styles.title}>
-            <p>.Vall’s Artwork Streaming Service</p>
+            <p>{props.children.project.name}</p>
             <p>
-              digital-designer/
+              {props.children.project.job}
               <br />
-              Japan/2019/
+              {props.children.project.detail}
             </p>
-            <p>
-              &gt;Web designer <br />
-              &gt;Front developer
-              <br />
-              &gt;Illustration
-              <br />
-              &gt;Branding
-            </p>
+            <p id="jobs"></p>
           </div>
           <div className={styles.desc}>
-            <p>Targeting art enthusiast, artist and tech lovers</p>
-            <p>
-              A flat-rate streaming platform allowing to view digitized art
-              works wherever you are on screen. Vall makes art more accessible
-              and easier to enjoy from home or at work will supporting our
-              favourite artists.
-            </p>
-            <Link href="#">
+            <p>{props.children.project.descTitle}</p>
+            <p>{props.children.project.desc}</p>
+            <Link href={props.children.project.link} passHref>
               <div className={styles.link}>
                 <p>see live</p>
                 <img
