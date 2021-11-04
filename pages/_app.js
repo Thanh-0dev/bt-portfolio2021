@@ -1,11 +1,38 @@
 import Head from "next/head";
 import Script from "next/script";
+import {useState, useEffect} from "react";
+import {useRouter} from "next/router";
 import Layout from "/components/layout/Layout";
+import Loader from "/components/Loader";
 import "/styles/globals.css";
 
 function MyApp({Component, pageProps}) {
+  /* First time loading */
+  const [firstTime, setFirstTime] = useState(false);
+  useEffect(() => {
+    setFirstTime(true);
+    setTimeout(() => {
+      setFirstTime(false);
+    }, 3000);
+  }, []);
+
+  /* const router = useRouter();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const handleStart = (url) => {
+      url !== router.pathname ? setLoading(true) : setLoading(false);
+    };
+    const handleComplete = (url) => {
+      setLoading(false);
+    };
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+  }, [router]); */
   return (
-    <Layout>
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -20,6 +47,7 @@ function MyApp({Component, pageProps}) {
           property="og:site_name"
           content="Bich Trâm Cynthia PHAM | Portfolio"
         />
+        <meta property="og:image" content="/preview.png" />
         <meta name="author" content="Bich Trâm Cynthia Pham" />
         <meta
           name="copyright"
@@ -70,8 +98,14 @@ function MyApp({Component, pageProps}) {
           `,
         }}
       />
-      <Component {...pageProps} />
-    </Layout>
+      {firstTime ? (
+        <Loader />
+      ) : (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
+    </>
   );
 }
 

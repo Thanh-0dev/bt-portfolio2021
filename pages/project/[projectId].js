@@ -57,40 +57,37 @@ function ProjectPage(props) {
       <Head>
         <title>Project | {props.project.name}</title>
       </Head>
-      <Banner>{props}</Banner>
-      <Flag>{props}</Flag>
+      <Banner {...props} />
+      <Flag {...props} />
       {Array(props.page.info)
         .fill(null)
         .map((e, i) => (
-          <Info key={`info-${i + 1}`}>{props}</Info>
+          <Info key={`info-${i + 1}`} {...props} />
         ))}
       {Array(props.page.firstMockup)
         .fill(null)
         .map((e, i) => (
-          <FirstMockup key={`firstMockup-${i + 1}`}>{props}</FirstMockup>
+          <FirstMockup key={`firstMockup-${i + 1}`} {...props} />
         ))}
       {Array(props.page.mockup)
         .fill(null)
         .map((e, i) => (
-          <Mockup key={`mockup-${i + 2}`}>
-            {props}
-            {i + 2}
-          </Mockup>
+          <Mockup key={`mockup-${i + 2}`} {...[props, i + 2]} />
         ))}
       {Array(props.page.sidebyside)
         .fill(null)
         .map((e, i) => (
-          <SideBySide key={`sideBySide-${i + 1}`}>{props}</SideBySide>
+          <SideBySide key={`sideBySide-${i + 1}`} {...props} />
         ))}
       {Array(props.page.bannerPannel)
         .fill(null)
         .map((e, i) => (
-          <BannerPannel key={`bannerPannel-${i + 1}`}>{props}</BannerPannel>
+          <BannerPannel key={`bannerPannel-${i + 1}`} {...props} />
         ))}
       {Array(props.page.bonusPannel)
         .fill(null)
         .map((e, i) => (
-          <BonusPannel key={`bonusPannel-${i + 1}`}>{props}</BonusPannel>
+          <BonusPannel key={`bonusPannel-${i + 1}`} {...props} />
         ))}
       <Footer></Footer>
     </Fragment>

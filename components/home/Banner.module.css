@@ -7,6 +7,16 @@
   padding-bottom: 200px;
 }
 
+.projectAction {
+  position: absolute;
+  top: 18px;
+  left: clamp(1px, 7.6vw, 110px);
+  width: clamp(1px, 65vw, 940px);
+  height: clamp(1px, 33vw, 484px);
+  transform: rotate(2deg);
+  z-index: 9999;
+}
+
 .glassOne {
   position: absolute;
   width: clamp(1px, 30vw, 432px);
@@ -60,9 +70,26 @@
 .projectImg {
   width: clamp(1px, 65vw, 940px);
   height: clamp(1px, 33vw, 484px);
-  background: url("/Image Home/vall-1.jpeg") center no-repeat;
+  background: url("/Image Home/1.jpeg") center no-repeat;
   background-size: clamp(1px, 85vw, 1227px) auto;
   transform: rotate(2deg);
+}
+
+.projectAction:hover ~ .bannerRow .projectImg {
+  animation: colorImage 0.3s;
+  background: url("/Image Home/Hover/1.jpeg") center no-repeat;
+  background-size: clamp(1px, 85vw, 1227px) auto;
+}
+
+@keyframes colorImage {
+  0% {
+    background: url("/Image Home/1.jpeg") center no-repeat;
+    background-size: clamp(1px, 85vw, 1227px) auto;
+  }
+  100% {
+    background: url("/Image Home/Hover/1.jpeg") center no-repeat;
+    background-size: clamp(1px, 85vw, 1227px) auto;
+  }
 }
 
 .title {

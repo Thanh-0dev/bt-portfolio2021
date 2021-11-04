@@ -4,7 +4,7 @@ function FirstMockup(props) {
   return (
     <section className={styles.firstMockup}>
       <img
-        src={`/Projets/${props.children.project.id}/Mockup1.png`}
+        src={`/Projets/${props.project.id}/Mockup1.png`}
         alt="First mockup"
       />
       <img

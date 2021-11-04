@@ -5,8 +5,8 @@ import styles from "./Banner.module.css";
 function Banner(props) {
   useEffect(() => {
     let alljobs = "";
-    for (let nbRole in props.children.roles) {
-      alljobs += "&gt" + props.children.roles[nbRole].role + "<br />";
+    for (let nbRole in props.roles) {
+      alljobs += "&gt" + props.roles[nbRole].role + "<br />";
     }
     document.getElementById("jobs").innerHTML = alljobs;
   });
@@ -19,7 +19,7 @@ function Banner(props) {
       />
       <img
         className={styles.bannerImg}
-        src={`/Image Home/Hover/${props.children.project.id}.jpeg`}
+        src={`/Image Home/Hover/${props.project.id}.jpeg`}
         alt="Banner image"
       />
       <div className={styles.underBanner}>
@@ -35,18 +35,18 @@ function Banner(props) {
         />
         <div className={styles.flex}>
           <div className={styles.title}>
-            <p>{props.children.project.name}</p>
+            <p>{props.project.name}</p>
             <p>
-              {props.children.project.job}
+              {props.project.job}
               <br />
-              {props.children.project.detail}
+              {props.project.detail}
             </p>
             <p id="jobs"></p>
           </div>
           <div className={styles.desc}>
-            <p>{props.children.project.descTitle}</p>
-            <p>{props.children.project.desc}</p>
-            <Link href={props.children.project.link} passHref>
+            <p>{props.project.descTitle}</p>
+            <p>{props.project.desc}</p>
+            <Link href={props.project.link} passHref>
               <div className={styles.link}>
                 <p>see live</p>
                 <img

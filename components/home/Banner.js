@@ -4,6 +4,9 @@ import styles from "./Banner.module.css";
 function Banner(props) {
   return (
     <section className={styles.banner}>
+      <Link href="/project/1" passHref>
+        <div className={styles.projectAction}></div>
+      </Link>
       <img
         className={styles.glassOne}
         src="/Icons habillage/Glass/Glass-1.svg"
@@ -23,14 +26,12 @@ function Banner(props) {
           alt="Arrow"
         />
         <div className={styles.bannerColumn}>
-          <Link href="/project/1" passHref>
-            <div className={styles.projectImg}></div>
-          </Link>
-          <p className={styles.title}>{props.children.projects[0]["name"]}</p>
+          <div className={styles.projectImg}></div>
+          <p className={styles.title}>{props.projects[0]["name"]}</p>
           <p>
-            {props.children.projects[0]["job"]}
+            {props.projects[0]["job"]}
             <br />
-            {props.children.projects[0]["detail"]}
+            {props.projects[0]["detail"]}
           </p>
         </div>
       </div>

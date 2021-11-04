@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "UntitledSans", Arial, Helvetica, sans-serif;
+  font-family: "UntitledSans";
   src: url("/Font/DesktopFonts/UntitledSans-Medium.otf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "UntitledSans", Arial, Helvetica, sans-serif;
+  font-family: "UntitledSans";
   src: url("/Font/DesktopFonts/UntitledSans-MediumItalic.otf")
     format("truetype");
   font-weight: 500;
@@ -13,20 +13,20 @@
 }
 
 @font-face {
-  font-family: "UntitledSans", Arial, Helvetica, sans-serif;
+  font-family: "UntitledSans";
   src: url("/Font/DesktopFonts/UntitledSans-RegularItalic.otf")
     format("truetype");
   font-style: italic;
 }
 
 @font-face {
-  font-family: "UntitledSans", Arial, Helvetica, sans-serif;
+  font-family: "UntitledSans";
   src: url("/Font/DesktopFonts/UntitledSans-Regular.otf") format("truetype");
 }
 
 * {
   box-sizing: border-box;
-  font-family: "UntitledSans", Arial, Helvetica, sans-serif;
+  font-family: "UntitledSans";
   padding: 0;
   margin: 0;
   cursor: url("/Icons habillage/cursor/crosshair.svg") 12 12, auto;

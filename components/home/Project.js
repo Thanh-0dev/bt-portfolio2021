@@ -1,7 +1,54 @@
 import Link from "next/link";
+import {useEffect} from "react";
 import styles from "./Project.module.css";
 
 function Project(props) {
+  useEffect(() => {
+    const action1 = document.getElementById("projectAction1");
+    const card1 = document.getElementById("projectCard1");
+    action1.addEventListener("mouseover", () => {
+      card1.classList.add(styles.hover);
+    });
+    action1.addEventListener("mouseleave", () => {
+      card1.classList.remove(styles.hover);
+    });
+
+    const action2 = document.getElementById("projectAction2");
+    const card2 = document.getElementById("projectCard2");
+    action2.addEventListener("mouseover", () => {
+      card2.classList.add(styles.hover);
+    });
+    action2.addEventListener("mouseleave", () => {
+      card2.classList.remove(styles.hover);
+    });
+
+    const action3 = document.getElementById("projectAction3");
+    const card3 = document.getElementById("projectCard3");
+    action3.addEventListener("mouseover", () => {
+      card3.classList.add(styles.hover);
+    });
+    action3.addEventListener("mouseleave", () => {
+      card3.classList.remove(styles.hover);
+    });
+
+    const action4 = document.getElementById("projectAction4");
+    const card4 = document.getElementById("projectCard4");
+    action4.addEventListener("mouseover", () => {
+      card4.classList.add(styles.hover);
+    });
+    action4.addEventListener("mouseleave", () => {
+      card4.classList.remove(styles.hover);
+    });
+
+    const action5 = document.getElementById("projectAction5");
+    const card5 = document.getElementById("projectCard5");
+    action5.addEventListener("mouseover", () => {
+      card5.classList.add(styles.hover);
+    });
+    action5.addEventListener("mouseleave", () => {
+      card5.classList.remove(styles.hover);
+    });
+  });
   return (
     <section className={styles.project}>
       <img
@@ -17,50 +64,83 @@ function Project(props) {
         />
         <div className={styles.secondProject}>
           <p className={styles.projectId}>02</p>
-          <Link href="/project/2" passHref>
-            <div className={styles.projectCard}></div>
-          </Link>
+          <svg
+            viewBox="0 0 404 716"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <Link href="/project/2" passHref>
+              <path
+                id="projectAction1"
+                d="M403 39.527L32.6456 1L1.00024 673.471L380.049 715L403 39.527Z"
+                fill="black"
+                fillOpacity="0"
+              />
+            </Link>
+          </svg>
+          <div className={styles.projectCard} id="projectCard1"></div>
           <img src="./Icons habillage/Cadre-1.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-3.svg" alt="Glass" />
-          <p className={styles.projectTitle}>
-            {props.children.projects[1]["name"]}
-          </p>
+          <p className={styles.projectTitle}>{props.projects[1]["name"]}</p>
           <p>
-            {props.children.projects[1]["job"]}
+            {props.projects[1]["job"]}
             <br />
-            {props.children.projects[1]["detail"]}
+            {props.projects[1]["detail"]}
           </p>
         </div>
         <div className={styles.fourthProject}>
           <p className={styles.projectId}>04</p>
-          <Link href="/project/4" passHref>
-            <div className={styles.projectCard}></div>
-          </Link>
+          <svg
+            viewBox="0 0 405 716"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <Link href="/project/4" passHref>
+              <path
+                id="projectAction3"
+                d="M404 39.5206L32.7242 0.993652L1.00012 673.465L380.991 714.994L404 39.5206Z"
+                fill="black"
+                fillOpacity="0"
+              />
+            </Link>
+          </svg>
+          <div className={styles.projectCard} id="projectCard3"></div>
           <img src="./Icons habillage/Cadre-3.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-5.svg" alt="Glass" />
-          <p className={styles.projectTitle}>
-            {props.children.projects[3]["name"]}
-          </p>
+          <p className={styles.projectTitle}>{props.projects[3]["name"]}</p>
           <p>
-            {props.children.projects[3]["job"]}
+            {props.projects[3]["job"]}
             <br />
-            {props.children.projects[3]["detail"]}
+            {props.projects[3]["detail"]}
           </p>
         </div>
         <div className={styles.sixthProject}>
           <p className={styles.projectId}>06</p>
-          <Link href="/project/6" passHref>
-            <div className={styles.projectCard}></div>
-          </Link>
+          <svg
+            viewBox="0 0 405 716"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <Link href="/project/6" passHref>
+              <path
+                id="projectAction5"
+                d="M404.001 39.5275L32.7255 1.00049L1.00146 673.471L380.993 715L404.001 39.5275Z"
+                fill="black"
+                fillOpacity="0"
+              />
+            </Link>
+          </svg>
+          <div className={styles.projectCard} id="projectCard5"></div>
           <img src="./Icons habillage/Cadre-5.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-7.svg" alt="Glass" />
-          <p className={styles.projectTitle}>
-            {props.children.projects[5]["name"]}
-          </p>
+          <p className={styles.projectTitle}>{props.projects[5]["name"]}</p>
           <p>
-            {props.children.projects[5]["job"]}
+            {props.projects[5]["job"]}
             <br />
-            {props.children.projects[5]["detail"]}
+            {props.projects[5]["detail"]}
           </p>
         </div>
       </div>
@@ -73,34 +153,56 @@ function Project(props) {
         />
         <div className={styles.thirdProject}>
           <p className={styles.projectId}>03</p>
-          <Link href="/project/3" passHref>
-            <div className={styles.projectCard}></div>
-          </Link>
+          <svg
+            viewBox="0 0 406 716"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <Link href="/project/3" passHref>
+              <path
+                id="projectAction2"
+                d="M0.997559 39.5L373.195 1L404.998 673L24.0633 714.5L0.997559 39.5Z"
+                fill="black"
+                fillOpacity="0"
+              />
+            </Link>
+          </svg>
+          <div className={styles.projectCard} id="projectCard2"></div>
           <img src="./Icons habillage/Cadre-2.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-4.svg" alt="Glass" />
-          <p className={styles.projectTitle}>
-            {props.children.projects[2]["name"]}
-          </p>
+          <p className={styles.projectTitle}>{props.projects[2]["name"]}</p>
           <p>
-            {props.children.projects[2]["job"]}
+            {props.projects[2]["job"]}
             <br />
-            {props.children.projects[2]["detail"]}
+            {props.projects[2]["detail"]}
           </p>
         </div>
         <div className={styles.fifthProject}>
           <p className={styles.projectId}>05</p>
-          <Link href="/project/5" passHref>
-            <div className={styles.projectCard}></div>
-          </Link>
+          <svg
+            viewBox="0 0 406 716"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <Link href="/project/5" passHref>
+              <path
+                id="projectAction4"
+                d="M1 39.5L373.197 1L405 673L24.0658 714.5L1 39.5Z"
+                fill="black"
+                fillOpacity="0"
+              />
+            </Link>
+          </svg>
+          <div className={styles.projectCard} id="projectCard4"></div>
           <img src="./Icons habillage/Cadre-4.svg" alt="Arrow" />
           <img src="./Icons habillage/Glass/Glass-6.svg" alt="Glass" />
-          <p className={styles.projectTitle}>
-            {props.children.projects[4]["name"]}
-          </p>
+          <p className={styles.projectTitle}>{props.projects[4]["name"]}</p>
           <p>
-            {props.children.projects[4]["job"]}
+            {props.projects[4]["job"]}
             <br />
-            {props.children.projects[4]["detail"]}
+            {props.projects[4]["detail"]}
           </p>
         </div>
       </div>

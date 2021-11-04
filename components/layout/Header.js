@@ -2,7 +2,7 @@ import Link from "next/link";
 import {useEffect} from "react";
 import styles from "./Header.module.css";
 
-function Header(props) {
+function Header() {
   let date = new Date();
   let time =
     date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) +

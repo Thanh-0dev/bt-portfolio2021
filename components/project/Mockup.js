@@ -4,7 +4,7 @@ function Mockup(props) {
   return (
     <section className={styles.mockup}>
       <img
-        src={`/Projets/${props.children[0].project.id}/Mockup${props.children[1]}.png`}
+        src={`/Projets/${props[0].project.id}/Mockup${props[1]}.png`}
         alt="Mockup"
       />
     </section>

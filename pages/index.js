@@ -20,8 +20,8 @@ function HomePage(props) {
       <Head>
         <title>Bich Trâm Cynthia PHAM | Portfolio</title>
       </Head>
-      <Banner>{props}</Banner>
-      <Project>{props}</Project>
+      <Banner {...props} />
+      <Project {...props} />
       <Footer></Footer>
     </Fragment>
   );

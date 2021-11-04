@@ -4,7 +4,7 @@ function Flag(props) {
   return (
     <section className={styles.flag}>
       <img
-        src={`/Projets/${props.children.project.id}/Flag.png`}
+        src={`/Projets/${props.project.id}/Flag.png`}
         alt="Project example image"
       />
     </section>

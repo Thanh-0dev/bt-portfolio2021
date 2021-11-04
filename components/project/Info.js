@@ -4,15 +4,15 @@ import styles from "./Info.module.css";
 function Info(props) {
   useEffect(() => {
     let adjectives = "";
-    for (let nbAdj in props.children.adj) {
-      adjectives += props.children.adj[nbAdj].adj + "<br />";
+    for (let nbAdj in props.adj) {
+      adjectives += props.adj[nbAdj].adj + "<br />";
     }
     document.getElementById("summary").innerHTML = adjectives;
   });
   return (
     <section className={styles.info}>
       <p id="summary"></p>
-      <p>{props.children.project.info}</p>
+      <p>{props.project.info}</p>
     </section>
   );
 }
