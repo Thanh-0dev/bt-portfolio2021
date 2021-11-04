@@ -4,6 +4,7 @@ import {useState, useEffect} from "react";
 import {useRouter} from "next/router";
 import Layout from "/components/layout/Layout";
 import Loader from "/components/Loader";
+import Transition from "/components/Transition";
 import "/styles/globals.css";
 
 function MyApp({Component, pageProps}) {
@@ -13,24 +14,27 @@ function MyApp({Component, pageProps}) {
     setFirstTime(true);
     setTimeout(() => {
       setFirstTime(false);
-    }, 3000);
+    }, 1500);
   }, []);
 
-  /* const router = useRouter();
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const handleStart = (url) => {
       url !== router.pathname ? setLoading(true) : setLoading(false);
     };
-    const handleComplete = (url) => {
+    setTimeout(() => {
       setLoading(false);
-    };
+    }, 800);
+    /*     const handleComplete = (url) => {
+      setLoading(false);
+    }; */
 
     router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleComplete);
-    router.events.on("routeChangeError", handleComplete);
-  }, [router]); */
+    /*     router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete); */
+  }, [router]);
   return (
     <>
       <Head>
@@ -98,13 +102,11 @@ function MyApp({Component, pageProps}) {
           `,
         }}
       />
-      {firstTime ? (
-        <Loader />
-      ) : (
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      )}
+      {firstTime ? <Loader /> : null}
+      {loading ? <Transition /> : null}
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

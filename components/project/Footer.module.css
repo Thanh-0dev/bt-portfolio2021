@@ -35,7 +35,7 @@
     #d6d6d6 8.39%,
     rgba(214, 214, 214, 0) 100%
   );
-  top: 50px;
+  top: 55px;
   left: clamp(1px, 70.5vw, 1016px);
 }
 

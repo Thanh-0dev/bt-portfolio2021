@@ -14,10 +14,10 @@ function Loader(props) {
         dot += ".";
       }
       buildText.innerHTML = `.tram/digital-designer/building ${dot}`;
-    }, 300);
+    }, 250);
     let percentInterval = setInterval(() => {
       if (percent < 100) {
-        percent += 4;
+        percent += 10;
         percentText.innerHTML = `loader::${percent}%`;
       } else {
         clearInterval(percentInterval);
@@ -27,19 +27,21 @@ function Loader(props) {
   }, []);
   return (
     <section className={styles.loader}>
-      <div className={styles.loadingLine}>
-        <div>
-          <img src="/Loader/loading-line.svg" alt="Loading line" />
+      <div className={styles.loaderContainer}>
+        <div className={styles.loadingLine}>
+          <div>
+            <img src="/Loader/loading-line.svg" alt="Loading line" />
+          </div>
+          <div>
+            <img src="/Loader/loading-line.svg" alt="Loading line" />
+          </div>
         </div>
-        <div>
-          <img src="/Loader/loading-line.svg" alt="Loading line" />
-        </div>
-      </div>
-      <div className={styles.loadingDiv}>
-        <img src="/Loader/loading-image.jpeg" alt="Loading image" />
-        <div className={styles.loadingText}>
-          <p id="loaderBuild">.tram/digital-designer/building </p>
-          <p id="loaderPercent">loader::0%</p>
+        <div className={styles.loadingDiv}>
+          <img src="/Loader/loading-image.jpeg" alt="Loading image" />
+          <div className={styles.loadingText}>
+            <p id="loaderBuild">.tram/digital-designer/building </p>
+            <p id="loaderPercent">loader::0%</p>
+          </div>
         </div>
       </div>
     </section>

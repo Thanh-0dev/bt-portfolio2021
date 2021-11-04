@@ -1,6 +1,5 @@
 import {useState, useEffect} from "react";
 import Header from "./Header";
-import styles from "./Layout.module.css";
 
 function Layout(props) {
   const [firstLoad, setFirstLoad] = useState(true);
@@ -8,7 +7,7 @@ function Layout(props) {
     setFirstLoad(false);
   }, []);
   return (
-    <div className={styles.container}>
+    <div>
       {!firstLoad ? <Header /> : null}
       <main {...props} />
     </div>

@@ -46,16 +46,21 @@ function Banner(props) {
           <div className={styles.desc}>
             <p>{props.project.descTitle}</p>
             <p>{props.project.desc}</p>
-            <Link href={props.project.link} passHref>
-              <div className={styles.link}>
-                <p>see live</p>
-                <img
-                  src="/Icons habillage/link/arrow-up-right.svg"
-                  alt="Arrow up"
-                />
-                <img src="/Icons habillage/see-live-line.svg" alt="Underline" />
-              </div>
-            </Link>
+            {props.project.link ? (
+              <Link href={props.project.link} passHref>
+                <div className={styles.link}>
+                  <p>see live</p>
+                  <img
+                    src="/Icons habillage/link/arrow-up-right.svg"
+                    alt="Arrow up"
+                  />
+                  <img
+                    src="/Icons habillage/see-live-line.svg"
+                    alt="Underline"
+                  />
+                </div>
+              </Link>
+            ) : null}
           </div>
         </div>
       </div>
