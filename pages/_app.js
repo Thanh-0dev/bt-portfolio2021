@@ -14,7 +14,7 @@ function MyApp({Component, pageProps}) {
     setFirstTime(true);
     setTimeout(() => {
       setFirstTime(false);
-    }, 1500);
+    }, 2000);
   }, []);
 
   const router = useRouter();
