@@ -328,6 +328,7 @@
 }
 
 .sixthProject .projectCard.hover {
+  animation: colorImage5 0.3s;
   background: url("/Image Home/Hover/6.jpeg") center no-repeat;
   background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
 }
