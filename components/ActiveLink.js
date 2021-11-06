@@ -8,7 +8,7 @@ function ActiveLink({children, href}) {
     event.preventDefault();
     setTimeout(() => {
       router.push(href);
-    }, 400);
+    }, 500);
   };
 
   return (
