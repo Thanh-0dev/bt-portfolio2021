@@ -1,11 +1,22 @@
+import {useEffect} from "react";
 import styles from "./Banner.module.css";
 import ActiveLink from "/components/ActiveLink";
 
 function Banner(props) {
+  useEffect(() => {
+    const action = document.getElementById("projectAction");
+    const banner = document.getElementById("projectBanner");
+    action.addEventListener("mouseover", () => {
+      banner.classList.add(styles.hover);
+    });
+    action.addEventListener("mouseleave", () => {
+      banner.classList.remove(styles.hover);
+    });
+  });
   return (
     <section className={styles.banner}>
       <ActiveLink href="/project/1">
-        <div className={styles.projectAction}></div>
+        <div className={styles.projectAction} id="projectAction"></div>
       </ActiveLink>
       <img
         className={styles.glassOne}
@@ -26,7 +37,7 @@ function Banner(props) {
           alt="Arrow"
         />
         <div className={styles.bannerColumn}>
-          <div className={styles.projectImg}></div>
+          <div className={styles.projectImg} id="projectBanner"></div>
           <p className={styles.title}>{props.projects[0]["name"]}</p>
           <p>
             {props.projects[0]["job"]}

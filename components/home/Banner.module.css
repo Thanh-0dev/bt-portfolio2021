@@ -75,7 +75,7 @@
   transform: rotate(2deg);
 }
 
-.projectAction:hover ~ .bannerRow .projectImg {
+.projectImg.hover {
   animation: colorImage 0.3s;
   background: url("/Image Home/Hover/1.jpeg") center no-repeat;
   background-size: clamp(1px, 85vw, 1227px) auto;
