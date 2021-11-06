@@ -1,4 +1,4 @@
-import Link from "next/link";
+import ActiveLink from "/components/ActiveLink";
 import {useEffect} from "react";
 import styles from "./Header.module.css";
 
@@ -22,10 +22,10 @@ function Header() {
     <header className={styles.header}>
       <ul>
         <li>
-          <Link href="/">.tram/workshop</Link>
+          <ActiveLink href="/">.tram/workshop</ActiveLink>
         </li>
         <li>
-          <Link href="/about">/statistics</Link>
+          <ActiveLink href="/about">/statistics</ActiveLink>
         </li>
       </ul>
       <div className={styles.info}>

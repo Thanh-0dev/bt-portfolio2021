@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import Link from "next/link";
+import ActiveLink from "/components/ActiveLink";
 
 function Footer(props) {
   return (
@@ -29,9 +29,9 @@ function Footer(props) {
           Nice to meet you. I’m available for freelance and new opportunities.
         </p>
         <div className={styles.contact}>
-          <Link href="#">/email</Link>
-          <Link href="#">/linkedIn</Link>
-          <Link href="#">/instagram</Link>
+          <ActiveLink href="#">/email</ActiveLink>
+          <ActiveLink href="#">/ActiveLinkedIn</ActiveLink>
+          <ActiveLink href="#">/instagram</ActiveLink>
         </div>
       </div>
     </section>

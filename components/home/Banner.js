@@ -1,12 +1,12 @@
-import Link from "next/link";
 import styles from "./Banner.module.css";
+import ActiveLink from "/components/ActiveLink";
 
 function Banner(props) {
   return (
     <section className={styles.banner}>
-      <Link href="/project/1" passHref>
+      <ActiveLink href="/project/1">
         <div className={styles.projectAction}></div>
-      </Link>
+      </ActiveLink>
       <img
         className={styles.glassOne}
         src="/Icons habillage/Glass/Glass-1.svg"

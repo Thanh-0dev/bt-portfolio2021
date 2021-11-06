@@ -17,24 +17,19 @@ function MyApp({Component, pageProps}) {
     }, 2000);
   }, []);
 
-  const router = useRouter();
+  /* Page transition effect */
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
-    const handleStart = (url) => {
-      url !== router.pathname ? setLoading(true) : setLoading(false);
-    };
-    setTimeout(() => {
-      setLoading(false);
-    }, 800);
-    /*     const handleComplete = (url) => {
-      setLoading(false);
-    }; */
-
-    router.events.on("routeChangeStart", handleStart);
-    /*     router.events.on("routeChangeComplete", handleComplete);
-    router.events.on("routeChangeError", handleComplete); */
-  }, [router]);
+    const links = document.querySelectorAll("a");
+    for (let link = 0; link < links.length; link++) {
+      links[link].addEventListener("click", () => {
+        setLoading(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1200);
+      });
+    }
+  });
   return (
     <>
       <Head>

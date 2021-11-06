@@ -1,4 +1,4 @@
-import Link from "next/link";
+import ActiveLink from "/components/ActiveLink";
 import {useEffect} from "react";
 import styles from "./Project.module.css";
 
@@ -70,14 +70,14 @@ function Project(props) {
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <Link href="/project/2" passHref>
+            <ActiveLink href="/project/2">
               <path
                 id="projectAction1"
                 d="M403 39.527L32.6456 1L1.00024 673.471L380.049 715L403 39.527Z"
                 fill="black"
                 fillOpacity="0"
               />
-            </Link>
+            </ActiveLink>
           </svg>
           <div className={styles.projectCard} id="projectCard1"></div>
           <img src="./Icons habillage/Cadre-1.svg" alt="Arrow" />
@@ -97,14 +97,14 @@ function Project(props) {
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <Link href="/project/4" passHref>
+            <ActiveLink href="/project/4">
               <path
                 id="projectAction3"
                 d="M404 39.5206L32.7242 0.993652L1.00012 673.465L380.991 714.994L404 39.5206Z"
                 fill="black"
                 fillOpacity="0"
               />
-            </Link>
+            </ActiveLink>
           </svg>
           <div className={styles.projectCard} id="projectCard3"></div>
           <img src="./Icons habillage/Cadre-3.svg" alt="Arrow" />
@@ -124,14 +124,14 @@ function Project(props) {
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <Link href="/project/6" passHref>
+            <ActiveLink href="/project/6">
               <path
                 id="projectAction5"
                 d="M404.001 39.5275L32.7255 1.00049L1.00146 673.471L380.993 715L404.001 39.5275Z"
                 fill="black"
                 fillOpacity="0"
               />
-            </Link>
+            </ActiveLink>
           </svg>
           <div className={styles.projectCard} id="projectCard5"></div>
           <img src="./Icons habillage/Cadre-5.svg" alt="Arrow" />
@@ -159,14 +159,14 @@ function Project(props) {
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <Link href="/project/3" passHref>
+            <ActiveLink href="/project/3">
               <path
                 id="projectAction2"
                 d="M0.997559 39.5L373.195 1L404.998 673L24.0633 714.5L0.997559 39.5Z"
                 fill="black"
                 fillOpacity="0"
               />
-            </Link>
+            </ActiveLink>
           </svg>
           <div className={styles.projectCard} id="projectCard2"></div>
           <img src="./Icons habillage/Cadre-2.svg" alt="Arrow" />
@@ -186,14 +186,14 @@ function Project(props) {
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
-            <Link href="/project/5" passHref>
+            <ActiveLink href="/project/5">
               <path
                 id="projectAction4"
                 d="M1 39.5L373.197 1L405 673L24.0658 714.5L1 39.5Z"
                 fill="black"
                 fillOpacity="0"
               />
-            </Link>
+            </ActiveLink>
           </svg>
           <div className={styles.projectCard} id="projectCard4"></div>
           <img src="./Icons habillage/Cadre-4.svg" alt="Arrow" />
