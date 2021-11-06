@@ -1,3 +1,4 @@
+import Head from "next/head";
 import ActiveLink from "/components/ActiveLink";
 import {useEffect} from "react";
 import styles from "./Project.module.css";
@@ -51,6 +52,13 @@ function Project(props) {
   });
   return (
     <section className={styles.project}>
+      <Head>
+        <link rel="preload" href="/Image Home/Hover/2.jpeg" as="image" />
+        <link rel="preload" href="/Image Home/Hover/3.jpeg" as="image" />
+        <link rel="preload" href="/Image Home/Hover/4.jpeg" as="image" />
+        <link rel="preload" href="/Image Home/Hover/5.jpeg" as="image" />
+        <link rel="preload" href="/Image Home/Hover/6.jpeg" as="image" />
+      </Head>
       <img
         className={styles.blur}
         src="./Icons habillage/Blur.png"

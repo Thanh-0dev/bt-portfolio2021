@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
 import {useState, useEffect} from "react";
-import {useRouter} from "next/router";
 import Layout from "/components/layout/Layout";
 import Loader from "/components/Loader";
 import Transition from "/components/Transition";

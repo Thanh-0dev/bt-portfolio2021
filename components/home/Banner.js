@@ -1,3 +1,4 @@
+import Head from "next/head";
 import {useEffect} from "react";
 import styles from "./Banner.module.css";
 import ActiveLink from "/components/ActiveLink";
@@ -15,6 +16,9 @@ function Banner(props) {
   });
   return (
     <section className={styles.banner}>
+      <Head>
+        <link rel="preload" href="/Image Home/Hover/1.jpeg" as="image" />
+      </Head>
       <ActiveLink href="/project/1">
         <div className={styles.projectAction} id="projectAction"></div>
       </ActiveLink>

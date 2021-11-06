@@ -1,5 +1,6 @@
 import {useEffect} from "react";
 import styles from "./Loader.module.css";
+import Image from "next/image";
 
 function Loader(props) {
   useEffect(() => {
@@ -37,7 +38,13 @@ function Loader(props) {
           </div>
         </div>
         <div className={styles.loadingDiv}>
-          <img src="/Loader/loading-image.jpeg" alt="Loading image" />
+          <Image
+            src="/Loader/loading-image.jpeg"
+            alt="Loading image"
+            width={260}
+            height={260}
+            priority
+          />
           <div className={styles.loadingText}>
             <p id="loaderBuild">.tram/digital-designer/building </p>
             <p id="loaderPercent">loader::0%</p>
