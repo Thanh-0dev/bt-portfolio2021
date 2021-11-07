@@ -14,7 +14,7 @@
   width: clamp(1px, 65vw, 940px);
   height: clamp(1px, 33vw, 484px);
   transform: rotate(2deg);
-  z-index: 9999;
+  z-index: 9000;
 }
 
 .glassOne {
