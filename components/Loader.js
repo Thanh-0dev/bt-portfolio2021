@@ -1,3 +1,4 @@
+import Head from "next/head";
 import {useEffect} from "react";
 import styles from "./Loader.module.css";
 import Image from "next/image";
@@ -28,6 +29,9 @@ function Loader(props) {
   }, []);
   return (
     <section className={styles.loader}>
+      <Head>
+        <link rel="preload" href="/Loader/loading-image.jpeg" as="image" />
+      </Head>
       <div className={styles.loaderContainer}>
         <div className={styles.loadingLine}>
           <div>
