@@ -1,366 +1,367 @@
-.project {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 1192px;
-  margin: 0 clamp(64px, 8.6vw, 124px);
-}
+@media only screen and (min-width: 650px) {
+  .project {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    row-gap: 180px;
+    column-gap: clamp(90px, 12.5vw, 180px);
+    justify-content: space-between;
+    max-width: 1192px;
+    margin: 0 clamp(64px, 8.6vw, 124px);
+  }
 
-.blur {
-  position: absolute;
-  width: clamp(1px, 79vw, 1135px);
-  top: clamp(1px, 45vw, 650px);
-  left: clamp(1px, 10vw, 150px);
-  transform: rotate(180deg);
-  z-index: -2;
-}
+  .blur {
+    position: absolute;
+    width: clamp(1px, 79vw, 1135px);
+    top: clamp(1px, 45vw, 650px);
+    left: clamp(1px, 10vw, 150px);
+    transform: rotate(180deg);
+    z-index: -2;
+  }
 
-.projectId {
-  color: #767676;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
+  .projectId {
+    color: #767676;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 
-.projectTitle {
-  margin: 16px 0;
-  font-size: 30px;
-}
+  .projectTitle {
+    margin: 16px 0;
+    font-size: 24px;
+  }
 
-.project p:not(.projectId, .projectTitle, .sixthProject > p) {
-  margin-bottom: 70px;
-  text-transform: uppercase;
-  line-height: 20px;
-}
+  .project p:not(.projectId, .projectTitle, .sixthProject > p) {
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    line-height: 20px;
+  }
 
-.sixthProject > p:not(.projectId, .projectTitle) {
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  line-height: 20px;
-}
+  .sixthProject > p:not(.projectId, .projectTitle) {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    line-height: 20px;
+  }
 
-.left {
-  position: relative;
-}
+  .left {
+    position: relative;
+  }
 
-.left .projectCard,
-.left p:not(.projectId) {
-  margin-left: clamp(1px, 7vw, 100px);
-}
+  .left .projectCard,
+  .left p:not(.projectId) {
+    margin-left: clamp(1px, 7vw, 100px);
+  }
 
-.right {
-  position: relative;
-  margin-top: 450px;
-}
+  .right {
+    position: relative;
+    margin-top: 450px;
+  }
 
-.right .projectCard {
-  margin-right: clamp(1px, 7vw, 100px);
-  margin-left: auto;
-}
+  .shadowLeft {
+    position: absolute;
+    z-index: -5;
+    left: clamp(1px, 7vw, 100px);
+    height: clamp(1px, 185vw, 2662px);
+    top: clamp(-400px, -27.8vw, -1px);
+  }
 
-.right .projectId {
-  margin-right: clamp(1px, 33.5vw, 483px);
-  margin-left: auto;
-}
+  .shadowRight {
+    position: absolute;
+    z-index: -5;
+    height: clamp(1px, 119vw, 1714px);
+    top: clamp(-500px, -34.7vw, -1px);
+  }
 
-.shadowLeft {
-  position: absolute;
-  z-index: -5;
-  top: clamp(-750px, -52vw, -1px);
-  left: clamp(1px, 14vw, 200px);
-  height: clamp(1px, 231vw, 3329px);
-}
+  /* Second project */
 
-.shadowRight {
-  position: absolute;
-  z-index: -5;
-  top: clamp(-1150px, -80vw, -1px);
-  height: clamp(1px, 231vw, 3329px);
-}
+  .secondProject {
+    position: relative;
+  }
 
-/* Second project */
+  .secondProject svg {
+    position: absolute;
+    left: clamp(1px, 7vw, 100px);
+    width: clamp(1px, 28vw, 404px);
+    height: clamp(1px, 49.7vw, 716px);
+    z-index: 9000;
+  }
 
-.secondProject {
-  position: relative;
-}
-
-.secondProject svg {
-  position: absolute;
-  left: clamp(1px, 7vw, 100px);
-  width: clamp(1px, 28vw, 404px);
-  height: clamp(1px, 49.7vw, 716px);
-  z-index: 9000;
-}
-
-.secondProject .projectCard {
-  width: clamp(1px, 28vw, 402px);
-  height: clamp(1px, 49.6vw, 714px);
-  background: url("/Image Home/2.jpeg") center no-repeat;
-  background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
-  mask: url("/Image Home/SVG/home-1.svg") no-repeat;
-  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-}
-
-.secondProject .projectCard.hover {
-  animation: colorImage1 0.3s;
-  background: url("/Image Home/Hover/2.jpeg") center no-repeat;
-  background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
-}
-
-@keyframes colorImage1 {
-  0% {
+  .secondProject .projectCard {
+    width: clamp(1px, 28vw, 402px);
+    height: clamp(1px, 49.6vw, 714px);
     background: url("/Image Home/2.jpeg") center no-repeat;
     background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
+    mask: url("/Image Home/SVG/home-1.svg") no-repeat;
+    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
   }
-  100% {
+
+  .secondProject .projectCard.hover {
+    animation: colorImage1 0.3s;
     background: url("/Image Home/Hover/2.jpeg") center no-repeat;
     background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
   }
-}
 
-.secondProject > img:nth-of-type(1) {
-  position: absolute;
-  height: clamp(1px, 48.4vw, 697px);
-  top: clamp(1px, 2.4vw, 35px);
-  left: clamp(1px, 7vw, 100px);
-}
+  @keyframes colorImage1 {
+    0% {
+      background: url("/Image Home/2.jpeg") center no-repeat;
+      background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
+    }
+    100% {
+      background: url("/Image Home/Hover/2.jpeg") center no-repeat;
+      background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
+    }
+  }
 
-.secondProject > img:nth-of-type(2) {
-  height: clamp(1px, 16vw, 230px);
-  width: clamp(1px, 9.3vw, 134px);
-  position: absolute;
-  top: clamp(1px, 1.7vw, 25px);
-  left: clamp(1px, 29.5vw, 425px);
-  z-index: -1;
-}
+  .secondProject > img:nth-of-type(1) {
+    position: absolute;
+    height: clamp(1px, 48.4vw, 697px);
+    top: clamp(1px, 2.4vw, 35px);
+    left: clamp(1px, 7vw, 100px);
+  }
 
-/* Third project */
+  .secondProject > img:nth-of-type(2) {
+    height: clamp(1px, 16vw, 230px);
+    width: clamp(1px, 9.3vw, 134px);
+    position: absolute;
+    top: clamp(1px, 1.7vw, 25px);
+    left: clamp(1px, 29.5vw, 425px);
+    z-index: -1;
+  }
 
-.thirdProject {
-  position: relative;
-}
+  /* Third project */
 
-.thirdProject svg {
-  position: absolute;
-  right: clamp(1px, 7vw, 100px);
-  width: clamp(1px, 28vw, 404px);
-  height: clamp(1px, 49.7vw, 716px);
-  left: auto;
-  z-index: 9000;
-}
+  .thirdProject {
+    position: relative;
+  }
 
-.thirdProject .projectCard {
-  width: clamp(1px, 28vw, 402px);
-  height: clamp(1px, 49.6vw, 714px);
-  background: url("/Image Home/3.jpeg") center no-repeat;
-  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
-  mask: url("/Image Home/SVG/home-2.svg") no-repeat;
-  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-}
+  .thirdProject svg {
+    position: absolute;
+    right: clamp(1px, 7vw, 100px);
+    width: clamp(1px, 28vw, 404px);
+    height: clamp(1px, 49.7vw, 716px);
+    left: auto;
+    z-index: 9000;
+  }
 
-.thirdProject .projectCard.hover {
-  animation: colorImage2 0.3s;
-  background: url("/Image Home/Hover/3.jpeg") center no-repeat;
-  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
-}
-
-@keyframes colorImage2 {
-  0% {
+  .thirdProject .projectCard {
+    width: clamp(1px, 28vw, 402px);
+    height: clamp(1px, 49.6vw, 714px);
     background: url("/Image Home/3.jpeg") center no-repeat;
     background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
+    mask: url("/Image Home/SVG/home-2.svg") no-repeat;
+    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
   }
-  100% {
+
+  .thirdProject .projectCard.hover {
+    animation: colorImage2 0.3s;
     background: url("/Image Home/Hover/3.jpeg") center no-repeat;
     background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
   }
-}
 
-.thirdProject > img:nth-of-type(1) {
-  position: absolute;
-  top: clamp(1px, 2.7vw, 40px);
-  width: clamp(1px, 26vw, 373px);
-}
+  @keyframes colorImage2 {
+    0% {
+      background: url("/Image Home/3.jpeg") center no-repeat;
+      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
+    }
+    100% {
+      background: url("/Image Home/Hover/3.jpeg") center no-repeat;
+      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
+    }
+  }
 
-.thirdProject > img:nth-of-type(2) {
-  height: clamp(1px, 18.2vw, 263px);
-  width: clamp(1px, 17.4vw, 251px);
-  position: absolute;
-  top: clamp(1px, 7vw, 100px);
-  right: clamp(1px, 0.7vw, 10px);
-  z-index: -1;
-}
+  .thirdProject > img:nth-of-type(1) {
+    position: absolute;
+    top: clamp(1px, 2.7vw, 40px);
+    width: clamp(1px, 26vw, 373px);
+  }
 
-/* Fourth project */
+  .thirdProject > img:nth-of-type(2) {
+    height: clamp(1px, 18.2vw, 263px);
+    width: clamp(1px, 17.4vw, 251px);
+    position: absolute;
+    top: clamp(1px, 7vw, 100px);
+    right: clamp(1px, 0.7vw, 10px);
+    z-index: -1;
+  }
 
-.fourthProject {
-  position: relative;
-}
+  /* Fourth project */
 
-.fourthProject svg {
-  position: absolute;
-  left: clamp(1px, 7vw, 100px);
-  width: clamp(1px, 28vw, 404px);
-  height: clamp(1px, 49.7vw, 716px);
-  z-index: 9000;
-}
+  .fourthProject {
+    position: relative;
+  }
 
-.fourthProject .projectCard {
-  width: clamp(1px, 28vw, 402px);
-  height: clamp(1px, 49.6vw, 714px);
-  background: url("/Image Home/4.jpeg") center no-repeat;
-  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-  mask: url("/Image Home/SVG/home-3.svg") no-repeat;
-  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-}
+  .fourthProject svg {
+    position: absolute;
+    left: clamp(1px, 7vw, 100px);
+    width: clamp(1px, 28vw, 404px);
+    height: clamp(1px, 49.7vw, 716px);
+    z-index: 9000;
+  }
 
-.fourthProject .projectCard.hover {
-  animation: colorImage3 0.3s;
-  background: url("/Image Home/Hover/4.jpeg") center no-repeat;
-  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-}
-
-@keyframes colorImage3 {
-  0% {
+  .fourthProject .projectCard {
+    width: clamp(1px, 28vw, 402px);
+    height: clamp(1px, 49.6vw, 714px);
     background: url("/Image Home/4.jpeg") center no-repeat;
     background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
+    mask: url("/Image Home/SVG/home-3.svg") no-repeat;
+    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
   }
-  100% {
+
+  .fourthProject .projectCard.hover {
+    animation: colorImage3 0.3s;
     background: url("/Image Home/Hover/4.jpeg") center no-repeat;
     background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
   }
-}
 
-.fourthProject > img:nth-of-type(1) {
-  position: absolute;
-  top: clamp(1px, 4.1vw, 60px);
-  left: clamp(1px, 32.6vw, 470px);
-  height: clamp(1px, 49.3vw, 710px);
-}
+  @keyframes colorImage3 {
+    0% {
+      background: url("/Image Home/4.jpeg") center no-repeat;
+      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
+    }
+    100% {
+      background: url("/Image Home/Hover/4.jpeg") center no-repeat;
+      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
+    }
+  }
 
-.fourthProject > img:nth-of-type(2) {
-  height: clamp(1px, 22vw, 316px);
-  width: clamp(1px, 20.8vw, 300px);
-  position: absolute;
-  top: clamp(-85px, -5.9vw, -1px);
-  left: clamp(1px, 16.6vw, 240px);
-  z-index: -1;
-}
+  .fourthProject > img:nth-of-type(1) {
+    position: absolute;
+    top: clamp(1px, 4.1vw, 60px);
+    left: clamp(1px, 32.6vw, 470px);
+    height: clamp(1px, 49.3vw, 710px);
+  }
 
-/* Fifth project */
+  .fourthProject > img:nth-of-type(2) {
+    height: clamp(1px, 22vw, 316px);
+    width: clamp(1px, 20.8vw, 300px);
+    position: absolute;
+    top: clamp(-85px, -5.9vw, -1px);
+    left: clamp(1px, 16.6vw, 240px);
+    z-index: -1;
+  }
 
-.fifthProject {
-  position: relative;
-}
+  /* Fifth project */
 
-.fifthProject svg {
-  position: absolute;
-  right: clamp(1px, 7vw, 100px);
-  left: auto;
-  width: clamp(1px, 28vw, 404px);
-  height: clamp(1px, 49.7vw, 716px);
-  z-index: 9000;
-}
+  .fifthProject {
+    position: relative;
+  }
 
-.fifthProject .projectCard {
-  width: clamp(1px, 28vw, 402px);
-  height: clamp(1px, 49.6vw, 714px);
-  background: url("/Image Home/5.jpeg") center no-repeat;
-  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
-  mask: url("/Image Home/SVG/home-4.svg") no-repeat;
-  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-}
+  .fifthProject svg {
+    position: absolute;
+    right: clamp(1px, 7vw, 100px);
+    left: auto;
+    width: clamp(1px, 28vw, 404px);
+    height: clamp(1px, 49.7vw, 716px);
+    z-index: 9000;
+  }
 
-.fifthProject .projectCard.hover {
-  animation: colorImage4 0.3s;
-  background: url("/Image Home/Hover/5.jpeg") center no-repeat;
-  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
-}
-
-@keyframes colorImage4 {
-  0% {
+  .fifthProject .projectCard {
+    width: clamp(1px, 28vw, 402px);
+    height: clamp(1px, 49.6vw, 714px);
     background: url("/Image Home/5.jpeg") center no-repeat;
     background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
+    mask: url("/Image Home/SVG/home-4.svg") no-repeat;
+    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
   }
-  100% {
+
+  .fifthProject .projectCard.hover {
+    animation: colorImage4 0.3s;
     background: url("/Image Home/Hover/5.jpeg") center no-repeat;
     background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
   }
-}
 
-.fifthProject > img:nth-of-type(1) {
-  position: absolute;
-  top: clamp(1px, 49.3vw, 710px);
-  left: clamp(1px, 0.5vw, 8px);
-  width: clamp(1px, 27.6vw, 397px);
-}
+  @keyframes colorImage4 {
+    0% {
+      background: url("/Image Home/5.jpeg") center no-repeat;
+      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
+    }
+    100% {
+      background: url("/Image Home/Hover/5.jpeg") center no-repeat;
+      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
+    }
+  }
 
-.fifthProject > img:nth-of-type(2) {
-  height: clamp(1px, 17.1vw, 246px);
-  width: clamp(1px, 12.8vw, 185px);
-  position: absolute;
-  top: clamp(-100px, -6.9vw, -1px);
-  right: clamp(1px, 3.5vw, 50px);
-  z-index: -1;
-  transform: rotate(-15deg);
-}
+  .fifthProject > img:nth-of-type(1) {
+    position: absolute;
+    top: clamp(1px, 49.3vw, 710px);
+    left: clamp(1px, 0.5vw, 8px);
+    width: clamp(1px, 27.6vw, 397px);
+  }
 
-/* Sixth project */
+  .fifthProject > img:nth-of-type(2) {
+    height: clamp(1px, 17.1vw, 246px);
+    width: clamp(1px, 12.8vw, 185px);
+    position: absolute;
+    top: clamp(-100px, -6.9vw, -1px);
+    right: clamp(1px, 3.5vw, 50px);
+    z-index: -1;
+    transform: rotate(-15deg);
+  }
 
-.sixthProject {
-  position: relative;
-}
+  /* Sixth project */
 
-.sixthProject svg {
-  position: absolute;
-  left: clamp(1px, 7vw, 100px);
-  width: clamp(1px, 28vw, 404px);
-  height: clamp(1px, 49.7vw, 716px);
-  z-index: 9000;
-}
+  .sixthProject {
+    position: relative;
+    display: none;
+  }
 
-.sixthProject .projectCard {
-  width: clamp(1px, 28vw, 402px);
-  height: clamp(1px, 49.6vw, 714px);
-  background: url("/Image Home/6.jpeg") center no-repeat;
-  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-  mask: url("/Image Home/SVG/home-5.svg") no-repeat;
-  mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-}
+  .sixthProject svg {
+    position: absolute;
+    left: clamp(1px, 7vw, 100px);
+    width: clamp(1px, 28vw, 404px);
+    height: clamp(1px, 49.7vw, 716px);
+    z-index: 9000;
+  }
 
-.sixthProject .projectCard.hover {
-  animation: colorImage5 0.3s;
-  background: url("/Image Home/Hover/6.jpeg") center no-repeat;
-  background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-}
-
-@keyframes colorImage5 {
-  0% {
+  .sixthProject .projectCard {
+    width: clamp(1px, 28vw, 402px);
+    height: clamp(1px, 49.6vw, 714px);
     background: url("/Image Home/6.jpeg") center no-repeat;
     background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
+    mask: url("/Image Home/SVG/home-5.svg") no-repeat;
+    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
   }
-  100% {
+
+  .sixthProject .projectCard.hover {
+    animation: colorImage5 0.3s;
     background: url("/Image Home/Hover/6.jpeg") center no-repeat;
     background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
   }
+
+  @keyframes colorImage5 {
+    0% {
+      background: url("/Image Home/6.jpeg") center no-repeat;
+      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
+    }
+    100% {
+      background: url("/Image Home/Hover/6.jpeg") center no-repeat;
+      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
+    }
+  }
+
+  .sixthProject > img:nth-of-type(1) {
+    position: absolute;
+    top: clamp(1px, 2.8vw, 40px);
+    left: clamp(1px, 4.2vw, 60px);
+    height: clamp(1px, 49.4vw, 711px);
+  }
+
+  .sixthProject > img:nth-of-type(2) {
+    height: clamp(1px, 22vw, 316px);
+    width: clamp(1px, 20.8vw, 300px);
+    position: absolute;
+    top: clamp(1px, 28.3vw, 408px);
+    left: clamp(-75px, -5.2vw, -1px);
+    z-index: -1;
+  }
 }
 
-.sixthProject > img:nth-of-type(1) {
-  position: absolute;
-  top: clamp(1px, 2.8vw, 40px);
-  left: clamp(1px, 4.2vw, 60px);
-  height: clamp(1px, 49.4vw, 711px);
+@media only screen and (min-width: 900px) {
+  .projectTitle {
+    font-size: 30px;
+  }
 }
 
-.sixthProject > img:nth-of-type(2) {
-  height: clamp(1px, 22vw, 316px);
-  width: clamp(1px, 20.8vw, 300px);
-  position: absolute;
-  top: clamp(1px, 28.3vw, 408px);
-  left: clamp(-75px, -5.2vw, -1px);
-  z-index: -1;
-}
-
-@media (min-width: 1441px) {
+@media only screen and (min-width: 1441px) {
   .project {
     margin: 0 auto 100px auto;
   }

@@ -1,7 +1,6 @@
 import styles from "./Footer.module.css";
-import ActiveLink from "/components/ActiveLink";
 
-function Footer(props) {
+function Footer() {
   return (
     <section className={styles.footer}>
       <img
@@ -29,9 +28,26 @@ function Footer(props) {
           Nice to meet you. I’m available for freelance and new opportunities.
         </p>
         <div className={styles.contact}>
-          <ActiveLink href="#">/email</ActiveLink>
-          <ActiveLink href="#">/ActiveLinkedIn</ActiveLink>
-          <ActiveLink href="#">/instagram</ActiveLink>
+          <a
+            href="mailto:bichtrampham.design@gmail.com"
+            rel="noreferrer noopener nofollow"
+          >
+            /email
+          </a>
+          <a
+            href="https://www.linkedin.com/in/bichtrampham/"
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+          >
+            /linkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/tram.inprogress/"
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+          >
+            /instagram
+          </a>
         </div>
       </div>
     </section>

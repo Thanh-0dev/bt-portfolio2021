@@ -53,6 +53,11 @@ function Project(props) {
   return (
     <section className={styles.project}>
       <Head>
+        <link rel="preload" href="/Image Home/2.jpeg" as="image" />
+        <link rel="preload" href="/Image Home/3.jpeg" as="image" />
+        <link rel="preload" href="/Image Home/4.jpeg" as="image" />
+        <link rel="preload" href="/Image Home/5.jpeg" as="image" />
+        <link rel="preload" href="/Image Home/6.jpeg" as="image" />
         <link rel="preload" href="/Image Home/Hover/2.jpeg" as="image" />
         <link rel="preload" href="/Image Home/Hover/3.jpeg" as="image" />
         <link rel="preload" href="/Image Home/Hover/4.jpeg" as="image" />

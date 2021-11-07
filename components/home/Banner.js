@@ -17,6 +17,7 @@ function Banner(props) {
   return (
     <section className={styles.banner}>
       <Head>
+        <link rel="preload" href="/Image Home/1.jpeg" as="image" />
         <link rel="preload" href="/Image Home/Hover/1.jpeg" as="image" />
       </Head>
       <ActiveLink href="/project/1">

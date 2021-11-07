@@ -1,113 +1,125 @@
-.banner {
-  display: flex;
-  flex-direction: column;
-  max-width: 1192px;
-  margin: 0 clamp(64px, 8.6vw, 124px);
-  position: relative;
+@media only screen and (min-width: 650px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    max-width: 1192px;
+    margin: 0 clamp(64px, 8.6vw, 124px);
+    position: relative;
+  }
+
+  .upperArrow {
+    position: absolute;
+    height: clamp(1px, 1.2vw, 18px);
+    top: clamp(-17px, -1.2vw, -1px);
+  }
+
+  .bannerImg {
+    width: 104vw;
+    height: clamp(1px, 34.7vw, 500px);
+    object-fit: cover;
+    transform: rotate(1deg);
+    margin: clamp(1px, 0.7vw, 10px) 0 60px clamp(-154px, -10.7vw, -64px);
+  }
+
+  .underBanner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 19px;
+    height: clamp(1px, 33.4vw, 484px);
+    margin-top: clamp(-190px, -13.2vw, -60px);
+    margin-left: clamp(-10px, -0.7vw, -1px);
+    z-index: 1;
+  }
+
+  .glass {
+    position: absolute;
+    z-index: -1;
+    width: clamp(1px, 66vw, 951px);
+    height: clamp(1px, 63vw, 908px);
+    margin-left: clamp(1px, 35vw, 505px);
+    margin-top: clamp(1px, 5.5vw, 80px);
+  }
+
+  .flex {
+    margin-left: clamp(1px, 7vw, 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .title p:nth-of-type(1) {
+    font-size: 30px;
+  }
+
+  .title p:nth-of-type(2) {
+    text-transform: uppercase;
+    margin-bottom: 44px;
+    margin-top: 16px;
+    line-height: 20px;
+  }
+
+  .title p:nth-of-type(3) {
+    font-size: 32px;
+    color: #585858;
+    line-height: 46px;
+    white-space: nowrap;
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 128px 0 120px 0px;
+  }
+
+  .desc > p:nth-of-type(1) {
+    font-size: 50px;
+  }
+
+  .desc p:nth-of-type(2) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+
+  .desc a {
+    margin-bottom: 120px;
+  }
+
+  .link {
+    display: flex;
+    position: relative;
+    width: 115px;
+  }
+
+  .link p {
+    font-size: 24px;
+  }
+
+  .link img:nth-of-type(1) {
+    margin-left: 4px;
+  }
+
+  .link img:nth-of-type(2) {
+    position: absolute;
+    top: 30px;
+  }
 }
 
-.upperArrow {
-  position: absolute;
-  height: clamp(1px, 1.2vw, 18px);
-  top: clamp(-17px, -1.2vw, -1px);
-}
-
-.bannerImg {
-  width: 104vw;
-  height: clamp(1px, 34.7vw, 500px);
-  object-fit: cover;
-  transform: rotate(1deg);
-  margin: clamp(1px, 0.7vw, 10px) 0 60px clamp(-154px, -10.7vw, -64px);
-}
-
-.underBanner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.arrow {
-  position: absolute;
-  width: 19px;
-  height: clamp(1px, 33.4vw, 484px);
-  margin-top: clamp(-190px, -13.2vw, -60px);
-  margin-left: clamp(-10px, -0.7vw, -1px);
-  z-index: 1;
-}
-
-.glass {
-  position: absolute;
-  z-index: -1;
-  width: clamp(1px, 66vw, 951px);
-  height: clamp(1px, 63vw, 908px);
-  margin-left: clamp(1px, 35vw, 505px);
-  margin-top: clamp(1px, 5.5vw, 80px);
-}
-
-.flex {
-  margin-left: clamp(1px, 7vw, 100px);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.title p:nth-of-type(1) {
-  font-size: 30px;
-}
-
-.title p:nth-of-type(2) {
-  text-transform: uppercase;
-  margin-bottom: 44px;
-  margin-top: 16px;
-  line-height: 20px;
-}
-
-.title p:nth-of-type(3) {
-  font-size: 32px;
-  color: #585858;
-  line-height: 46px;
-  white-space: nowrap;
-}
-
-.desc {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin: 128px 0 120px 30px;
-}
-
-.desc > p:nth-of-type(1) {
-  font-size: 50px;
-}
-
-.desc p:nth-of-type(2) {
-  font-size: 24px;
-  line-height: 36px;
-  margin-top: 80px;
-  margin-bottom: 30px;
-}
-
-.desc a {
-  margin-bottom: 120px;
-}
-
-.link {
-  display: flex;
-  position: relative;
-  width: 115px;
-}
-
-.link p {
-  font-size: 24px;
-}
-
-.link img:nth-of-type(1) {
-  margin-left: 4px;
-}
-
-.link img:nth-of-type(2) {
-  position: absolute;
-  top: 30px;
+@media only screen and (min-width: 900px) {
+  .flex {
+    margin-left: clamp(1px, 7vw, 100px);
+    display: flex;
+    flex-direction: row;
+    column-gap: 48px;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1441px) {
