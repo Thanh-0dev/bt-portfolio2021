@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import styles from "./Loader.module.css";
 import Image from "next/image";
 
-function Loader(props) {
+function Loader() {
   useEffect(() => {
     const buildText = document.getElementById("loaderBuild");
     const percentText = document.getElementById("loaderPercent");

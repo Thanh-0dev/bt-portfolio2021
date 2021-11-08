@@ -1,6 +1,6 @@
 import styles from "./Transition.module.css";
 
-function Transition(props) {
+function Transition() {
   return (
     <section className={styles.transition}>
       <div className={styles.blur}></div>

@@ -23,11 +23,14 @@ function MyApp({Component, pageProps}) {
   useEffect(() => {
     const links = document.querySelectorAll("a:not(#menu ul:nth-of-type(2) a)");
     for (let link = 0; link < links.length; link++) {
-      links[link].addEventListener("click", () => {
-        setLoading(true);
-        setTimeout(() => {
-          setLoading(false);
-        }, 1200);
+      links[link].addEventListener("click", (event) => {
+        event.preventDefault();
+        if (links[link].href !== window.location.href) {
+          setLoading(true);
+          setTimeout(() => {
+            setLoading(false);
+          }, 1200);
+        }
       });
     }
   });
