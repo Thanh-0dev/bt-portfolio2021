@@ -12,7 +12,7 @@
     height: 440px;
   }
 
-  .blur {
+  /* .blur {
     position: absolute;
     z-index: -2;
     top: -100px;
@@ -24,7 +24,7 @@
   .blur img {
     width: 1135px;
     transform: rotate(180deg);
-  }
+  } */
 
   .projectId {
     color: #767676;

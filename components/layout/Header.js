@@ -8,7 +8,7 @@ function Header() {
   useEffect(() => {
     const burgerMenu = document.getElementById("burger");
     const menu = document.getElementById("menu");
-    burgerMenu.addEventListener("click", (event) => {
+    burgerMenu.addEventListener("click", () => {
       setMenuIsOpen(!menuIsOpen);
       if (!menuIsOpen) {
         menu.classList.add(styles.active);

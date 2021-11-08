@@ -9,8 +9,10 @@ import "/styles/globals.css";
 function MyApp({Component, pageProps}) {
   /* First time loading */
   const [firstTime, setFirstTime] = useState(false);
+  const [firstLoading, setFirstLoading] = useState(true);
   useEffect(() => {
     setFirstTime(true);
+    setFirstLoading(false);
     setTimeout(() => {
       setFirstTime(false);
     }, 2000);
@@ -98,9 +100,11 @@ function MyApp({Component, pageProps}) {
       />
       {firstTime ? <Loader /> : null}
       {loading ? <Transition /> : null}
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      {!firstLoading ? (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      ) : null}
     </>
   );
 }
