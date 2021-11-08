@@ -27,6 +27,9 @@ function Header() {
         <li>
           <ActiveLink href="/about">/statistics</ActiveLink>
         </li>
+        <li>
+          <img src="/Mobile/burger-menu.svg" alt="burger menu" />
+        </li>
       </ul>
       <div className={styles.info}>
         <span>.actually in France</span>

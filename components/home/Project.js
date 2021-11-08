@@ -64,159 +64,177 @@ function Project(props) {
         <link rel="preload" href="/Image Home/Hover/5.jpeg" as="image" />
         <link rel="preload" href="/Image Home/Hover/6.jpeg" as="image" />
       </Head>
-      <img
-        className={styles.blur}
-        src="./Icons habillage/Blur.png"
-        alt="Blur"
-      />
-      <div className={styles.left}>
+      <div className={styles.projectContainer}>
         <img
-          className={styles.shadowLeft}
-          src="./Image Home/ombre/ombre-all-left.png"
-          alt="Shadows Left"
+          className={styles.blur}
+          src="./Icons habillage/Blur.png"
+          alt="Blur"
         />
-        <div className={styles.secondProject}>
-          <p className={styles.projectId}>02</p>
-          <svg
-            viewBox="0 0 404 716"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
+        <div className={styles.left}>
+          <img
+            className={styles.shadowLeft}
+            src="./Image Home/ombre/ombre-all-left.png"
+            alt="Shadows Left"
+          />
+          <div className={styles.secondProject}>
+            <p className={styles.projectId}>02</p>
+            <svg
+              viewBox="0 0 404 716"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <ActiveLink href="/project/2">
+                <path
+                  id="projectAction1"
+                  d="M403 39.527L32.6456 1L1.00024 673.471L380.049 715L403 39.527Z"
+                  fill="black"
+                  fillOpacity="0"
+                />
+              </ActiveLink>
+            </svg>
+            <div className={styles.projectCard} id="projectCard1"></div>
+            <img src="./Icons habillage/Cadre-1.svg" alt="Arrow" />
+            <img src="./Icons habillage/Glass/Glass-3.svg" alt="Glass" />
             <ActiveLink href="/project/2">
-              <path
-                id="projectAction1"
-                d="M403 39.527L32.6456 1L1.00024 673.471L380.049 715L403 39.527Z"
-                fill="black"
-                fillOpacity="0"
-              />
+              <p className={styles.projectTitle}>{props.projects[1]["name"]}</p>
+              <p>
+                {props.projects[1]["job"]}
+                <br />
+                {props.projects[1]["detail"]}
+              </p>
             </ActiveLink>
-          </svg>
-          <div className={styles.projectCard} id="projectCard1"></div>
-          <img src="./Icons habillage/Cadre-1.svg" alt="Arrow" />
-          <img src="./Icons habillage/Glass/Glass-3.svg" alt="Glass" />
-          <p className={styles.projectTitle}>{props.projects[1]["name"]}</p>
-          <p>
-            {props.projects[1]["job"]}
-            <br />
-            {props.projects[1]["detail"]}
-          </p>
-        </div>
-        <div className={styles.fourthProject}>
-          <p className={styles.projectId}>04</p>
-          <svg
-            viewBox="0 0 405 716"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
+          </div>
+          <div className={styles.fourthProject}>
+            <p className={styles.projectId}>04</p>
+            <svg
+              viewBox="0 0 405 716"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <ActiveLink href="/project/4">
+                <path
+                  id="projectAction3"
+                  d="M404 39.5206L32.7242 0.993652L1.00012 673.465L380.991 714.994L404 39.5206Z"
+                  fill="black"
+                  fillOpacity="0"
+                />
+              </ActiveLink>
+            </svg>
+            <div className={styles.projectCard} id="projectCard3"></div>
+            <img src="./Icons habillage/Cadre-3.svg" alt="Arrow" />
+            <img src="./Icons habillage/Glass/Glass-5.svg" alt="Glass" />
             <ActiveLink href="/project/4">
-              <path
-                id="projectAction3"
-                d="M404 39.5206L32.7242 0.993652L1.00012 673.465L380.991 714.994L404 39.5206Z"
-                fill="black"
-                fillOpacity="0"
-              />
+              <p className={styles.projectTitle}>{props.projects[3]["name"]}</p>
+              <p>
+                {props.projects[3]["job"]}
+                <br />
+                {props.projects[3]["detail"]}
+              </p>
             </ActiveLink>
-          </svg>
-          <div className={styles.projectCard} id="projectCard3"></div>
-          <img src="./Icons habillage/Cadre-3.svg" alt="Arrow" />
-          <img src="./Icons habillage/Glass/Glass-5.svg" alt="Glass" />
-          <p className={styles.projectTitle}>{props.projects[3]["name"]}</p>
-          <p>
-            {props.projects[3]["job"]}
-            <br />
-            {props.projects[3]["detail"]}
-          </p>
-        </div>
-        <div className={styles.sixthProject}>
-          <p className={styles.projectId}>06</p>
-          <svg
-            viewBox="0 0 405 716"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
+          </div>
+          <div className={styles.sixthProject}>
+            <p className={styles.projectId}>06</p>
+            <svg
+              viewBox="0 0 405 716"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <ActiveLink href="/project/6">
+                <path
+                  id="projectAction5"
+                  d="M404.001 39.5275L32.7255 1.00049L1.00146 673.471L380.993 715L404.001 39.5275Z"
+                  fill="black"
+                  fillOpacity="0"
+                />
+              </ActiveLink>
+            </svg>
+            <div className={styles.projectCard} id="projectCard5"></div>
+            <img src="./Icons habillage/Cadre-5.svg" alt="Arrow" />
+            <img src="./Icons habillage/Glass/Glass-7.svg" alt="Glass" />
             <ActiveLink href="/project/6">
-              <path
-                id="projectAction5"
-                d="M404.001 39.5275L32.7255 1.00049L1.00146 673.471L380.993 715L404.001 39.5275Z"
-                fill="black"
-                fillOpacity="0"
-              />
+              <p className={styles.projectTitle}>{props.projects[5]["name"]}</p>
+              <p>
+                {props.projects[5]["job"]}
+                <br />
+                {props.projects[5]["detail"]}
+              </p>
             </ActiveLink>
-          </svg>
-          <div className={styles.projectCard} id="projectCard5"></div>
-          <img src="./Icons habillage/Cadre-5.svg" alt="Arrow" />
-          <img src="./Icons habillage/Glass/Glass-7.svg" alt="Glass" />
-          <p className={styles.projectTitle}>{props.projects[5]["name"]}</p>
-          <p>
-            {props.projects[5]["job"]}
-            <br />
-            {props.projects[5]["detail"]}
-          </p>
+          </div>
         </div>
-      </div>
 
-      <div className={styles.right}>
-        <img
-          className={styles.shadowRight}
-          src="./Image Home/ombre/ombre-all-right.png"
-          alt="Shadows Right"
-        />
-        <div className={styles.thirdProject}>
-          <p className={styles.projectId}>03</p>
-          <svg
-            viewBox="0 0 406 716"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
+        <div className={styles.right}>
+          <img
+            className={styles.shadowRight}
+            src="./Image Home/ombre/ombre-all-right.png"
+            alt="Shadows Right"
+          />
+          <div className={styles.thirdProject}>
+            <p className={styles.projectId}>03</p>
+            <svg
+              viewBox="0 0 406 716"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <ActiveLink href="/project/3">
+                <path
+                  id="projectAction2"
+                  d="M0.997559 39.5L373.195 1L404.998 673L24.0633 714.5L0.997559 39.5Z"
+                  fill="black"
+                  fillOpacity="0"
+                />
+              </ActiveLink>
+            </svg>
+            <div className={styles.projectCard} id="projectCard2"></div>
+            <img src="./Icons habillage/Cadre-2.svg" alt="Arrow" />
+            <img src="./Icons habillage/Glass/Glass-4.svg" alt="Glass" />
             <ActiveLink href="/project/3">
-              <path
-                id="projectAction2"
-                d="M0.997559 39.5L373.195 1L404.998 673L24.0633 714.5L0.997559 39.5Z"
-                fill="black"
-                fillOpacity="0"
-              />
+              <p className={styles.projectTitle}>{props.projects[2]["name"]}</p>
+              <p>
+                {props.projects[2]["job"]}
+                <br />
+                {props.projects[2]["detail"]}
+              </p>
             </ActiveLink>
-          </svg>
-          <div className={styles.projectCard} id="projectCard2"></div>
-          <img src="./Icons habillage/Cadre-2.svg" alt="Arrow" />
-          <img src="./Icons habillage/Glass/Glass-4.svg" alt="Glass" />
-          <p className={styles.projectTitle}>{props.projects[2]["name"]}</p>
-          <p>
-            {props.projects[2]["job"]}
-            <br />
-            {props.projects[2]["detail"]}
-          </p>
-        </div>
-        <div className={styles.fifthProject}>
-          <p className={styles.projectId}>05</p>
-          <svg
-            viewBox="0 0 406 716"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
+          </div>
+          <div className={styles.fifthProject}>
+            <p className={styles.projectId}>05</p>
+            <svg
+              viewBox="0 0 406 716"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <ActiveLink href="/project/5">
+                <path
+                  id="projectAction4"
+                  d="M1 39.5L373.197 1L405 673L24.0658 714.5L1 39.5Z"
+                  fill="black"
+                  fillOpacity="0"
+                />
+              </ActiveLink>
+            </svg>
+            <div className={styles.projectCard} id="projectCard4"></div>
+            <img src="./Icons habillage/Cadre-4.svg" alt="Arrow" />
+            <img src="./Icons habillage/Glass/Glass-6.svg" alt="Glass" />
             <ActiveLink href="/project/5">
-              <path
-                id="projectAction4"
-                d="M1 39.5L373.197 1L405 673L24.0658 714.5L1 39.5Z"
-                fill="black"
-                fillOpacity="0"
-              />
+              <p className={styles.projectTitle}>{props.projects[4]["name"]}</p>
+              <p>
+                {props.projects[4]["job"]}
+                <br />
+                {props.projects[4]["detail"]}
+              </p>
             </ActiveLink>
-          </svg>
-          <div className={styles.projectCard} id="projectCard4"></div>
-          <img src="./Icons habillage/Cadre-4.svg" alt="Arrow" />
-          <img src="./Icons habillage/Glass/Glass-6.svg" alt="Glass" />
-          <p className={styles.projectTitle}>{props.projects[4]["name"]}</p>
-          <p>
-            {props.projects[4]["job"]}
-            <br />
-            {props.projects[4]["detail"]}
-          </p>
+          </div>
+        </div>
+        <div className={styles.mobile}>
+          <img src="/Mobile/mobile-cadre.svg" alt="Mobile project line" />
+          <img src="/Mobile/mobile-cadre-2.svg" alt="Mobile project line" />
+          <img src="/Mobile/mobile-cadre.svg" alt="Mobile project line" />
+          <img src="/Mobile/mobile-cadre-2.svg" alt="Mobile project line" />
         </div>
       </div>
     </section>
