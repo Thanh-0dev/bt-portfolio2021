@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {useEffect} from "react";
 import styles from "./Footer.module.css";
+import ActiveLink from "/components/ActiveLink";
 
 function Footer(props) {
   useEffect(() => {
@@ -48,7 +49,7 @@ function Footer(props) {
           <img src="/Icons habillage/Blur.png" alt="Blur" />
         </div>
         <div id="project" className={styles.project}>
-          <Link href="/project/2" passHref>
+          <ActiveLink href="/project/2">
             <div>
               <p className={styles.detail}>2021</p>
               <p className={styles.name}>chance/</p>
@@ -58,8 +59,8 @@ function Footer(props) {
                 weight::2 details
               </p>
             </div>
-          </Link>
-          <Link href="/project/3" passHref>
+          </ActiveLink>
+          <ActiveLink href="/project/3">
             <div>
               <p className={styles.detail}>2020</p>
               <p className={styles.name}>smatch/</p>
@@ -69,8 +70,8 @@ function Footer(props) {
                 weight::6 months
               </p>
             </div>
-          </Link>
-          <Link href="/project/4" passHref>
+          </ActiveLink>
+          <ActiveLink href="/project/4">
             <div>
               <p className={styles.detail}>2019</p>
               <p className={styles.name}>kanamoji/</p>
@@ -80,8 +81,8 @@ function Footer(props) {
                 weight::3 months
               </p>
             </div>
-          </Link>
-          <Link href="/project/5" passHref>
+          </ActiveLink>
+          <ActiveLink href="/project/5">
             <div>
               <p className={styles.detail}>2019</p>
               <p className={styles.name}>kati-inc/</p>
@@ -91,8 +92,8 @@ function Footer(props) {
                 weight::3 months
               </p>
             </div>
-          </Link>
-          <Link href="/project/1" passHref>
+          </ActiveLink>
+          <ActiveLink href="/project/1">
             <div>
               <p className={styles.detail}>2019</p>
               <p className={styles.name}>vall/</p>
@@ -102,7 +103,7 @@ function Footer(props) {
                 weight::3 months
               </p>
             </div>
-          </Link>
+          </ActiveLink>
           <div>
             <p className={styles.detail}>always</p>
             <p className={styles.name}>wip/</p>

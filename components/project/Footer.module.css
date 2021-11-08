@@ -63,6 +63,10 @@
   scroll-behavior: smooth;
 }
 
+.project div:nth-child(6) {
+  display: none;
+}
+
 .project div:not(.fade) {
   margin-right: 140px;
 }

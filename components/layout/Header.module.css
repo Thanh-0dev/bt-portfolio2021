@@ -54,9 +54,12 @@
 
   .header li:nth-of-type(3) {
     z-index: 9900;
-    padding: 12px;
     margin-top: -12px;
     margin-left: -12px;
+  }
+
+  .header img {
+    padding: 12px;
   }
 
   .info {

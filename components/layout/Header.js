@@ -18,6 +18,15 @@ function Header() {
     });
   });
 
+  useEffect(() => {
+    const links = document.querySelectorAll("a");
+    for (let link = 0; link < links.length; link++) {
+      links[link].addEventListener("click", () => {
+        menu.classList.remove(styles.active);
+      });
+    }
+  });
+
   /* Time */
   useEffect(() => {
     setInterval(() => {
