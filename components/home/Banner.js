@@ -34,11 +34,9 @@ function Banner(props) {
           src="/Icons habillage/Glass/Glass-2.svg"
           alt="Glass2"
         />
-        <img
-          className={styles.blur}
-          src="/Icons habillage/Blur.png"
-          alt="Blur"
-        />
+        <div className={styles.blur}>
+          <img src="/Icons habillage/Blur.png" alt="Blur" />
+        </div>
         <p className={styles.projectId}>01</p>
         <div className={styles.bannerRow}>
           <img

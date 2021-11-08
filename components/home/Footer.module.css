@@ -24,9 +24,7 @@
   }
 
   .blur {
-    display: none;
-  }
-  /* position: absolute;
+    position: absolute;
     overflow: hidden;
     top: -300px;
     left: -500px;
@@ -36,7 +34,7 @@
   .blur img {
     transform: rotate(180deg);
     width: 1135px;
-  } */
+  }
 
   .info p:nth-of-type(1) {
     display: none;
