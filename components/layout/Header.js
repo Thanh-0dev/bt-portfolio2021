@@ -4,12 +4,12 @@ import styles from "./Header.module.css";
 
 function Header() {
   /* Burger menu */
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
   useEffect(() => {
     const burgerMenu = document.getElementById("burger");
     const menu = document.getElementById("menu");
+    let menuIsOpen = false;
     burgerMenu.addEventListener("click", () => {
-      setMenuIsOpen(!menuIsOpen);
+      menuIsOpen = !menuIsOpen;
       if (!menuIsOpen) {
         menu.classList.add(styles.active);
       } else {
@@ -19,11 +19,6 @@ function Header() {
   });
 
   /* Time */
-  let date = new Date();
-  let time =
-    date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) +
-    " UTC+2";
-
   useEffect(() => {
     setInterval(() => {
       let date = new Date();
@@ -81,7 +76,7 @@ function Header() {
       <div className={styles.info}>
         <span>.actually in France</span>
         <span>.open to opportunities</span>
-        <span id="time">{time}</span>
+        <span id="time"></span>
       </div>
     </header>
   );
