@@ -7,22 +7,24 @@ function Header() {
   useEffect(() => {
     const burgerMenu = document.getElementById("burger");
     const menu = document.getElementById("menu");
+    const html = document.documentElement;
     let menuIsOpen = false;
     burgerMenu.addEventListener("click", () => {
       menuIsOpen = !menuIsOpen;
-      if (!menuIsOpen) {
+      if (menuIsOpen) {
         menu.classList.add(styles.active);
+        html.classList.add(styles.noScroll);
       } else {
         menu.classList.remove(styles.active);
+        html.classList.remove(styles.noScroll);
       }
     });
-  });
 
-  useEffect(() => {
-    const links = document.querySelectorAll("a");
-    for (let link = 0; link < links.length; link++) {
-      links[link].addEventListener("click", () => {
+    const menuLinks = document.querySelectorAll("#menu ul:nth-of-type(1) a");
+    for (let link = 0; link < menuLinks.length; link++) {
+      menuLinks[link].addEventListener("click", () => {
         menu.classList.remove(styles.active);
+        html.classList.remove(styles.noScroll);
       });
     }
   });

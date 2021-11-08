@@ -23,6 +23,10 @@
     flex-direction: column;
   }
 
+  .noScroll {
+    overflow: hidden;
+  }
+
   .burgerMenu ul {
     margin: 84px 0 -16px 50px;
     list-style: none;

@@ -21,7 +21,7 @@ function MyApp({Component, pageProps}) {
   /* Page transition effect */
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    const links = document.querySelectorAll("a");
+    const links = document.querySelectorAll("a:not(#menu ul:nth-of-type(2) a)");
     for (let link = 0; link < links.length; link++) {
       links[link].addEventListener("click", () => {
         setLoading(true);
