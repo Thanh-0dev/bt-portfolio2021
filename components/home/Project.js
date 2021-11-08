@@ -65,11 +65,9 @@ function Project(props) {
         <link rel="preload" href="/Image Home/Hover/6.jpeg" as="image" />
       </Head>
       <div className={styles.projectContainer}>
-        <img
-          className={styles.blur}
-          src="./Icons habillage/Blur.png"
-          alt="Blur"
-        />
+        <div className={styles.blur}>
+          <img src="./Icons habillage/Blur.png" alt="Blur" />
+        </div>
         <div className={styles.left}>
           <img
             className={styles.shadowLeft}

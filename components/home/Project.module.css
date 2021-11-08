@@ -14,11 +14,16 @@
 
   .blur {
     position: absolute;
-    width: clamp(1px, 302.7vw, 1135px);
     z-index: -2;
-    transform: rotate(180deg);
     top: -100px;
     left: -300px;
+    height: 800px;
+    overflow: hidden;
+  }
+
+  .blur img {
+    width: 1135px;
+    transform: rotate(180deg);
   }
 
   .projectId {
@@ -153,11 +158,14 @@
 
   .blur {
     position: absolute;
-    width: clamp(1px, 79vw, 1135px);
     top: clamp(1px, 45vw, 650px);
     left: clamp(1px, 10vw, 150px);
-    transform: rotate(180deg);
     z-index: -2;
+  }
+
+  .blur img {
+    transform: rotate(180deg);
+    width: clamp(1px, 79vw, 1135px);
   }
 
   .projectId {

@@ -24,12 +24,16 @@
   }
 
   .blur {
-    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: -300px;
+    left: -500px;
+    height: 560px;
   }
 
   .blur img {
     transform: rotate(180deg);
-    width: clamp(1px, 302.7vw, 1135px);
+    width: 1135px;
   }
 
   .info p:nth-of-type(1) {

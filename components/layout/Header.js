@@ -1,8 +1,24 @@
 import ActiveLink from "/components/ActiveLink";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import styles from "./Header.module.css";
 
 function Header() {
+  /* Burger menu */
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  useEffect(() => {
+    const burgerMenu = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+    burgerMenu.addEventListener("click", (event) => {
+      setMenuIsOpen(!menuIsOpen);
+      if (!menuIsOpen) {
+        menu.classList.add(styles.active);
+      } else {
+        menu.classList.remove(styles.active);
+      }
+    });
+  });
+
+  /* Time */
   let date = new Date();
   let time =
     date.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) +
@@ -17,9 +33,40 @@ function Header() {
       document.getElementById("time").innerHTML = time;
     }, 1000);
   });
-
   return (
     <header className={styles.header}>
+      <div className={styles.burgerMenu} id="menu">
+        <ul>
+          <ActiveLink href="/">
+            <li>/workshop</li>
+          </ActiveLink>
+          <ActiveLink href="/about">
+            <li>/statistics</li>
+          </ActiveLink>
+        </ul>
+        <ul>
+          <a
+            href="mailto:bichtrampham.design@gmail.com"
+            rel="noreferrer noopener nofollow"
+          >
+            <li>/email</li>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/bichtrampham/"
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+          >
+            <li>/linkedIn</li>
+          </a>
+          <a
+            href="https://www.instagram.com/tram.inprogress/"
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+          >
+            <li>/instagram</li>
+          </a>
+        </ul>
+      </div>
       <ul>
         <li>
           <ActiveLink href="/">.tram/workshop</ActiveLink>
@@ -28,7 +75,7 @@ function Header() {
           <ActiveLink href="/about">/statistics</ActiveLink>
         </li>
         <li>
-          <img src="/Mobile/burger-menu.svg" alt="burger menu" />
+          <img id="burger" src="/Mobile/burger-menu.svg" alt="burger menu" />
         </li>
       </ul>
       <div className={styles.info}>
