@@ -1,3 +1,29 @@
+@media only screen and (max-width: 650px) {
+  .bannerPannel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .banner {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .pannel {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    row-gap: 24px;
+  }
+
+  .pannel img {
+    height: 289px;
+    width: 163px;
+  }
+}
+
 @media only screen and (min-width: 650px) {
   .bannerPannel {
     margin: 40px auto 0 auto;

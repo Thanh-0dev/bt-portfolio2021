@@ -1,17 +1,15 @@
-import {useEffect} from "react";
 import styles from "./Info.module.css";
 
 function Info(props) {
-  useEffect(() => {
-    let adjectives = "";
-    for (let nbAdj in props.adj) {
-      adjectives += props.adj[nbAdj].adj + "<br />";
-    }
-    document.getElementById("summary").innerHTML = adjectives;
-  });
   return (
     <section className={styles.info}>
-      <p id="summary"></p>
+      <div className={styles.adjectives}>
+        {Array(props.adj.length)
+          .fill(null)
+          .map((e, i) => (
+            <p key={`adj-${i + 1}`}>{props.adj[i].adj}</p>
+          ))}
+      </div>
       <p>{props.project.info}</p>
     </section>
   );

@@ -1,3 +1,109 @@
+@media screen and (max-width: 650px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+    position: relative;
+  }
+
+  .upperArrow {
+    display: none;
+  }
+
+  .bannerImg {
+    width: 104vw;
+    height: clamp(168px, 44.8vw, 500px);
+    object-fit: cover;
+    transform: rotate(1deg);
+    margin: clamp(1px, 0.7vw, 10px) 0 20px -77px;
+  }
+
+  .underBanner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 17.5px;
+    height: 198px;
+    top: -155px;
+    left: -32px;
+  }
+
+  .glass {
+    position: absolute;
+    width: 364px;
+    height: 381px;
+    z-index: -1;
+    top: 248px;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title p:nth-of-type(1) {
+    font-size: 16px;
+  }
+
+  .title p:nth-of-type(2) {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .title p:nth-of-type(3) {
+    font-size: 16px;
+    color: #585858;
+    line-height: 26px;
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    margin: 64px 0 40px 0px;
+  }
+
+  .desc > p:nth-of-type(1) {
+    font-size: 24px;
+  }
+
+  .desc p:nth-of-type(2) {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .desc a {
+    margin-bottom: 40px;
+  }
+
+  .link {
+    display: flex;
+    position: relative;
+    width: 115px;
+  }
+
+  .link p {
+    font-size: 24px;
+  }
+
+  .link img:nth-of-type(1) {
+    margin-left: 4px;
+  }
+
+  .link img:nth-of-type(2) {
+    position: absolute;
+    top: 30px;
+  }
+}
+
 @media only screen and (min-width: 650px) {
   .banner {
     display: flex;

@@ -125,6 +125,10 @@
     width: 85%;
   }
 
+  .contact {
+    margin-bottom: 50px;
+  }
+
   .contact a {
     margin-right: 110px;
   }
@@ -146,7 +150,7 @@
   }
 
   .info {
-    padding: 11vw 0 0 clamp(1px, 6.9vw, 100px);
+    padding: 11vw 0 0 100px;
     position: relative;
   }
 }

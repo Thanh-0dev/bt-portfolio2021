@@ -24,8 +24,7 @@ function Info(props) {
         </div>
         <div className={styles.desc}>
           <p>
-            Hi there.
-            <br />I like to add flavor to every{" "}
+            Hi there. I like to add flavor to every{" "}
             <span className={styles.underline}>digital experience</span>
             <br />I work on and have a sweet tooth for anything related to{" "}
             <span className={styles.underline}>interface</span>.

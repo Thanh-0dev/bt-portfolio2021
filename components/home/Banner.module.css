@@ -55,10 +55,11 @@
   }
 
   .arrow {
-    height: 196px;
+    height: 198px;
+    width: 17.5px;
     position: absolute;
-    left: -0.7vw;
-    top: 32px;
+    left: -12px;
+    top: 16px;
     z-index: 1;
   }
 
@@ -151,10 +152,10 @@
 
   .arrow {
     height: clamp(1px, 33vw, 484px);
-    width: 20px;
+    width: 17.5px;
     position: absolute;
-    left: -0.7vw;
-    top: 0.7vw;
+    left: -12px;
+    top: 20px;
     z-index: 3;
   }
 

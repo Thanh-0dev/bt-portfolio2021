@@ -1,23 +1,44 @@
-.slidingPuzzle {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 clamp(64px, 8.6vw, 124px);
-  position: relative;
-  max-width: 1192px;
-  padding-bottom: 120px;
+@media only screen and (max-width: 650px) {
+  .slidingPuzzle {
+    margin: 0 28px 44px 28px;
+    position: relative;
+  }
+
+  .slidingPuzzle img:nth-of-type(1) {
+    position: absolute;
+    left: -500px;
+    top: -300px;
+    z-index: -1;
+  }
+
+  .slidingPuzzle img:nth-of-type(2) {
+    width: 100%;
+    margin-top: -34px;
+  }
 }
 
-.slidingPuzzle img:nth-of-type(1) {
-  position: absolute;
-  width: clamp(1px, 79vw, 1135px);
-  z-index: -1;
-  left: clamp(-216px, -15vw, -1px);
-  top: clamp(-144px, -10vw, -1px);
-}
+@media only screen and (min-width: 650px) {
+  .slidingPuzzle {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 clamp(64px, 8.6vw, 124px);
+    position: relative;
+    max-width: 1192px;
+    padding-bottom: 120px;
+  }
 
-.slidingPuzzle img:nth-of-type(2) {
-  width: clamp(1px, 54.4vw, 783px);
-  height: clamp(1px, 36.5vw, 526px);
+  .slidingPuzzle img:nth-of-type(1) {
+    position: absolute;
+    width: clamp(1px, 79vw, 1135px);
+    z-index: -1;
+    left: clamp(-216px, -15vw, -1px);
+    top: clamp(-144px, -10vw, -1px);
+  }
+
+  .slidingPuzzle img:nth-of-type(2) {
+    width: clamp(1px, 54.4vw, 783px);
+    height: clamp(1px, 36.5vw, 526px);
+  }
 }
 
 @media (min-width: 1441px) {

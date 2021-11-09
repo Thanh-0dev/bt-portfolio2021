@@ -1,3 +1,74 @@
+@media only screen and (max-width: 650px) {
+  .info {
+    display: flex;
+    flex-direction: row;
+    margin: 0 50px;
+    position: relative;
+  }
+
+  .info > img {
+    position: absolute;
+    height: 198px;
+    width: 17.5px;
+    left: -32px;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .flex > img {
+    position: absolute;
+    z-index: -1;
+    width: 364px;
+    height: 381px;
+    left: -20px;
+    top: 200px;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title p:nth-of-type(1) {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .title p:nth-of-type(2) {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .title p:nth-of-type(3) {
+    font-size: 16px;
+    line-height: 26px;
+    color: #585858;
+  }
+
+  .desc {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desc p:nth-of-type(1) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .desc p:nth-of-type(2) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 @media only screen and (min-width: 650px) {
   .info {
     margin: 0 clamp(64px, 8.6vw, 124px);
@@ -6,7 +77,7 @@
     flex-direction: row;
   }
 
-  .info img {
+  .info > img {
     height: clamp(1px, 33vw, 484px);
     width: 20px;
     margin: 20px clamp(1px, 7vw, 100px) 0 0;
@@ -20,7 +91,7 @@
     width: 100%;
   }
 
-  .flex img {
+  .flex > img {
     position: absolute;
     z-index: -1;
     width: clamp(1px, 66vw, 951px);

@@ -1,3 +1,29 @@
+@media screen and (max-width: 650px) {
+  .info {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 50px;
+  }
+
+  .adjectives {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .adjectives p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #585858;
+  }
+
+  .info > p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 @media only screen and (min-width: 650px) {
   .info {
     display: flex;
@@ -8,14 +34,14 @@
     justify-content: space-between;
   }
 
-  .info p:nth-of-type(1) {
+  .adjectives {
     color: #585858;
     width: 340px;
     font-size: 24px;
     line-height: 32px;
   }
 
-  .info p:nth-of-type(2) {
+  .info > p {
     width: 590px;
     font-size: 20px;
     line-height: 28px;
@@ -23,7 +49,7 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .info p:nth-of-type(1) {
+  .adjectives {
     font-size: 32px;
     line-height: 46px;
   }

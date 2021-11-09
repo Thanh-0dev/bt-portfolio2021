@@ -1,63 +1,100 @@
-.experiences {
-  position: relative;
-  max-width: 1192px;
-  margin: 0 clamp(64px, 8.6vw, 124px);
-}
-
-.experiences img:nth-of-type(1) {
-  z-index: -1;
-  position: absolute;
-  right: 0;
-  height: 295px;
-}
-
-.experiences img:nth-of-type(2) {
-  z-index: -1;
-  position: absolute;
-  right: 200px;
-  margin-top: 363px;
-  width: 283px;
-}
-
-.flex {
-  margin-left: clamp(1px, 7vw, 100px);
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-.flex > p {
-  color: #585858;
-  font-size: 22px;
-  line-height: 46px;
-}
-
-.exp p:nth-of-type(1) {
-  color: #585858;
-  font-size: 32px;
-  line-height: 46px;
-  margin-bottom: 24px;
-}
-
-.exp p:nth-of-type(2) {
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.exp {
-  display: flex;
-  flex-direction: column;
-  margin: 32px 0;
-}
-
-@media (min-width: 1441px) {
+@media only screen and (max-width: 650px) {
   .experiences {
-    margin: 0 auto;
+    margin: 0 49px;
+  }
+
+  .experiences img {
+    display: none;
+  }
+
+  .flex > p {
+    color: #585858;
+    font-size: 20px;
+    line-height: 46px;
+    margin-bottom: 32px;
+  }
+
+  .exp p:nth-of-type(1) {
+    color: #585858;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  .exp p:nth-of-type(2) {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .exp {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
   }
 }
 
-@media (max-width: 1160px) {
+@media only screen and (min-width: 650px) {
+  .experiences {
+    position: relative;
+    max-width: 1192px;
+    margin: 0 clamp(64px, 8.6vw, 124px);
+  }
+
+  .experiences img:nth-of-type(1) {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    height: 295px;
+  }
+
+  .experiences img:nth-of-type(2) {
+    z-index: -1;
+    position: absolute;
+    right: 200px;
+    margin-top: 363px;
+    width: 283px;
+  }
+
+  .flex {
+    margin-left: clamp(1px, 7vw, 100px);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex > p {
+    color: #585858;
+    font-size: 22px;
+    line-height: 46px;
+  }
+
+  .exp p:nth-of-type(1) {
+    color: #585858;
+    font-size: 32px;
+    line-height: 46px;
+    margin-bottom: 24px;
+  }
+
+  .exp p:nth-of-type(2) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .exp {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1160px) {
   .experiences img {
     opacity: 0.1;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .experiences {
+    margin: 0 auto;
   }
 }
