@@ -3,13 +3,6 @@ import {useEffect} from "react";
 import styles from "./Banner.module.css";
 
 function Banner(props) {
-  useEffect(() => {
-    let alljobs = "";
-    for (let nbRole in props.roles) {
-      alljobs += "&gt" + props.roles[nbRole].role + "<br />";
-    }
-    document.getElementById("jobs").innerHTML = alljobs;
-  });
   return (
     <section className={styles.banner}>
       <img
@@ -41,7 +34,13 @@ function Banner(props) {
               <br />
               {props.project.detail}
             </p>
-            <p id="jobs"></p>
+            <div>
+              {Array(props.roles.length)
+                .fill(null)
+                .map((e, i) => (
+                  <p key={`role-${i + 1}`}>{props.roles[i].role}</p>
+                ))}
+            </div>
           </div>
           <div className={styles.desc}>
             <p>{props.project.descTitle}</p>

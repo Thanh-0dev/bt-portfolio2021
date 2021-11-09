@@ -45,11 +45,11 @@
     flex-direction: column;
   }
 
-  .title p:nth-of-type(1) {
+  .title > p:nth-of-type(1) {
     font-size: 16px;
   }
 
-  .title p:nth-of-type(2) {
+  .title > p:nth-of-type(2) {
     text-transform: uppercase;
     margin-bottom: 16px;
     margin-top: 8px;
@@ -57,7 +57,12 @@
     line-height: 22px;
   }
 
-  .title p:nth-of-type(3) {
+  .title div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title div p {
     font-size: 16px;
     color: #585858;
     line-height: 26px;
@@ -158,22 +163,26 @@
     justify-content: space-between;
   }
 
-  .title p:nth-of-type(1) {
+  .title > p:nth-of-type(1) {
     font-size: 30px;
   }
 
-  .title p:nth-of-type(2) {
+  .title > p:nth-of-type(2) {
     text-transform: uppercase;
     margin-bottom: 44px;
     margin-top: 16px;
     line-height: 20px;
   }
 
-  .title p:nth-of-type(3) {
-    font-size: 32px;
+  .title div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title div p {
+    font-size: 16px;
     color: #585858;
-    line-height: 46px;
-    white-space: nowrap;
+    line-height: 26px;
   }
 
   .desc {
