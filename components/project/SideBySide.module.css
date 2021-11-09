@@ -1,22 +1,36 @@
-.sideBySide {
-  display: flex;
-  margin: 0 clamp(64px, 8.6vw, 124px) 70px clamp(64px, 8.6vw, 124px);
-  justify-content: space-between;
-  flex-direction: row;
-  max-width: 1192px;
+@media only screen and (max-width: 650px) {
+  .sideBySide {
+    margin-bottom: 30px;
+  }
+
+  .sideBySide img {
+    width: 100%;
+  }
+
+  .sideBySide p {
+    display: none;
+  }
 }
 
-.sideBySide > * {
-  width: clamp(1px, 41vw, 596px);
-}
+@media only screen and (min-width: 650px) {
+  .sideBySide {
+    display: flex;
+    margin: 0 clamp(64px, 8.6vw, 124px) 70px clamp(64px, 8.6vw, 124px);
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1192px;
+  }
 
-.sideBySide div {
-  margin: auto 0 auto clamp(1px, 8.6vw, 124px);
-}
+  .sideBySide > * {
+    width: clamp(1px, 41vw, 596px);
+  }
 
-.sideBySide p {
-  line-height: 28px;
-  font-size: 20px;
+  .sideBySide p {
+    line-height: 28px;
+    font-size: 20px;
+    margin-left: clamp(32px, 8.3vw, 120px);
+  }
 }
 
 @media (min-width: 1441px) {
