@@ -11,7 +11,7 @@
   }
 
   .bannerImg {
-    width: 104vw;
+    width: clamp(390px, 104vw, 1000px);
     height: clamp(168px, 44.8vw, 500px);
     object-fit: cover;
     transform: rotate(1deg);
