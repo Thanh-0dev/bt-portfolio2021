@@ -29,12 +29,14 @@ function Footer() {
         </p>
         <div className={styles.contact}>
           <a
+            className="noTransition"
             href="mailto:bichtrampham.design@gmail.com"
             rel="noreferrer noopener nofollow"
           >
             /email
           </a>
           <a
+            className="noTransition"
             href="https://www.linkedin.com/in/bichtrampham/"
             target="_blank"
             rel="noreferrer noopener nofollow"
@@ -42,6 +44,7 @@ function Footer() {
             /linkedIn
           </a>
           <a
+            className="noTransition"
             href="https://www.instagram.com/tram.inprogress/"
             target="_blank"
             rel="noreferrer noopener nofollow"

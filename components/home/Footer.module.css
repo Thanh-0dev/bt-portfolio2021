@@ -29,6 +29,7 @@
     top: -291px;
     left: -500px;
     height: 560px;
+    z-index: -1;
   }
 
   .blur img {

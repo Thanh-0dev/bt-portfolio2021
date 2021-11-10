@@ -15,7 +15,7 @@
     height: clamp(168px, 44.8vw, 500px);
     object-fit: cover;
     transform: rotate(1deg);
-    margin: clamp(1px, 0.7vw, 10px) 0 20px -77px;
+    margin: clamp(1px, 0.7vw, 10px) 0 20px clamp(-64px, 15vw, -56px);
   }
 
   .underBanner {

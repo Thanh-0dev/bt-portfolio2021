@@ -30,6 +30,8 @@
   .burgerMenu ul {
     margin: 84px 0 -16px 50px;
     list-style: none;
+    display: flex;
+    flex-direction: column;
   }
 
   .burgerMenu ul:nth-of-type(1) li {

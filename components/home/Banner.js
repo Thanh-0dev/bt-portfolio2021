@@ -4,25 +4,26 @@ import styles from "./Banner.module.css";
 import ActiveLink from "/components/ActiveLink";
 
 function Banner(props) {
-  useEffect(() => {
-    const action = document.getElementById("projectAction");
-    const banner = document.getElementById("projectBanner");
-    action.addEventListener("mouseover", () => {
-      banner.classList.add(styles.hover);
-    });
-    action.addEventListener("mouseleave", () => {
-      banner.classList.remove(styles.hover);
-    });
-  });
+  const mouseEnter = (id) => {
+    document.getElementById(id).classList.add(styles.hover);
+  };
+
+  const mouseLeave = (id) => {
+    document.getElementById(id).classList.remove(styles.hover);
+  };
   return (
     <section className={styles.banner}>
-      <Head>
-        <link rel="preload" href="/Image Home/1.jpeg" as="image" />
-        <link rel="preload" href="/Image Home/Hover/1.jpeg" as="image" />
-      </Head>
       <div className={styles.bannerContainer}>
         <ActiveLink href="/project/1">
-          <div className={styles.projectAction} id="projectAction"></div>
+          <div
+            className={styles.projectAction}
+            onMouseEnter={() => {
+              mouseEnter("projectBanner");
+            }}
+            onMouseLeave={() => {
+              mouseLeave("projectBanner");
+            }}
+          ></div>
         </ActiveLink>
         <img
           className={styles.glassOne}
@@ -45,7 +46,14 @@ function Banner(props) {
             alt="Arrow"
           />
           <div className={styles.bannerColumn}>
-            <div className={styles.projectImg} id="projectBanner"></div>
+            <div className={styles.projectDiv}>
+              <img
+                src="/Image Home/1.jpeg"
+                alt="Project banner image"
+                className={styles.projectImg}
+                id="projectBanner"
+              />
+            </div>
             <ActiveLink href="/project/1">
               <p className={styles.title}>{props.projects[0]["name"]}</p>
               <p>

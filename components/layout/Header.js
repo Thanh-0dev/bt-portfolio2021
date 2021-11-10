@@ -20,7 +20,7 @@ function Header() {
       }
     });
 
-    const menuLinks = document.querySelectorAll("#menu ul:nth-of-type(1) a");
+    const menuLinks = document.querySelectorAll("#menu .noTransition");
     for (let link = 0; link < menuLinks.length; link++) {
       menuLinks[link].addEventListener("click", () => {
         menu.classList.remove(styles.active);
@@ -52,12 +52,14 @@ function Header() {
         </ul>
         <ul>
           <a
+            className="noTransition"
             href="mailto:bichtrampham.design@gmail.com"
             rel="noreferrer noopener nofollow"
           >
             <li>/email</li>
           </a>
           <a
+            className="noTransition"
             href="https://www.linkedin.com/in/bichtrampham/"
             target="_blank"
             rel="noreferrer noopener nofollow"
@@ -65,6 +67,7 @@ function Header() {
             <li>/linkedIn</li>
           </a>
           <a
+            className="noTransition"
             href="https://www.instagram.com/tram.inprogress/"
             target="_blank"
             rel="noreferrer noopener nofollow"

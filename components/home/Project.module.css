@@ -79,11 +79,16 @@
     display: none;
   }
 
-  .secondProject {
+  .secondProject,
+  .thirdProject,
+  .fourthProject,
+  .fifthProject,
+  .sixthProject {
     position: relative;
+    z-index: 1;
   }
 
-  .secondProject img:nth-of-type(2) {
+  .secondProject > img:nth-of-type(2) {
     display: block;
     position: absolute;
     z-index: -1;
@@ -93,11 +98,7 @@
     top: 0;
   }
 
-  .thirdProject {
-    position: relative;
-  }
-
-  .thirdProject img:nth-of-type(2) {
+  .thirdProject > img:nth-of-type(2) {
     display: block;
     position: absolute;
     z-index: -1;
@@ -107,11 +108,7 @@
     left: -56px;
   }
 
-  .fourthProject {
-    position: relative;
-  }
-
-  .fourthProject img:nth-of-type(2) {
+  .fourthProject > img:nth-of-type(2) {
     display: block;
     position: absolute;
     z-index: -1;
@@ -120,11 +117,7 @@
     left: 280px;
   }
 
-  .fifthProject {
-    position: relative;
-  }
-
-  .fifthProject img:nth-of-type(2) {
+  .fifthProject > img:nth-of-type(2) {
     display: block;
     position: absolute;
     z-index: -1;
@@ -134,11 +127,7 @@
     left: -50px;
   }
 
-  .sixthProject {
-    position: relative;
-  }
-
-  .sixthProject img:nth-of-type(2) {
+  .sixthProject > img:nth-of-type(2) {
     display: block;
     position: absolute;
     z-index: -1;
@@ -228,11 +217,15 @@
     display: none;
   }
 
-  /* Second project */
-
-  .secondProject {
+  .secondProject,
+  .thirdProject,
+  .fourthProject,
+  .fifthProject,
+  .sixthProject {
     position: relative;
   }
+
+  /* Second project */
 
   .secondProject svg {
     position: absolute;
@@ -245,27 +238,16 @@
   .secondProject .projectCard {
     width: clamp(1px, 28vw, 402px);
     height: clamp(1px, 49.6vw, 714px);
-    background: url("/Image Home/2.jpeg") center no-repeat;
-    background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
     mask: url("/Image Home/SVG/home-1.svg") no-repeat;
     mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .secondProject .projectCard.hover {
-    animation: colorImage1 0.3s;
-    background: url("/Image Home/Hover/2.jpeg") center no-repeat;
-    background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
-  }
-
-  @keyframes colorImage1 {
-    0% {
-      background: url("/Image Home/2.jpeg") center no-repeat;
-      background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
-    }
-    100% {
-      background: url("/Image Home/Hover/2.jpeg") center no-repeat;
-      background-size: clamp(1px, 131vw, 1886px) clamp(1px, 88.7vw, 1277px);
-    }
+  .secondProject .projectImg {
+    width: clamp(1px, 131vw, 1886px);
+    height: clamp(1px, 88.7vw, 1277px);
   }
 
   .secondProject > img:nth-of-type(1) {
@@ -286,10 +268,6 @@
 
   /* Third project */
 
-  .thirdProject {
-    position: relative;
-  }
-
   .thirdProject svg {
     position: absolute;
     right: clamp(1px, 7vw, 100px);
@@ -302,27 +280,16 @@
   .thirdProject .projectCard {
     width: clamp(1px, 28vw, 402px);
     height: clamp(1px, 49.6vw, 714px);
-    background: url("/Image Home/3.jpeg") center no-repeat;
-    background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
     mask: url("/Image Home/SVG/home-2.svg") no-repeat;
     mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .thirdProject .projectCard.hover {
-    animation: colorImage2 0.3s;
-    background: url("/Image Home/Hover/3.jpeg") center no-repeat;
-    background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
-  }
-
-  @keyframes colorImage2 {
-    0% {
-      background: url("/Image Home/3.jpeg") center no-repeat;
-      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
-    }
-    100% {
-      background: url("/Image Home/Hover/3.jpeg") center no-repeat;
-      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 784px);
-    }
+  .thirdProject .projectImg {
+    width: clamp(1px, 81vw, 1180px);
+    height: clamp(1px, 54.4vw, 784px);
   }
 
   .thirdProject > img:nth-of-type(1) {
@@ -342,10 +309,6 @@
 
   /* Fourth project */
 
-  .fourthProject {
-    position: relative;
-  }
-
   .fourthProject svg {
     position: absolute;
     left: clamp(1px, 7vw, 100px);
@@ -357,27 +320,16 @@
   .fourthProject .projectCard {
     width: clamp(1px, 28vw, 402px);
     height: clamp(1px, 49.6vw, 714px);
-    background: url("/Image Home/4.jpeg") center no-repeat;
-    background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
     mask: url("/Image Home/SVG/home-3.svg") no-repeat;
     mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .fourthProject .projectCard.hover {
-    animation: colorImage3 0.3s;
-    background: url("/Image Home/Hover/4.jpeg") center no-repeat;
-    background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-  }
-
-  @keyframes colorImage3 {
-    0% {
-      background: url("/Image Home/4.jpeg") center no-repeat;
-      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-    }
-    100% {
-      background: url("/Image Home/Hover/4.jpeg") center no-repeat;
-      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-    }
+  .fourthProject .projectImg {
+    width: clamp(1px, 81vw, 1180px);
+    height: clamp(1px, 54.6vw, 786px);
   }
 
   .fourthProject > img:nth-of-type(1) {
@@ -398,10 +350,6 @@
 
   /* Fifth project */
 
-  .fifthProject {
-    position: relative;
-  }
-
   .fifthProject svg {
     position: absolute;
     right: clamp(1px, 7vw, 100px);
@@ -414,27 +362,16 @@
   .fifthProject .projectCard {
     width: clamp(1px, 28vw, 402px);
     height: clamp(1px, 49.6vw, 714px);
-    background: url("/Image Home/5.jpeg") center no-repeat;
-    background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
     mask: url("/Image Home/SVG/home-4.svg") no-repeat;
     mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .fifthProject .projectCard.hover {
-    animation: colorImage4 0.3s;
-    background: url("/Image Home/Hover/5.jpeg") center no-repeat;
-    background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
-  }
-
-  @keyframes colorImage4 {
-    0% {
-      background: url("/Image Home/5.jpeg") center no-repeat;
-      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
-    }
-    100% {
-      background: url("/Image Home/Hover/5.jpeg") center no-repeat;
-      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.4vw, 783px);
-    }
+  .fifthProject .projectImg {
+    width: clamp(1px, 81vw, 1180px);
+    height: clamp(1px, 54.4vw, 783px);
   }
 
   .fifthProject > img:nth-of-type(1) {
@@ -472,27 +409,16 @@
   .sixthProject .projectCard {
     width: clamp(1px, 28vw, 402px);
     height: clamp(1px, 49.6vw, 714px);
-    background: url("/Image Home/6.jpeg") center no-repeat;
-    background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
     mask: url("/Image Home/SVG/home-5.svg") no-repeat;
     mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .sixthProject .projectCard.hover {
-    animation: colorImage5 0.3s;
-    background: url("/Image Home/Hover/6.jpeg") center no-repeat;
-    background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-  }
-
-  @keyframes colorImage5 {
-    0% {
-      background: url("/Image Home/6.jpeg") center no-repeat;
-      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-    }
-    100% {
-      background: url("/Image Home/Hover/6.jpeg") center no-repeat;
-      background-size: clamp(1px, 81vw, 1180px) clamp(1px, 54.6vw, 786px);
-    }
+  .sixthProject .projectImg {
+    width: clamp(1px, 81vw, 1180px);
+    height: clamp(1px, 54.6vw, 786px);
   }
 
   .sixthProject > img:nth-of-type(1) {
@@ -509,6 +435,25 @@
     top: clamp(1px, 28.3vw, 408px);
     left: clamp(-75px, -5.2vw, -1px);
     z-index: -1;
+  }
+
+  /* Project hover */
+  .projectImg {
+    filter: grayscale(1);
+  }
+
+  .hover {
+    animation: colorImage 0.5s;
+    filter: grayscale(0);
+  }
+
+  @keyframes colorImage {
+    0% {
+      filter: grayscale(1);
+    }
+    100% {
+      filter: grayscale(0);
+    }
   }
 }
 

@@ -172,28 +172,35 @@
     margin-left: clamp(1px, 7.6vw, 110px);
   }
 
-  .projectImg {
+  .projectDiv {
     width: clamp(1px, 65vw, 940px);
     height: clamp(1px, 33vw, 484px);
-    background: url("/Image Home/1.jpeg") center no-repeat;
-    background-size: clamp(1px, 85vw, 1227px) auto;
+    overflow: hidden;
     transform: rotate(2deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .projectImg.hover {
-    animation: colorImage 0.3s;
-    background: url("/Image Home/Hover/1.jpeg") center no-repeat;
-    background-size: clamp(1px, 85vw, 1227px) auto;
+  .projectImg {
+    width: clamp(1px, 82vw, 1180px);
+    height: clamp(1px, 54.6vw, 787px);
+    filter: grayscale(1);
+  }
+
+  /* Banner hover */
+
+  .hover {
+    animation: colorImage 0.5s;
+    filter: grayscale(0);
   }
 
   @keyframes colorImage {
     0% {
-      background: url("/Image Home/1.jpeg") center no-repeat;
-      background-size: clamp(1px, 85vw, 1227px) auto;
+      filter: grayscale(1);
     }
     100% {
-      background: url("/Image Home/Hover/1.jpeg") center no-repeat;
-      background-size: clamp(1px, 85vw, 1227px) auto;
+      filter: grayscale(0);
     }
   }
 
