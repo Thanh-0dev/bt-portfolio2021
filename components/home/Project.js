@@ -3,6 +3,9 @@ import ActiveLink from "/components/ActiveLink";
 import {useEffect} from "react";
 import styles from "./Project.module.css";
 
+/* Filter grayscale pour les hover -> pas de reload */
+/* On mouseenter -> grayscale progressif none */
+/* On mouseleave -> grayscale progressf */
 function Project(props) {
   useEffect(() => {
     const action1 = document.getElementById("projectAction1");
@@ -52,7 +55,7 @@ function Project(props) {
   });
   return (
     <section className={styles.project}>
-      <Head>
+      {/* <Head>
         <link rel="preload" href="/Image Home/2.jpeg" as="image" />
         <link rel="preload" href="/Image Home/3.jpeg" as="image" />
         <link rel="preload" href="/Image Home/4.jpeg" as="image" />
@@ -63,7 +66,7 @@ function Project(props) {
         <link rel="preload" href="/Image Home/Hover/4.jpeg" as="image" />
         <link rel="preload" href="/Image Home/Hover/5.jpeg" as="image" />
         <link rel="preload" href="/Image Home/Hover/6.jpeg" as="image" />
-      </Head>
+      </Head> */}
       <div className={styles.projectContainer}>
         <div className={styles.blur}>
           <img src="./Icons habillage/Blur.png" alt="Blur" />
