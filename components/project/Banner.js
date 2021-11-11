@@ -12,7 +12,7 @@ function Banner(props) {
       />
       <img
         className={styles.bannerImg}
-        src={`/Image Home/Hover/${props.project.id}.jpeg`}
+        src={`/Image Home/${props.project.id}.jpeg`}
         alt="Banner image"
       />
       <div className={styles.underBanner}>
