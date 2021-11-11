@@ -42,16 +42,18 @@ function Loader() {
           </div>
         </div>
         <div className={styles.loadingDiv}>
-          <Image
-            src="/Loader/loading-image.jpeg"
-            alt="Loading image"
-            width={260}
-            height={260}
-            priority
-          />
-          <div className={styles.loadingText}>
-            <p id="loaderBuild">.tram/digital-designer/building </p>
-            <p id="loaderPercent">loader::0%</p>
+          <div>
+            <Image
+              src="/Loader/loading-image.jpeg"
+              alt="Loading image"
+              width={260}
+              height={260}
+              priority
+            />
+            <div className={styles.loadingText}>
+              <p id="loaderBuild">.tram/digital-designer/building </p>
+              <p id="loaderPercent">loader::0%</p>
+            </div>
           </div>
         </div>
       </div>
