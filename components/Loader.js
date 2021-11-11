@@ -1,7 +1,6 @@
 import Head from "next/head";
 import {useEffect} from "react";
 import styles from "./Loader.module.css";
-import Image from "next/image";
 
 function Loader() {
   useEffect(() => {
@@ -9,28 +8,37 @@ function Loader() {
     const percentText = document.getElementById("loaderPercent");
     let percent = 0;
     let dot = "";
-    let dotInterval = setInterval(() => {
-      if (dot === "...") {
-        dot = "";
-      } else {
-        dot += ".";
-      }
-      buildText.innerHTML = `.tram/digital-designer/building ${dot}`;
-    }, 250);
-    let percentInterval = setInterval(() => {
-      if (percent < 100) {
-        percent += 10;
-        percentText.innerHTML = `loader::${percent}%`;
-      } else {
-        clearInterval(percentInterval);
-        clearInterval(dotInterval);
-      }
-    }, 100);
+    let loading = setTimeout(() => {
+      let dotInterval = setInterval(() => {
+        if (dot === "...") {
+          dot = "";
+        } else {
+          dot += ".";
+        }
+        buildText.innerHTML = `.tram/digital-designer/building ${dot}`;
+      }, 250);
+      let percentInterval = setInterval(() => {
+        if (percent < 100) {
+          percent += 10;
+          percentText.innerHTML = `loader::${percent}%`;
+        } else {
+          clearInterval(percentInterval);
+          clearInterval(dotInterval);
+          clearInterval(loading);
+        }
+      }, 150);
+    }, 400);
   }, []);
   return (
     <section className={styles.loader}>
       <Head>
+        <link
+          rel="preload"
+          href="/Font/DesktopFonts/UntitledSans-Regular.otf"
+          as="font"
+        />
         <link rel="preload" href="/Loader/loading-image.jpeg" as="image" />
+        <link rel="preload" href="/Loader/loading-line.svg" as="image" />
       </Head>
       <div className={styles.loaderContainer}>
         <div className={styles.loadingLine}>
@@ -43,13 +51,7 @@ function Loader() {
         </div>
         <div className={styles.loadingDiv}>
           <div>
-            <Image
-              src="/Loader/loading-image.jpeg"
-              alt="Loading image"
-              width={260}
-              height={260}
-              priority
-            />
+            <img src="/Loader/loading-image.jpeg" alt="Loading image" />
             <div className={styles.loadingText}>
               <p id="loaderBuild">.tram/digital-designer/building </p>
               <p id="loaderPercent">loader::0%</p>
