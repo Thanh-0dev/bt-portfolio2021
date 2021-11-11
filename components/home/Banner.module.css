@@ -76,14 +76,23 @@
     margin-left: 20px;
   }
 
-  .projectImg {
+  .projectDiv {
     margin-top: -6px;
     margin-left: 4px;
     width: 290px;
     height: 150px;
-    background: url("/Image Home/1.jpeg") center no-repeat;
-    background-size: 360px, auto;
     transform: rotate(2deg);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectImg {
+    width: 360px;
+    height: auto;
+    transform: rotate(-2deg);
+    filter: grayscale(1);
   }
 
   .title {
@@ -186,6 +195,7 @@
     width: clamp(1px, 82vw, 1180px);
     height: clamp(1px, 54.6vw, 787px);
     filter: grayscale(1);
+    transform: rotate(-2deg);
   }
 
   /* Banner hover */

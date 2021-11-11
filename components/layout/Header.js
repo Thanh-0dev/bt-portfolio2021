@@ -20,7 +20,7 @@ function Header() {
       }
     });
 
-    const menuLinks = document.querySelectorAll("#menu .noTransition");
+    const menuLinks = document.querySelectorAll("#menu a");
     for (let link = 0; link < menuLinks.length; link++) {
       menuLinks[link].addEventListener("click", () => {
         menu.classList.remove(styles.active);
