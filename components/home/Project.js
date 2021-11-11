@@ -1,18 +1,14 @@
-import Head from "next/head";
 import ActiveLink from "/components/ActiveLink";
-import {useEffect} from "react";
 import styles from "./Project.module.css";
-
-/* Filter grayscale pour les hover -> pas de reload */
-/* On mouseenter -> grayscale progressif none */
-/* On mouseleave -> grayscale progressf */
 
 function Project(props) {
   const mouseEnter = (id) => {
     document.getElementById(id).classList.add(styles.hover);
+    document.getElementById(id).classList.remove(styles.unhover);
   };
 
   const mouseLeave = (id) => {
+    document.getElementById(id).classList.add(styles.unhover);
     document.getElementById(id).classList.remove(styles.hover);
   };
   return (

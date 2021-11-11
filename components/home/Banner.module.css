@@ -198,6 +198,17 @@
     transform: rotate(-2deg);
   }
 
+  .title {
+    font-size: 24px;
+    line-height: 37px;
+    margin: 16px 0;
+  }
+
+  .bannerColumn p:nth-of-type(2) {
+    text-transform: uppercase;
+    line-height: 20px;
+  }
+
   /* Banner hover */
 
   .hover {
@@ -217,15 +228,21 @@
     }
   }
 
-  .title {
-    font-size: 24px;
-    line-height: 37px;
-    margin: 16px 0;
+  .unhover {
+    animation: uncolorImage 0.5s;
+    filter: grayscale(1);
+    transform: scale(1) rotate(-2deg);
   }
 
-  .bannerColumn p:nth-of-type(2) {
-    text-transform: uppercase;
-    line-height: 20px;
+  @keyframes uncolorImage {
+    0% {
+      filter: grayscale(0);
+      transform: scale(1.1) rotate(0deg);
+    }
+    100% {
+      filter: grayscale(1);
+      transform: scale(1) rotate(-2deg);
+    }
   }
 }
 

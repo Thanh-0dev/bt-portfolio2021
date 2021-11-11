@@ -453,11 +453,28 @@
   @keyframes colorImage {
     0% {
       filter: grayscale(1);
-      transform: scale(1.1) rotate(0deg);
+      transform: scale(1) rotate(0deg);
     }
     100% {
       filter: grayscale(0);
       transform: scale(1.1) rotate(2deg);
+    }
+  }
+
+  .unhover {
+    animation: uncolorImage 0.5s;
+    filter: grayscale(1);
+    transform: scale(1) rotate(0deg);
+  }
+
+  @keyframes uncolorImage {
+    0% {
+      filter: grayscale(0);
+      transform: scale(1.1) rotate(2deg);
+    }
+    100% {
+      filter: grayscale(1);
+      transform: scale(1) rotate(0deg);
     }
   }
 }

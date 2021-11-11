@@ -8,7 +8,7 @@
   background: url("/Image Home/background.png");
   background-color: #d6d6d6;
   background-blend-mode: multiply;
-  animation: up 0.4s linear 1.6s, disappear 10s 1.99s;
+  animation: up 0.4s linear 2.1s;
 }
 
 @keyframes up {
@@ -22,15 +22,6 @@
   }
 }
 
-@keyframes disappear {
-  0% {
-    display: none;
-  }
-  100% {
-    display: none;
-  }
-}
-
 .loaderContainer {
   position: relative;
   display: flex;
@@ -39,10 +30,26 @@
   width: 100vw;
 }
 
+.loaderContainer {
+  animation: appear 0.4s ease-in;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .loadingLine {
   position: absolute;
   z-index: -1;
   display: flex;
+  transform: translateY(-5vh);
 }
 
 .loadingLine div {

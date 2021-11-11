@@ -1,5 +1,4 @@
 import Link from "next/link";
-import {useEffect} from "react";
 import styles from "./Banner.module.css";
 
 function Banner(props) {

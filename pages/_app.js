@@ -15,7 +15,7 @@ function MyApp({Component, pageProps}) {
     setFirstLoading(false);
     setTimeout(() => {
       setFirstTime(false);
-    }, 2050);
+    }, 2500);
   }, []);
 
   /* Page transition effect */

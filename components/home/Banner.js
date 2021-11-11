@@ -1,14 +1,14 @@
-import Head from "next/head";
-import {useEffect} from "react";
 import styles from "./Banner.module.css";
 import ActiveLink from "/components/ActiveLink";
 
 function Banner(props) {
   const mouseEnter = (id) => {
     document.getElementById(id).classList.add(styles.hover);
+    document.getElementById(id).classList.remove(styles.unhover);
   };
 
   const mouseLeave = (id) => {
+    document.getElementById(id).classList.add(styles.unhover);
     document.getElementById(id).classList.remove(styles.hover);
   };
   return (
