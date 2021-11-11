@@ -16,7 +16,7 @@
   width: 150vw;
   height: 150vh;
   background: #d6d6d6;
-  transform: rotate(11.71deg) translate(-110%, -10%);
+  transform: rotate(11.71deg) translate(-118%, -10%);
 }
 
 .transition :nth-child(1) {
@@ -31,7 +31,7 @@
 
 @keyframes slideIn {
   0% {
-    transform: rotate(11.71deg) translate(-110%, -10%);
+    transform: rotate(11.71deg) translate(-118%, -10%);
   }
   100% {
     transform: rotate(11.71deg) translate(-10%, -10%);
