@@ -41,6 +41,7 @@
   .projectTitle + p {
     text-transform: uppercase;
     font-size: 11px;
+    line-height: 14px;
     margin-left: 20px;
   }
 
@@ -185,10 +186,8 @@
     font-size: 16px;
   }
 
-  .sixthProject > p:not(.projectId, .projectTitle) {
+  .sixthProject .projectTitle + p {
     margin-bottom: 40px;
-    text-transform: uppercase;
-    line-height: 20px;
   }
 
   .left {
