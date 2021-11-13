@@ -208,6 +208,7 @@
   .bannerColumn p:nth-of-type(2) {
     text-transform: uppercase;
     line-height: 20px;
+    font-size: 16px;
   }
 
   /* Banner hover */
