@@ -1,31 +1,50 @@
 import ActiveLink from "/components/ActiveLink";
+import {useRouter} from "next/router";
 import {useEffect} from "react";
 import styles from "./Header.module.css";
 
 function Header() {
   /* Burger menu */
+  const router = useRouter();
   useEffect(() => {
     const burgerMenu = document.getElementById("burger");
     const menu = document.getElementById("menu");
     const html = document.documentElement;
     let menuIsOpen = false;
     burgerMenu.addEventListener("click", () => {
-      if (!menuIsOpen) {
-        menu.classList.add(styles.active);
-        html.classList.add(styles.noScroll);
-      } else {
-        menu.classList.remove(styles.active);
-        html.classList.remove(styles.noScroll);
-      }
-      menuIsOpen = !menuIsOpen;
+      setTimeout(() => {
+        if (!menuIsOpen) {
+          menu.classList.add(styles.active);
+          html.classList.add(styles.noScroll);
+        } else {
+          menu.classList.remove(styles.active);
+          html.classList.remove(styles.noScroll);
+        }
+        menuIsOpen = !menuIsOpen;
+      }, 500);
     });
-
     const menuLinks = document.querySelectorAll("#menu a");
     for (let link = 0; link < menuLinks.length; link++) {
-      menuLinks[link].addEventListener("click", () => {
-        menu.classList.remove(styles.active);
-        html.classList.remove(styles.noScroll);
-      });
+      if (menuLinks[link].href !== router.pathname) {
+        menuLinks[link].addEventListener("click", () => {
+          menuIsOpen = false;
+          menu.classList.remove(styles.active);
+          html.classList.remove(styles.noScroll);
+        });
+      } else {
+        menuIsOpen = true;
+      }
+    }
+  }, [router.pathname]);
+
+  useEffect(() => {
+    const menuLinks = document.querySelectorAll("#menu a");
+    for (let link = 0; link < menuLinks.length; link++) {
+      if (menuLinks[link].href === window.location.href) {
+        menuLinks[link].classList.add(styles.underline);
+      } else {
+        menuLinks[link].classList.remove(styles.underline);
+      }
     }
   });
 
@@ -84,7 +103,9 @@ function Header() {
           <ActiveLink href="/about">/statistics</ActiveLink>
         </li>
         <li>
-          <img id="burger" src="/Mobile/burger-menu.svg" alt="burger menu" />
+          <a>
+            <img id="burger" src="/Mobile/burger-menu.svg" alt="burger menu" />
+          </a>
         </li>
       </ul>
       <div className={styles.info}>

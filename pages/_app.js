@@ -13,7 +13,7 @@ function MyApp({Component, pageProps}) {
     window.addEventListener("load", () => {
       setFinishedLoading(true);
     });
-  });
+  }, []);
 
   /* First time loading */
   const [firstTime, setFirstTime] = useState(false);
@@ -47,8 +47,6 @@ function MyApp({Component, pageProps}) {
         }
       });
     }
-
-    /* For burger menu mobile */
   });
   return (
     <>
