@@ -1,6 +1,6 @@
 import styles from "./SlidingPuzzle.module.css";
 
-function SlidingPuzzle(props) {
+function SlidingPuzzle() {
   return (
     <section className={styles.slidingPuzzle}>
       <img src="/Icons habillage/Blur.png" alt="Blur" />

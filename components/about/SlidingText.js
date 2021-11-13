@@ -1,9 +1,15 @@
 import styles from "./SlidingText.module.css";
 
-function SlidingText(props) {
+function SlidingText() {
   return (
     <section className={styles.slidingText}>
-      <img src="/Image About/habillage/about-lines.svg" alt="About lines" />
+      <div className={styles.fade}></div>
+      <div className={styles.fade}></div>
+      <img
+        className={styles.lines}
+        src="/Image About/habillage/about-lines.svg"
+        alt="About lines"
+      />
       <div className={styles.scroll}>
         <div>
           <p>
@@ -26,7 +32,11 @@ function SlidingText(props) {
           </p>
         </div>
       </div>
-      <img src="/Image About/habillage/about-lines-2.svg" alt="About lines" />
+      <img
+        className={styles.lines}
+        src="/Image About/habillage/about-lines-2.svg"
+        alt="About lines"
+      />
     </section>
   );
 }

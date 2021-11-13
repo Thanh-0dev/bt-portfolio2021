@@ -7,18 +7,14 @@ function Experiences(props) {
       <img src="/Image About/about-3.png" alt="Photo of Japan" />
       <div className={styles.flex}>
         <p>Experiences</p>
-        <div className={styles.exp}>
-          <p>UX UI Designer/Growth & product team</p>
-          <p>at @Chance/French/Startup/2020-2022</p>
-        </div>
-        <div className={styles.exp}>
-          <p>Designer & frond-end developer/</p>
-          <p>at @Garden Eight/Japan/Digital Agency/2019</p>
-        </div>
-        <div className={styles.exp}>
-          <p>Art director junior/</p>
-          <p>at @WNP/Ads agency/2018</p>
-        </div>
+        {Array(props.exp.length)
+          .fill(null)
+          .map((e, i) => (
+            <div className={styles.exp} key={`exp-${i + 1}`}>
+              <p>{props.exp[i].role}</p>
+              <p>{props.exp[i].detail}</p>
+            </div>
+          ))}
       </div>
     </section>
   );

@@ -7,9 +7,11 @@ import Footer from "/components/home/Footer";
 
 export async function getStaticProps() {
   const allProject = await prisma.project.findMany();
+  const footer = await prisma.footer.findMany();
   return {
     props: {
       projects: allProject,
+      footer: footer,
     },
   };
 }
@@ -22,7 +24,7 @@ function HomePage(props) {
       </Head>
       <Banner {...props} />
       <Project {...props} />
-      <Footer></Footer>
+      <Footer {...props} />
     </Fragment>
   );
 }

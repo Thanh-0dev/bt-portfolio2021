@@ -33,12 +33,12 @@
     flex-direction: column;
   }
 
-  .title p:nth-of-type(1) {
+  .title > p:nth-of-type(1) {
     font-size: 16px;
     white-space: nowrap;
   }
 
-  .title p:nth-of-type(2) {
+  .title > p:nth-of-type(2) {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 22px;
@@ -46,7 +46,7 @@
     margin-bottom: 16px;
   }
 
-  .title p:nth-of-type(3) {
+  .title div p {
     font-size: 16px;
     line-height: 26px;
     color: #585858;
@@ -103,21 +103,28 @@
   .title {
     display: flex;
     flex-direction: column;
+    width: 400px;
   }
 
-  .title p:nth-of-type(1) {
+  .title > p:nth-of-type(1) {
     font-size: 30px;
     white-space: nowrap;
   }
 
-  .title p:nth-of-type(2) {
+  .title > p:nth-of-type(2) {
     text-transform: uppercase;
     line-height: 20px;
     margin-top: 20px;
     margin-bottom: 60px;
   }
 
-  .title p:nth-of-type(3) {
+  .title div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .title div p {
     font-size: 32px;
     line-height: 46px;
     color: #585858;

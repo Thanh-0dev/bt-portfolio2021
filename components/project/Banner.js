@@ -14,6 +14,9 @@ function Banner(props) {
         src={`/Image Home/${props.project.id}.jpeg`}
         alt="Banner image"
       />
+      <div className={styles.blur}>
+        <img src="/Icons habillage/Blur.png" alt="Blur" />
+      </div>
       <div className={styles.underBanner}>
         <img
           className={styles.arrow}

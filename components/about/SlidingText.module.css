@@ -3,7 +3,7 @@
     margin: -40px 0;
   }
 
-  .slidingText > img {
+  .lines {
     width: 1500px;
     transform: translate(-300px, 10px);
   }
@@ -21,7 +21,7 @@
     white-space: nowrap;
   }
 
-  .slidingText p img {
+  .scroll p img {
     margin: 0 24px;
     padding-bottom: 6px;
   }
@@ -44,6 +44,7 @@
   .slidingText {
     margin: 0 auto;
     max-width: 1440px;
+    position: relative;
   }
 
   .scroll {
@@ -75,5 +76,32 @@
     100% {
       transform: translateX(-100%);
     }
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .fade {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 75px;
+  }
+
+  .fade:nth-of-type(1) {
+    background: linear-gradient(
+      90deg,
+      #d6d6d6 10.79%,
+      rgba(214, 214, 214, 0) 92.22%
+    );
+  }
+
+  .fade:nth-of-type(2) {
+    background: linear-gradient(
+      270deg,
+      #d6d6d6 10.79%,
+      rgba(214, 214, 214, 0) 92.22%
+    );
+    right: 0;
   }
 }

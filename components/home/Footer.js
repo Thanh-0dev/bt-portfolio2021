@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 
-function Footer() {
+function Footer(props) {
   return (
     <section className={styles.footer}>
       <img
@@ -23,10 +23,8 @@ function Footer() {
         <div className={styles.blur}>
           <img src="/Icons habillage/Blur.png" alt="Blur" />
         </div>
-        <p>Hello.</p>
-        <p>
-          Nice to meet you. I’m available for freelance and new opportunities.
-        </p>
+        <p>{props.footer[0].firstP}</p>
+        <p>{props.footer[0].secondP}</p>
         <div className={styles.contact}>
           <a
             className="noTransition"

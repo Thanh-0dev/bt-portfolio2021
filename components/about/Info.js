@@ -10,33 +10,29 @@ function Info(props) {
           alt="Glass"
         />
         <div className={styles.title}>
-          <p>00.Bich Trâm Pham (24mo) </p>
-          <p>type: FRENCH JUNIOR digital-designer/</p>
-          <p>
-            &gt;create 14.12.2020
-            <br />
-            &gt;open: 1xp oversea
-            <br />
-            &gt;environment known:
-            <br />
-            startup & agency (2)
-          </p>
+          <p>{props.about[0].title}</p>
+          <p>{props.about[0].type}</p>
+          <div>
+            {Array(props.recap.length)
+              .fill(null)
+              .map((e, i) => (
+                <p key={`recap-${i + 1}`}>{props.recap[i].text}</p>
+              ))}
+          </div>
         </div>
         <div className={styles.desc}>
           <p>
-            Hi there. I like to add flavor to every{" "}
-            <span className={styles.underline}>digital experience</span>
-            <br />I work on and have a sweet tooth for anything related to{" "}
+            Hi there.
+            <br />I like to add flavor to every{" "}
+            <span className={styles.underline}>digital experience</span> I work
+            on, and have a sweet tooth for anything related to{" "}
             <span className={styles.underline}>interface</span>.
           </p>
           <p>
-            More informations: Over the past few years, thanks to various
-            exchanges with caring and talented people, I have grown and learned
-            as much as a designer as a person.
+            {props.about[0].moreInfo1}
             <br />
-            <br /> Through my experiences, I have been able to clarify and be
-            more aware of the type of environment and the mindset I strive for
-            in a company.
+            <br />
+            {props.about[0].moreInfo2}
           </p>
         </div>
       </div>

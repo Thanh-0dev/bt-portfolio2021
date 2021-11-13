@@ -1,5 +1,5 @@
 import ActiveLink from "/components/ActiveLink";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -10,13 +10,18 @@ function Header() {
     const html = document.documentElement;
     let menuIsOpen = false;
     burgerMenu.addEventListener("click", () => {
-      menuIsOpen = !menuIsOpen;
-      if (menuIsOpen) {
-        menu.classList.add(styles.active);
-        html.classList.add(styles.noScroll);
+      if (!menuIsOpen) {
+        setTimeout(() => {
+          menu.classList.add(styles.active);
+          html.classList.add(styles.noScroll);
+          menuIsOpen = true;
+        }, 500);
       } else {
-        menu.classList.remove(styles.active);
-        html.classList.remove(styles.noScroll);
+        setTimeout(() => {
+          menu.classList.remove(styles.active);
+          html.classList.remove(styles.noScroll);
+          menuIsOpen = false;
+        }, 500);
       }
     });
 

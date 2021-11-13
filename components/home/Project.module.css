@@ -141,6 +141,10 @@
 }
 
 @media only screen and (min-width: 650px) {
+  .mobile {
+    display: none;
+  }
+
   .projectContainer {
     position: relative;
     display: flex;
@@ -160,7 +164,7 @@
 
   .blur img {
     transform: rotate(180deg);
-    width: clamp(1px, 79vw, 1135px);
+    width: clamp(1px, 83.3vw, 1200px);
   }
 
   .projectId {
@@ -215,8 +219,47 @@
     top: clamp(-500px, -34.7vw, -1px);
   }
 
-  .mobile {
-    display: none;
+  .secondProject svg:nth-of-type(1),
+  .fourthProject svg:nth-of-type(1),
+  .sixthProject svg:nth-of-type(1),
+  .thirdProject svg:nth-of-type(1),
+  .fifthProject svg:nth-of-type(1) {
+    position: absolute;
+    width: clamp(1px, 28vw, 404px);
+    height: clamp(1px, 49.7vw, 714px);
+    z-index: 9000;
+  }
+
+  .secondProject svg:nth-of-type(1),
+  .fourthProject svg:nth-of-type(1),
+  .sixthProject svg:nth-of-type(1) {
+    left: clamp(1px, 7vw, 100px);
+  }
+
+  .thirdProject svg:nth-of-type(1),
+  .fifthProject svg:nth-of-type(1) {
+    right: clamp(1px, 7vw, 100px);
+    left: auto;
+  }
+
+  .left .projectCard {
+    width: clamp(1px, 28vw, 403px);
+    height: clamp(1px, 49.6vw, 714px);
+    mask: url("/Image Home/SVG/left.svg") no-repeat;
+    mask-size: clamp(1px, 28vw, 403px) clamp(1px, 49.7vw, 714px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right .projectCard {
+    width: clamp(1px, 28vw, 404px);
+    height: clamp(1px, 49.6vw, 714px);
+    mask: url("/Image Home/SVG/right.svg") no-repeat;
+    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 714px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .secondProject,
@@ -228,25 +271,6 @@
   }
 
   /* Second project */
-
-  .secondProject svg {
-    position: absolute;
-    left: clamp(1px, 7vw, 100px);
-    width: clamp(1px, 28vw, 404px);
-    height: clamp(1px, 49.7vw, 716px);
-    z-index: 9000;
-  }
-
-  .secondProject .projectCard {
-    width: clamp(1px, 28vw, 402px);
-    height: clamp(1px, 49.6vw, 714px);
-    mask: url("/Image Home/SVG/home-1.svg") no-repeat;
-    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .secondProject .projectImg {
     width: clamp(1px, 131vw, 1886px);
     height: clamp(1px, 88.7vw, 1277px);
@@ -270,25 +294,6 @@
 
   /* Third project */
 
-  .thirdProject svg {
-    position: absolute;
-    right: clamp(1px, 7vw, 100px);
-    width: clamp(1px, 28vw, 404px);
-    height: clamp(1px, 49.7vw, 716px);
-    left: auto;
-    z-index: 9000;
-  }
-
-  .thirdProject .projectCard {
-    width: clamp(1px, 28vw, 402px);
-    height: clamp(1px, 49.6vw, 714px);
-    mask: url("/Image Home/SVG/home-2.svg") no-repeat;
-    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .thirdProject .projectImg {
     width: clamp(1px, 81vw, 1180px);
     height: clamp(1px, 54.4vw, 784px);
@@ -310,24 +315,6 @@
   }
 
   /* Fourth project */
-
-  .fourthProject svg {
-    position: absolute;
-    left: clamp(1px, 7vw, 100px);
-    width: clamp(1px, 28vw, 404px);
-    height: clamp(1px, 49.7vw, 716px);
-    z-index: 9000;
-  }
-
-  .fourthProject .projectCard {
-    width: clamp(1px, 28vw, 402px);
-    height: clamp(1px, 49.6vw, 714px);
-    mask: url("/Image Home/SVG/home-3.svg") no-repeat;
-    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   .fourthProject .projectImg {
     width: clamp(1px, 81vw, 1180px);
@@ -351,25 +338,6 @@
   }
 
   /* Fifth project */
-
-  .fifthProject svg {
-    position: absolute;
-    right: clamp(1px, 7vw, 100px);
-    left: auto;
-    width: clamp(1px, 28vw, 404px);
-    height: clamp(1px, 49.7vw, 716px);
-    z-index: 9000;
-  }
-
-  .fifthProject .projectCard {
-    width: clamp(1px, 28vw, 402px);
-    height: clamp(1px, 49.6vw, 714px);
-    mask: url("/Image Home/SVG/home-4.svg") no-repeat;
-    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   .fifthProject .projectImg {
     width: clamp(1px, 81vw, 1180px);
@@ -398,24 +366,6 @@
   .sixthProject {
     position: relative;
     display: none;
-  }
-
-  .sixthProject svg {
-    position: absolute;
-    left: clamp(1px, 7vw, 100px);
-    width: clamp(1px, 28vw, 404px);
-    height: clamp(1px, 49.7vw, 716px);
-    z-index: 9000;
-  }
-
-  .sixthProject .projectCard {
-    width: clamp(1px, 28vw, 402px);
-    height: clamp(1px, 49.6vw, 714px);
-    mask: url("/Image Home/SVG/home-5.svg") no-repeat;
-    mask-size: clamp(1px, 28vw, 404px) clamp(1px, 49.7vw, 716px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .sixthProject .projectImg {

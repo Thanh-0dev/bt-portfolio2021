@@ -18,6 +18,18 @@
     margin: clamp(1px, 0.7vw, 10px) 0 20px clamp(-64px, 15vw, -56px);
   }
 
+  .blur {
+    position: absolute;
+    z-index: -2;
+    top: -450px;
+    left: -400px;
+    overflow: hidden;
+  }
+
+  .blur img {
+    width: 1135px;
+  }
+
   .underBanner {
     position: relative;
     display: flex;
@@ -130,6 +142,17 @@
     object-fit: cover;
     transform: rotate(1deg);
     margin: clamp(1px, 0.7vw, 10px) 0 60px clamp(-154px, -10.7vw, -64px);
+  }
+
+  .blur {
+    position: absolute;
+    left: clamp(-150px, -10.4vw, -1px);
+    top: clamp(-150px, -10.4vw, -1px);
+    z-index: -1;
+  }
+
+  .blur img {
+    width: clamp(1px, 83.3vw, 1200px);
   }
 
   .underBanner {

@@ -7,30 +7,55 @@ import Transition from "/components/Transition";
 import "/styles/globals.css";
 
 function MyApp({Component, pageProps}) {
+  /* Slow internet loading */
+  const [finishedLoading, setFinishedLoading] = useState(false);
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      setFinishedLoading(true);
+    });
+  });
+
   /* First time loading */
   const [firstTime, setFirstTime] = useState(false);
   const [firstLoading, setFirstLoading] = useState(true);
+  const [leave, setLeave] = useState(false);
   useEffect(() => {
     setFirstTime(true);
     setFirstLoading(false);
     setTimeout(() => {
-      setFirstTime(false);
-    }, 2500);
-  }, []);
+      if (finishedLoading) {
+        setLeave(true);
+        setTimeout(() => {
+          setFirstTime(false);
+        }, 400);
+      }
+    }, 2100);
+  }, [finishedLoading]);
 
   /* Page transition effect */
   const [loading, setLoading] = useState(false);
   useEffect(() => {
+    /* For links without noTransition class */
     const links = document.querySelectorAll("a:not(a.noTransition)");
     for (let link = 0; link < links.length; link++) {
-      links[link].addEventListener("click", (event) => {
-        event.preventDefault();
+      links[link].addEventListener("click", () => {
         if (links[link].href !== window.location.href) {
           setLoading(true);
           setTimeout(() => {
             setLoading(false);
           }, 1500);
         }
+      });
+    }
+
+    /* For burger menu mobile */
+    if (!firstTime && finishedLoading) {
+      const burgerMenuMobile = document.getElementById("burger");
+      burgerMenuMobile.addEventListener("click", () => {
+        setLoading(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
       });
     }
   });
@@ -87,10 +112,6 @@ function MyApp({Component, pageProps}) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       {/* Global site tag (gtag.js) - Google Analytics */}
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-152641511-1"
-      />
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -101,7 +122,13 @@ function MyApp({Component, pageProps}) {
           `,
         }}
       />
-      {firstTime ? <Loader /> : null}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-152641511-1"
+      />
+      {firstTime || !finishedLoading ? (
+        <Loader {...[firstTime, finishedLoading, leave]} />
+      ) : null}
       {loading ? <Transition /> : null}
       {!firstLoading ? (
         <Layout>

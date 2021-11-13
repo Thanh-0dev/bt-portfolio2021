@@ -8,17 +8,27 @@
   background: url("/Image Home/background.png");
   background-color: #d6d6d6;
   background-blend-mode: multiply;
-  animation: up 0.4s linear 2.1s;
+}
+
+.leave {
+  position: fixed;
+  display: block;
+  top: 0;
+  z-index: 9999;
+  height: 100vh;
+  width: 100vw;
+  background: url("/Image Home/background.png");
+  background-color: #d6d6d6;
+  background-blend-mode: multiply;
+  animation: up 0.4s linear;
 }
 
 @keyframes up {
   0% {
     transform: translateY(0);
-    display: block;
   }
   100% {
     transform: translateY(-100%);
-    display: none;
   }
 }
 
@@ -54,6 +64,11 @@
 
 .loadingLine div {
   animation: scroll 5s linear infinite;
+}
+
+.loadingLine img {
+  width: 100vw;
+  min-width: 1440px;
 }
 
 @keyframes scroll {
