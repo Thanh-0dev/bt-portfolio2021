@@ -49,15 +49,6 @@ function MyApp({Component, pageProps}) {
     }
 
     /* For burger menu mobile */
-    if (!firstTime && finishedLoading) {
-      const burgerMenuMobile = document.getElementById("burger");
-      burgerMenuMobile.addEventListener("click", () => {
-        setLoading(true);
-        setTimeout(() => {
-          setLoading(false);
-        }, 1500);
-      });
-    }
   });
   return (
     <>

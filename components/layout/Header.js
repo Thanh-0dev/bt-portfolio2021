@@ -11,18 +11,13 @@ function Header() {
     let menuIsOpen = false;
     burgerMenu.addEventListener("click", () => {
       if (!menuIsOpen) {
-        setTimeout(() => {
-          menu.classList.add(styles.active);
-          html.classList.add(styles.noScroll);
-          menuIsOpen = true;
-        }, 500);
+        menu.classList.add(styles.active);
+        html.classList.add(styles.noScroll);
       } else {
-        setTimeout(() => {
-          menu.classList.remove(styles.active);
-          html.classList.remove(styles.noScroll);
-          menuIsOpen = false;
-        }, 500);
+        menu.classList.remove(styles.active);
+        html.classList.remove(styles.noScroll);
       }
+      menuIsOpen = !menuIsOpen;
     });
 
     const menuLinks = document.querySelectorAll("#menu a");

@@ -40,7 +40,7 @@ function Banner(props) {
               {Array(props.roles.length)
                 .fill(null)
                 .map((e, i) => (
-                  <p key={`role-${i + 1}`}>{props.roles[i].role}</p>
+                  <p key={`role-${i + 1}`}>&gt;{props.roles[i].role}</p>
                 ))}
             </div>
           </div>
