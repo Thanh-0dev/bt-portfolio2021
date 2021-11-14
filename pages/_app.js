@@ -10,10 +10,14 @@ function MyApp({Component, pageProps}) {
   /* Slow internet loading */
   const [finishedLoading, setFinishedLoading] = useState(false);
   useEffect(() => {
-    window.addEventListener("load", () => {
-      setFinishedLoading(true);
-    });
-  }, [finishedLoading]);
+    window.addEventListener(
+      "load",
+      () => {
+        setFinishedLoading(true);
+      },
+      {once: true}
+    );
+  }, []);
 
   /* First time loading */
   const [firstTime, setFirstTime] = useState(false);
@@ -51,7 +55,6 @@ function MyApp({Component, pageProps}) {
   return (
     <>
       <Head>
-        <html lang="en" />
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
