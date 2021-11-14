@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./Banner.module.css";
 
 function Banner(props) {
@@ -48,7 +47,12 @@ function Banner(props) {
             <h2>{props.project.descTitle}</h2>
             <p>{props.project.desc}</p>
             {props.project.link ? (
-              <Link href={props.project.link} passHref>
+              <a
+                className="noTransition"
+                href={props.project.link}
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+              >
                 <div className={styles.link}>
                   <p>see live</p>
                   <img
@@ -60,7 +64,7 @@ function Banner(props) {
                     alt="Underline"
                   />
                 </div>
-              </Link>
+              </a>
             ) : null}
           </div>
         </div>

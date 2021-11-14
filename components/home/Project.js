@@ -105,7 +105,7 @@ function Project(props) {
               </p>
             </ActiveLink>
           </div>
-          <div className={styles.sixthProject}>
+          {/* <div className={styles.sixthProject}>
             <p className={styles.projectId}>06</p>
             <svg
               viewBox="0 0 405 716"
@@ -145,7 +145,7 @@ function Project(props) {
                 {props.projects[5]["detail"]}
               </p>
             </ActiveLink>
-          </div>
+          </div> */}
         </div>
 
         <div className={styles.right}>

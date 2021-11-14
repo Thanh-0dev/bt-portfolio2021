@@ -130,7 +130,7 @@
     left: -50px;
   }
 
-  .sixthProject > img:nth-of-type(2) {
+  /* .sixthProject > img:nth-of-type(2) {
     display: block;
     position: absolute;
     z-index: -1;
@@ -138,7 +138,7 @@
     height: 113px;
     top: 54px;
     left: -50px;
-  }
+  } */
 }
 
 @media only screen and (min-width: 650px) {
@@ -186,9 +186,9 @@
     font-size: 16px;
   }
 
-  .sixthProject .projectTitle + p {
+  /* .sixthProject .projectTitle + p {
     margin-bottom: 40px;
-  }
+  } */
 
   .left {
     position: relative;
@@ -363,7 +363,7 @@
 
   /* Sixth project */
 
-  .sixthProject {
+  /* .sixthProject {
     position: relative;
     display: none;
   }
@@ -387,7 +387,7 @@
     top: clamp(1px, 28.3vw, 408px);
     left: clamp(-75px, -5.2vw, -1px);
     z-index: -1;
-  }
+  } */
 
   /* Project hover */
   .projectImg {
