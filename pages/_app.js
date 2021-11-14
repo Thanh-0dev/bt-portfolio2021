@@ -15,10 +15,10 @@ function MyApp({Component, pageProps}) {
   useEffect(() => {
     setFirstTime(true);
     setFirstLoading(false);
-    setTimeout(() => {
-      window.addEventListener(
-        "load",
-        () => {
+    window.addEventListener(
+      "load",
+      () => {
+        setTimeout(() => {
           setFinishedLoading(true);
           setTimeout(() => {
             setLeave(true);
@@ -26,10 +26,10 @@ function MyApp({Component, pageProps}) {
               setFirstTime(false);
             }, 400);
           }, 1600);
-        },
-        {once: true}
-      );
-    }, 500);
+        }, 500);
+      },
+      {once: true}
+    );
   }, []);
 
   /* Page transition effect */
