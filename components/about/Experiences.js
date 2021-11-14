@@ -6,7 +6,7 @@ function Experiences(props) {
       <img src="/Image About/about-2.png" alt="Photo of France" />
       <img src="/Image About/about-3.png" alt="Photo of Japan" />
       <div className={styles.flex}>
-        <p>Experiences</p>
+        <h3>Experiences</h3>
         {Array(props.exp.length)
           .fill(null)
           .map((e, i) => (

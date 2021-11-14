@@ -58,7 +58,7 @@ function MyApp({Component, pageProps}) {
         <meta property="og:locale" content="fr_FR" />
         <meta
           property="og:description"
-          content=" Hi, I'm Bich Trâm Pham a digital designer based in Paris currently searching for a job or remote."
+          content="Hi, I'm Bich Trâm Pham a digital designer based in Paris currently searching for a job or remote."
         />
         <meta
           property="og:site_name"
@@ -73,6 +73,19 @@ function MyApp({Component, pageProps}) {
         <meta
           name="p:domain_verify"
           content="a5865c29d2592e6c312729f0190f5c88"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          name="twitter:description"
+          content="Hi, I'm Bich Trâm Pham a digital designer based in Paris currently searching for a job or remote."
+        />
+        <meta
+          name="twitter:title"
+          content="Bich Trâm Cynthia PHAM | Portfolio"
+        />
+        <meta
+          name="twitter:image"
+          content="https://bichtrampham.com/preview.png"
         />
         <meta name="twitter:site" content="@BichTramPh" />
         <meta

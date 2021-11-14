@@ -27,6 +27,7 @@ function About(props) {
     <Fragment>
       <Head>
         <title>Bich Trâm Cynthia PHAM | About</title>
+        <link rel="canonical" href="/About" />
       </Head>
       <SlidingPuzzle />
       <Info {...props} />

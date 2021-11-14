@@ -21,6 +21,7 @@ function HomePage(props) {
     <Fragment>
       <Head>
         <title>Bich Trâm Cynthia PHAM | Portfolio</title>
+        <link rel="canonical" href="/" />
       </Head>
       <Banner {...props} />
       <Project {...props} />

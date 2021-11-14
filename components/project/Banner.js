@@ -30,7 +30,7 @@ function Banner(props) {
         />
         <div className={styles.flex}>
           <div className={styles.title}>
-            <p>{props.project.name}</p>
+            <h1>{props.project.name}</h1>
             <p>
               {props.project.job}
               <br />
@@ -45,7 +45,7 @@ function Banner(props) {
             </div>
           </div>
           <div className={styles.desc}>
-            <p>{props.project.descTitle}</p>
+            <h2>{props.project.descTitle}</h2>
             <p>{props.project.desc}</p>
             {props.project.link ? (
               <Link href={props.project.link} passHref>

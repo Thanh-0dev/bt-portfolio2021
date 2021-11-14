@@ -97,7 +97,13 @@ function Header() {
       </div>
       <ul>
         <li>
-          <ActiveLink href="/">.tram/workshop</ActiveLink>
+          <ActiveLink href="/">
+            {router.pathname === "/" ? (
+              <h1>.tram/workshop</h1>
+            ) : (
+              ".tram/workshop"
+            )}
+          </ActiveLink>
         </li>
         <li>
           <ActiveLink href="/about">/statistics</ActiveLink>

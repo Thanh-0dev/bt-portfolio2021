@@ -10,7 +10,7 @@ function Info(props) {
           alt="Glass"
         />
         <div className={styles.title}>
-          <p>{props.about[0].title}</p>
+          <h1>{props.about[0].title}</h1>
           <p>{props.about[0].type}</p>
           <div>
             {Array(props.recap.length)
@@ -21,13 +21,13 @@ function Info(props) {
           </div>
         </div>
         <div className={styles.desc}>
-          <p>
+          <h2>
             Hi there.
             <br />I like to add flavor to every{" "}
             <span className={styles.underline}>digital experience</span> I work
             on, and have a sweet tooth for anything related to{" "}
             <span className={styles.underline}>interface</span>.
-          </p>
+          </h2>
           <p>
             {props.about[0].moreInfo1}
             <br />
