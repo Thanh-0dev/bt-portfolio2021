@@ -13,7 +13,7 @@ function MyApp({Component, pageProps}) {
     window.addEventListener("load", () => {
       setFinishedLoading(true);
     });
-  }, [finishedLoading]);
+  }, []);
 
   /* First time loading */
   const [firstTime, setFirstTime] = useState(false);
