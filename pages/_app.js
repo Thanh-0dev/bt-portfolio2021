@@ -18,7 +18,9 @@ function MyApp({Component, pageProps}) {
     window.addEventListener(
       "load",
       () => {
-        setFinishedLoading(true);
+        setTimeout(() => {
+          setFinishedLoading(true);
+        }, 500);
         setTimeout(() => {
           setLeave(true);
           setTimeout(() => {
