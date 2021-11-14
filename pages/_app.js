@@ -10,10 +10,14 @@ function MyApp({Component, pageProps}) {
   /* Slow internet loading */
   const [finishedLoading, setFinishedLoading] = useState(false);
   useEffect(() => {
-    window.addEventListener("load", () => {
-      setFinishedLoading(true);
-    });
-  }, []);
+    window.addEventListener(
+      "load",
+      () => {
+        setFinishedLoading(true);
+      },
+      {once: true}
+    );
+  });
 
   /* First time loading */
   const [firstTime, setFirstTime] = useState(false);
