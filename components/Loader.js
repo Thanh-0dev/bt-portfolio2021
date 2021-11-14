@@ -35,9 +35,9 @@ function Loader(props) {
   return (
     <section
       className={
-        !props[2]
+        !props[1]
           ? styles.loader
-          : props[0] || !props[1]
+          : props[0]
           ? [styles.loader, styles.leave].join(" ")
           : styles.none
       }

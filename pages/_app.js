@@ -8,7 +8,6 @@ import "/styles/globals.css";
 
 function MyApp({Component, pageProps}) {
   /* Slow internet loading */
-  const [finishedLoading, setFinishedLoading] = useState(false);
   const [firstTime, setFirstTime] = useState(false);
   const [firstLoading, setFirstLoading] = useState(true);
   const [leave, setLeave] = useState(false);
@@ -19,14 +18,11 @@ function MyApp({Component, pageProps}) {
       "load",
       () => {
         setTimeout(() => {
-          setFinishedLoading(true);
+          setLeave(true);
           setTimeout(() => {
-            setLeave(true);
-            setTimeout(() => {
-              setFirstTime(false);
-            }, 400);
-          }, 1600);
-        }, 500);
+            setFirstTime(false);
+          }, 400);
+        }, 2100);
       },
       {once: true}
     );
@@ -133,9 +129,7 @@ function MyApp({Component, pageProps}) {
         async
         src="https://www.googletagmanager.com/gtag/js?id=UA-152641511-1"
       />
-      {firstTime || !finishedLoading ? (
-        <Loader {...[firstTime, finishedLoading, leave]} />
-      ) : null}
+      {firstTime ? <Loader {...[firstTime, leave]} /> : null}
       {loading ? <Transition /> : null}
       {!firstLoading ? (
         <Layout>
