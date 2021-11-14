@@ -9,32 +9,26 @@ import "/styles/globals.css";
 function MyApp({Component, pageProps}) {
   /* Slow internet loading */
   const [finishedLoading, setFinishedLoading] = useState(false);
-  useEffect(() => {
-    window.addEventListener(
-      "load",
-      () => {
-        setFinishedLoading(true);
-      },
-      {once: true}
-    );
-  }, []);
-
-  /* First time loading */
   const [firstTime, setFirstTime] = useState(false);
   const [firstLoading, setFirstLoading] = useState(true);
   const [leave, setLeave] = useState(false);
   useEffect(() => {
     setFirstTime(true);
     setFirstLoading(false);
-    setTimeout(() => {
-      if (finishedLoading) {
-        setLeave(true);
+    window.addEventListener(
+      "load",
+      () => {
+        setFinishedLoading(true);
         setTimeout(() => {
-          setFirstTime(false);
-        }, 400);
-      }
-    }, 2100);
-  }, [finishedLoading]);
+          setLeave(true);
+          setTimeout(() => {
+            setFirstTime(false);
+          }, 400);
+        }, 2100);
+      },
+      {once: true}
+    );
+  }, []);
 
   /* Page transition effect */
   const [loading, setLoading] = useState(false);
