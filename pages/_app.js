@@ -7,25 +7,18 @@ import Transition from "/components/Transition";
 import "/styles/globals.css";
 
 function MyApp({Component, pageProps}) {
-  /* Slow internet loading */
-  const [firstTime, setFirstTime] = useState(false);
-  const [firstLoading, setFirstLoading] = useState(true);
+  /* Loading screen */
+  const [firstTime, setFirstTime] = useState(true);
   const [leave, setLeave] = useState(false);
   useEffect(() => {
-    setFirstTime(true);
-    setFirstLoading(false);
-    window.addEventListener(
-      "load",
-      () => {
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        setLeave(true);
         setTimeout(() => {
-          setLeave(true);
-          setTimeout(() => {
-            setFirstTime(false);
-          }, 400);
-        }, 2100);
-      },
-      {once: true}
-    );
+          setFirstTime(false);
+        }, 400);
+      }, 2100);
+    });
   }, []);
 
   /* Page transition effect */
@@ -131,11 +124,9 @@ function MyApp({Component, pageProps}) {
       />
       {firstTime ? <Loader {...[firstTime, leave]} /> : null}
       {loading ? <Transition /> : null}
-      {!firstLoading ? (
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      ) : null}
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
