@@ -17,7 +17,7 @@ function MyApp({Component, pageProps}) {
       },
       {once: true}
     );
-  });
+  }, []);
 
   /* First time loading */
   const [firstTime, setFirstTime] = useState(false);
