@@ -15,21 +15,21 @@ function MyApp({Component, pageProps}) {
   useEffect(() => {
     setFirstTime(true);
     setFirstLoading(false);
-    window.addEventListener(
-      "load",
-      () => {
-        setTimeout(() => {
+    setTimeout(() => {
+      window.addEventListener(
+        "load",
+        () => {
           setFinishedLoading(true);
-        }, 500);
-        setTimeout(() => {
-          setLeave(true);
           setTimeout(() => {
-            setFirstTime(false);
-          }, 400);
-        }, 2100);
-      },
-      {once: true}
-    );
+            setLeave(true);
+            setTimeout(() => {
+              setFirstTime(false);
+            }, 400);
+          }, 1600);
+        },
+        {once: true}
+      );
+    }, 500);
   }, []);
 
   /* Page transition effect */
@@ -59,7 +59,7 @@ function MyApp({Component, pageProps}) {
           content="Bich Trâm Cynthia PHAM | Portfolio"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_us" />
+        <meta property="og:locale" content="fr_FR" />
         <meta
           property="og:description"
           content="Hi, I'm Bich Trâm Pham a digital designer based in Paris currently searching for a job or remote."
