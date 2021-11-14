@@ -11,7 +11,7 @@
 }
 
 .leave {
-  animation: up 0.4s linear;
+  animation: up 0.44s linear;
 }
 
 @keyframes up {
@@ -19,7 +19,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-110%);
   }
 }
 
