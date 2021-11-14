@@ -56,7 +56,6 @@ function ProjectPage(props) {
     <Fragment>
       <Head>
         <title>Project | {props.project.name}</title>
-        <link rel="canonical" href={`/project/${props.project.id}`} />
       </Head>
       <Banner {...props} />
       <Flag {...props} />

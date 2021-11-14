@@ -60,7 +60,7 @@ function MyApp({Component, pageProps}) {
           content="Bich Trâm Cynthia PHAM | Portfolio"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:locale" content="en_us" />
         <meta
           property="og:description"
           content="Hi, I'm Bich Trâm Pham a digital designer based in Paris currently searching for a job or remote."
@@ -69,6 +69,7 @@ function MyApp({Component, pageProps}) {
           property="og:site_name"
           content="Bich Trâm Cynthia PHAM | Portfolio"
         />
+        <meta property="og:url" content="https://bichtrampham.com" />
         <meta property="og:image" content="/preview.png" />
         <meta name="author" content="Bich Trâm Cynthia Pham" />
         <meta
