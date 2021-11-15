@@ -1,6 +1,7 @@
 @media only screen and (max-width: 650px) {
   .sideBySide {
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
   }
 
   .sideBySide img {
@@ -8,7 +9,9 @@
   }
 
   .sideBySide p {
-    display: none;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 40px 50px;
   }
 }
 
