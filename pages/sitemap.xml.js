@@ -8,7 +8,7 @@ export const getServerSideProps = async ({res}) => {
     production: "https://bichtrampham.com",
   }[process.env.NODE_ENV];
 
-  const staticPages = [`${baseUrl}/index`, `${baseUrl}/about`];
+  const staticPages = [`${baseUrl}`, `${baseUrl}/about`];
   const dynamicPage = await prisma.project.findMany({select: {id: true}});
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
