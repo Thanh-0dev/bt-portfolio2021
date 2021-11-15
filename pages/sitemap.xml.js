@@ -1,5 +1,4 @@
 import prisma from "/components/client";
-import fs from "fs";
 
 const Sitemap = () => {};
 
@@ -9,27 +8,7 @@ export const getServerSideProps = async ({res}) => {
     production: "https://bichtrampham.com",
   }[process.env.NODE_ENV];
 
-  const staticPages = fs
-    .readdirSync(
-      {
-        development: "pages",
-        production: "./",
-      }[process.env.NODE_ENV]
-    )
-    .filter((staticPage) => {
-      return ![
-        "_app.js",
-        "_document.js",
-        "_error.js",
-        "sitemap.xml.js",
-        "robots.txt",
-        "project",
-      ].includes(staticPage);
-    })
-    .map((staticPagePath) => {
-      return `${baseUrl}/${staticPagePath}`;
-    });
-
+  const staticPages = [`${baseUrl}/index.js`, `${baseUrl}/about.js`];
   const dynamicPage = await prisma.project.findMany({select: {id: true}});
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
