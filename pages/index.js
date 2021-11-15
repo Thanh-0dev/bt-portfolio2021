@@ -6,7 +6,9 @@ import Project from "/components/home/Project";
 import Footer from "/components/home/Footer";
 
 export async function getStaticProps() {
-  const allProject = await prisma.project.findMany();
+  const allProject = await prisma.project.findMany({
+    select: {name: true, job: true, detail: true},
+  });
   const footer = await prisma.footer.findMany();
   return {
     props: {
