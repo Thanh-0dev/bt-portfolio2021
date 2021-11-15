@@ -13,7 +13,7 @@ export const getServerSideProps = async ({res}) => {
     .readdirSync(
       {
         development: "pages",
-        production: "./.next/server/pages",
+        production: "./.next/server/pages/",
       }[process.env.NODE_ENV]
     )
     .filter((staticPage) => {
@@ -30,7 +30,6 @@ export const getServerSideProps = async ({res}) => {
       return `${baseUrl}/${staticPagePath}`;
     });
 
-  console.log(fs.readdirSync("./"));
   const dynamicPage = await prisma.project.findMany({select: {id: true}});
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
