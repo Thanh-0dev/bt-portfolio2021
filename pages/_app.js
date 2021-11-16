@@ -7,10 +7,6 @@ import Transition from "/components/Transition";
 import "/styles/globals.css";
 
 function MyApp({Component, pageProps}) {
-  useEffect(() => {
-    document.documentElement.lang = "en";
-  }, []);
-
   /* Loading screen */
   const [firstTime, setFirstTime] = useState(true);
   const [leave, setLeave] = useState(false);

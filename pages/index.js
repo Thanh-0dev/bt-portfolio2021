@@ -1,5 +1,4 @@
 import prisma from "/components/client";
-import {Fragment} from "react";
 import Head from "next/head";
 import Banner from "/components/home/Banner";
 import Project from "/components/home/Project";
@@ -20,14 +19,14 @@ export async function getStaticProps() {
 
 function HomePage(props) {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>Bich Trâm Cynthia PHAM | Portfolio</title>
       </Head>
       <Banner {...props} />
       <Project {...props} />
       <Footer {...props} />
-    </Fragment>
+    </>
   );
 }
 

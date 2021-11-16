@@ -1,5 +1,4 @@
 import prisma from "/components/client";
-import {Fragment} from "react";
 import Head from "next/head";
 import SlidingPuzzle from "/components/about/SlidingPuzzle";
 import Info from "/components/about/Info";
@@ -24,7 +23,7 @@ export async function getStaticProps() {
 
 function About(props) {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>Bich Trâm Cynthia PHAM | About</title>
       </Head>
@@ -33,7 +32,7 @@ function About(props) {
       <SlidingText />
       <Experiences {...props} />
       <Footer {...props} />
-    </Fragment>
+    </>
   );
 }
 

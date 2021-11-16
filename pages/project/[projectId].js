@@ -1,5 +1,4 @@
 import prisma from "/components/client";
-import {Fragment} from "react";
 import Head from "next/head";
 import Banner from "/components/project/Banner";
 import Flag from "/components/project/Flag";
@@ -53,7 +52,7 @@ export async function getStaticPaths() {
 
 function ProjectPage(props) {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>Project | {props.project.name}</title>
       </Head>
@@ -90,7 +89,7 @@ function ProjectPage(props) {
           <BonusPannel key={`bonusPannel-${i + 1}`} {...props} />
         ))}
       <Footer></Footer>
-    </Fragment>
+    </>
   );
 }
 
