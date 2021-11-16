@@ -13,7 +13,9 @@ function ActiveLink({children, href}) {
 
   return (
     <Link href={href}>
-      <a onClick={handleClick}>{children}</a>
+      <a style={{width: "fit-content"}} onClick={handleClick}>
+        {children}
+      </a>
     </Link>
   );
 }

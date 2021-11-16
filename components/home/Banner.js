@@ -55,12 +55,9 @@ function Banner(props) {
               />
             </div>
             <ActiveLink href="/project/1">
-              <p className={styles.title}>{props.projects[0]["name"]}</p>
-              <p>
-                {props.projects[0]["job"]}
-                <br />
-                {props.projects[0]["detail"]}
-              </p>
+              <h2 className={styles.title}>{props.projects[0]["name"]}</h2>
+              <h1>{props.projects[0]["job"]}</h1>
+              <p>{props.projects[0]["detail"]}</p>
             </ActiveLink>
           </div>
         </div>

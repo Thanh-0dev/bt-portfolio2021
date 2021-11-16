@@ -72,6 +72,10 @@
     z-index: -1;
   }
 
+  .mobile img {
+    width: 100%;
+  }
+
   .shadowLeft,
   .shadowRight,
   .left img,
@@ -195,7 +199,8 @@
   }
 
   .left .projectCard,
-  .left p:not(.projectId) {
+  .left .projectTitle + p,
+  .left .projectTitle {
     margin-left: clamp(1px, 7vw, 100px);
   }
 
