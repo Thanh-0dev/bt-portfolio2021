@@ -21,7 +21,7 @@ function Header() {
           html.classList.remove(styles.noScroll);
         }
         menuIsOpen = !menuIsOpen;
-      }, 500);
+      }, 550);
     });
     const menuLinks = document.querySelectorAll("#menu a");
     for (let link = 0; link < menuLinks.length; link++) {
@@ -97,13 +97,7 @@ function Header() {
       </div>
       <ul>
         <li>
-          <ActiveLink href="/">
-            {router.pathname === "/" ? (
-              <h1>.tram/workshop</h1>
-            ) : (
-              ".tram/workshop"
-            )}
-          </ActiveLink>
+          <ActiveLink href="/">.tram/workshop</ActiveLink>
         </li>
         <li>
           <ActiveLink href="/about">/statistics</ActiveLink>

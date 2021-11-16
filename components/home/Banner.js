@@ -42,7 +42,7 @@ function Banner(props) {
         <div className={styles.bannerRow}>
           <img
             className={styles.arrow}
-            src="Icons habillage/Arrow.svg"
+            src="/Icons habillage/Arrow.svg"
             alt="Arrow"
           />
           <div className={styles.bannerColumn}>

@@ -15,12 +15,12 @@ function Project(props) {
     <section className={styles.project}>
       <div className={styles.projectContainer}>
         <div className={styles.blur}>
-          <img src="./Icons habillage/Blur.png" alt="Blur" />
+          <img src="/Icons habillage/Blur.png" alt="Blur" />
         </div>
         <div className={styles.left}>
           <img
             className={styles.shadowLeft}
-            src="./Image Home/ombre/ombre-all-left.png"
+            src="/Image Home/ombre/ombre-all-left.png"
             alt="Shadows Left"
           />
           <div className={styles.secondProject}>
@@ -53,8 +53,8 @@ function Project(props) {
                 className={styles.projectImg}
               />
             </div>
-            <img src="./Icons habillage/Cadre-1.svg" alt="Arrow" />
-            <img src="./Icons habillage/Glass/Glass-3.svg" alt="Glass" />
+            <img src="/Icons habillage/Cadre-1.svg" alt="Arrow" />
+            <img src="/Icons habillage/Glass/Glass-3.svg" alt="Glass" />
             <ActiveLink href="/project/2">
               <p className={styles.projectTitle}>{props.projects[1]["name"]}</p>
               <p>
@@ -94,8 +94,8 @@ function Project(props) {
                 className={styles.projectImg}
               />
             </div>
-            <img src="./Icons habillage/Cadre-3.svg" alt="Arrow" />
-            <img src="./Icons habillage/Glass/Glass-5.svg" alt="Glass" />
+            <img src="/Icons habillage/Cadre-3.svg" alt="Arrow" />
+            <img src="/Icons habillage/Glass/Glass-5.svg" alt="Glass" />
             <ActiveLink href="/project/4">
               <p className={styles.projectTitle}>{props.projects[3]["name"]}</p>
               <p>
@@ -135,8 +135,8 @@ function Project(props) {
                 className={styles.projectImg}
               />
             </div>
-            <img src="./Icons habillage/Cadre-5.svg" alt="Arrow" />
-            <img src="./Icons habillage/Glass/Glass-7.svg" alt="Glass" />
+            <img src="/Icons habillage/Cadre-5.svg" alt="Arrow" />
+            <img src="/Icons habillage/Glass/Glass-7.svg" alt="Glass" />
             <ActiveLink href="/project/6">
               <p className={styles.projectTitle}>{props.projects[5]["name"]}</p>
               <p>
@@ -151,7 +151,7 @@ function Project(props) {
         <div className={styles.right}>
           <img
             className={styles.shadowRight}
-            src="./Image Home/ombre/ombre-all-right.png"
+            src="/Image Home/ombre/ombre-all-right.png"
             alt="Shadows Right"
           />
           <div className={styles.thirdProject}>
@@ -184,8 +184,8 @@ function Project(props) {
                 className={styles.projectImg}
               />
             </div>
-            <img src="./Icons habillage/Cadre-2.svg" alt="Arrow" />
-            <img src="./Icons habillage/Glass/Glass-4.svg" alt="Glass" />
+            <img src="/Icons habillage/Cadre-2.svg" alt="Arrow" />
+            <img src="/Icons habillage/Glass/Glass-4.svg" alt="Glass" />
             <ActiveLink href="/project/3">
               <p className={styles.projectTitle}>{props.projects[2]["name"]}</p>
               <p>
@@ -225,8 +225,8 @@ function Project(props) {
                 className={styles.projectImg}
               />
             </div>
-            <img src="./Icons habillage/Cadre-4.svg" alt="Arrow" />
-            <img src="./Icons habillage/Glass/Glass-6.svg" alt="Glass" />
+            <img src="/Icons habillage/Cadre-4.svg" alt="Arrow" />
+            <img src="/Icons habillage/Glass/Glass-6.svg" alt="Glass" />
             <ActiveLink href="/project/5">
               <p className={styles.projectTitle}>{props.projects[4]["name"]}</p>
               <p>
