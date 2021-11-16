@@ -31,7 +31,7 @@ export const getServerSideProps = async ({res}) => {
           if (id !== 6) {
             return `
               <url>
-                <loc>${baseUrl}/project/${id}</loc>
+                <loc>${baseUrl}/project/${id}/</loc>
                 <lastmod>${new Date().toISOString()}</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
