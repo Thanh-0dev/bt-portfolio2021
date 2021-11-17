@@ -14,7 +14,7 @@ function Banner(props) {
   return (
     <section className={styles.banner}>
       <div className={styles.bannerContainer}>
-        <ActiveLink href="/project/1">
+        <ActiveLink href="/project/1/">
           <div
             className={styles.projectAction}
             onMouseEnter={() => {

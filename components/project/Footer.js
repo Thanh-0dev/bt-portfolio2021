@@ -48,7 +48,7 @@ function Footer(props) {
           <img src="/Icons habillage/Blur.png" alt="Blur" />
         </div>
         <div id="project" className={styles.project}>
-          <ActiveLink href="/project/2">
+          <ActiveLink href="/project/2/">
             <div>
               <p className={styles.detail}>2021</p>
               <p className={styles.name}>chance/</p>
@@ -59,7 +59,7 @@ function Footer(props) {
               </p>
             </div>
           </ActiveLink>
-          <ActiveLink href="/project/3">
+          <ActiveLink href="/project/3/">
             <div>
               <p className={styles.detail}>2020</p>
               <p className={styles.name}>smatch/</p>
@@ -70,7 +70,7 @@ function Footer(props) {
               </p>
             </div>
           </ActiveLink>
-          <ActiveLink href="/project/4">
+          <ActiveLink href="/project/4/">
             <div>
               <p className={styles.detail}>2019</p>
               <p className={styles.name}>kanamoji/</p>
@@ -81,7 +81,7 @@ function Footer(props) {
               </p>
             </div>
           </ActiveLink>
-          <ActiveLink href="/project/5">
+          <ActiveLink href="/project/5/">
             <div>
               <p className={styles.detail}>2019</p>
               <p className={styles.name}>kati-inc/</p>
@@ -92,7 +92,7 @@ function Footer(props) {
               </p>
             </div>
           </ActiveLink>
-          <ActiveLink href="/project/1">
+          <ActiveLink href="/project/1/">
             <div>
               <p className={styles.detail}>2019</p>
               <p className={styles.name}>vall/</p>

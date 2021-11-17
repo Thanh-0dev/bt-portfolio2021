@@ -31,7 +31,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/2">
+              <ActiveLink href="/project/2/">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard1");
@@ -74,7 +74,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/4">
+              <ActiveLink href="/project/4/">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard3");
@@ -117,7 +117,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/6">
+              <ActiveLink href="/project/6/">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard5");
@@ -166,7 +166,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/3">
+              <ActiveLink href="/project/3/">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard2");
@@ -209,7 +209,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/5">
+              <ActiveLink href="/project/5/">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard4");
