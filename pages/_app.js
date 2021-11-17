@@ -124,15 +124,9 @@ function MyApp({Component, pageProps}) {
       />
       {firstTime ? <Loader {...[firstTime, leave]} /> : null}
       {loading ? <Transition /> : null}
-      {firstTime ? (
-        <Layout style={{opacity: 0}}>
-          <Component {...pageProps} />
-        </Layout>
-      ) : (
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      )}
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
