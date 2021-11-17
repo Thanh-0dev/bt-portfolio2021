@@ -1,5 +1,6 @@
 import prisma from "/components/client";
 import Head from "next/head";
+import Intro from "/components/home/Intro";
 import Banner from "/components/home/Banner";
 import Project from "/components/home/Project";
 import Footer from "/components/home/Footer";
@@ -23,6 +24,7 @@ function HomePage(props) {
       <Head>
         <title>Bich Trâm Cynthia PHAM | Portfolio</title>
       </Head>
+      <Intro />
       <Banner {...props} />
       <Project {...props} />
       <Footer {...props} />
