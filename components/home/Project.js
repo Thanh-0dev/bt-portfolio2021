@@ -56,9 +56,9 @@ function Project(props) {
             <img src="/Icons habillage/Cadre-1.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-3.svg" alt="Glass" />
             <ActiveLink href="/project/2">
-              <h2 className={styles.projectTitle}>
+              <h3 className={styles.projectTitle}>
                 {props.projects[1]["name"]}
-              </h2>
+              </h3>
               <p>
                 {props.projects[1]["job"]}
                 <br />
@@ -99,9 +99,9 @@ function Project(props) {
             <img src="/Icons habillage/Cadre-3.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-5.svg" alt="Glass" />
             <ActiveLink href="/project/4">
-              <h2 className={styles.projectTitle}>
+              <h3 className={styles.projectTitle}>
                 {props.projects[3]["name"]}
-              </h2>
+              </h3>
               <p>
                 {props.projects[3]["job"]}
                 <br />
@@ -142,7 +142,7 @@ function Project(props) {
             <img src="/Icons habillage/Cadre-5.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-7.svg" alt="Glass" />
             <ActiveLink href="/project/6">
-              <h2 className={styles.projectTitle}>{props.projects[5]["name"]}</h2>
+              <h3 className={styles.projectTitle}>{props.projects[5]["name"]}</h3>
               <p>
                 {props.projects[5]["job"]}
                 <br />
@@ -191,9 +191,9 @@ function Project(props) {
             <img src="/Icons habillage/Cadre-2.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-4.svg" alt="Glass" />
             <ActiveLink href="/project/3">
-              <h2 className={styles.projectTitle}>
+              <h3 className={styles.projectTitle}>
                 {props.projects[2]["name"]}
-              </h2>
+              </h3>
               <p>
                 {props.projects[2]["job"]}
                 <br />
@@ -234,9 +234,9 @@ function Project(props) {
             <img src="/Icons habillage/Cadre-4.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-6.svg" alt="Glass" />
             <ActiveLink href="/project/5">
-              <h2 className={styles.projectTitle}>
+              <h3 className={styles.projectTitle}>
                 {props.projects[4]["name"]}
-              </h2>
+              </h3>
               <p>
                 {props.projects[4]["job"]}
                 <br />
