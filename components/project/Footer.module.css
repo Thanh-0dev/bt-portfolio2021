@@ -21,6 +21,7 @@
 
   .timelineFolder > p {
     margin-top: -90px;
+    margin-bottom: 26px;
   }
 
   .blur {
@@ -35,21 +36,8 @@
     width: 1135px;
   }
 
-  .project {
-    margin-top: 32px;
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    user-select: none;
-    scroll-behavior: smooth;
-  }
-
   .project div:nth-child(6) {
     display: none;
-  }
-
-  .project div:not(.fade) {
-    margin-right: 76px;
   }
 
   .detail {
@@ -62,6 +50,10 @@
     margin-top: 12px;
     margin-bottom: 8px;
     color: #3c3c3c;
+  }
+
+  .none {
+    display: none;
   }
 }
 
@@ -92,9 +84,11 @@
 
   .timelineFolder > p {
     margin-top: -40px;
+    margin-bottom: 32px;
   }
 
   .fade {
+    z-index: 1;
     width: 200px;
     height: 150px;
     position: absolute;
@@ -122,21 +116,8 @@
     width: clamp(1px, 79vw, 1135px);
   }
 
-  .project {
-    margin-top: 32px;
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    user-select: none;
-    scroll-behavior: smooth;
-  }
-
   .project div:nth-child(6) {
     display: none;
-  }
-
-  .project div:not(.fade) {
-    margin-right: 140px;
   }
 
   .detail {
@@ -150,6 +131,10 @@
     margin-top: 24px;
     margin-bottom: 6px;
     color: #3c3c3c;
+  }
+
+  .none {
+    display: none;
   }
 }
 
