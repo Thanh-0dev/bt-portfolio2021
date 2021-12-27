@@ -134,6 +134,8 @@
     z-index: 1;
     left: clamp(-66px, -4.6vw, -1px);
     top: clamp(1px, 3.4vw, 49px);
+    user-select: none;
+    pointer-events: none;
   }
 
   .glassTwo {
@@ -142,6 +144,8 @@
     z-index: 2;
     top: clamp(1px, 25.5vw, 367px);
     left: clamp(1px, 3.4vw, 49px);
+    user-select: none;
+    pointer-events: none;
   }
 
   .blur {
@@ -197,6 +201,7 @@
     height: clamp(1px, 54.6vw, 787px);
     filter: grayscale(1);
     transform: rotate(-2deg);
+    transition: 0.5s;
   }
 
   .title {
@@ -213,7 +218,7 @@
 
   /* Banner hover */
 
-  .hover {
+  .projectImg:hover {
     animation: colorImage 0.5s;
     filter: grayscale(0);
     transform: scale(1.1);
@@ -227,23 +232,6 @@
     100% {
       filter: grayscale(0);
       transform: scale(1.1) rotate(0deg);
-    }
-  }
-
-  .unhover {
-    animation: uncolorImage 0.5s;
-    filter: grayscale(1);
-    transform: scale(1) rotate(-2deg);
-  }
-
-  @keyframes uncolorImage {
-    0% {
-      filter: grayscale(0);
-      transform: scale(1.1) rotate(0deg);
-    }
-    100% {
-      filter: grayscale(1);
-      transform: scale(1) rotate(-2deg);
     }
   }
 }

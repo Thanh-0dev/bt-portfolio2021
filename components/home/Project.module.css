@@ -224,29 +224,6 @@
     top: clamp(-500px, -34.7vw, -1px);
   }
 
-  .secondProject svg:nth-of-type(1),
-  .fourthProject svg:nth-of-type(1),
-  .sixthProject svg:nth-of-type(1),
-  .thirdProject svg:nth-of-type(1),
-  .fifthProject svg:nth-of-type(1) {
-    position: absolute;
-    width: clamp(1px, 28vw, 404px);
-    height: clamp(1px, 49.7vw, 714px);
-    z-index: 9000;
-  }
-
-  .secondProject svg:nth-of-type(1),
-  .fourthProject svg:nth-of-type(1),
-  .sixthProject svg:nth-of-type(1) {
-    left: clamp(1px, 7vw, 100px);
-  }
-
-  .thirdProject svg:nth-of-type(1),
-  .fifthProject svg:nth-of-type(1) {
-    right: clamp(1px, 7vw, 100px);
-    left: auto;
-  }
-
   .left .projectCard {
     width: clamp(1px, 28vw, 403px);
     height: clamp(1px, 49.6vw, 714px);
@@ -273,6 +250,7 @@
   .fifthProject,
   .sixthProject {
     position: relative;
+    transition: 0.5s;
   }
 
   /* Second project */
@@ -286,6 +264,8 @@
     height: clamp(1px, 48.4vw, 697px);
     top: clamp(1px, 2.4vw, 35px);
     left: clamp(1px, 7vw, 100px);
+    user-select: none;
+    pointer-events: none;
   }
 
   .secondProject > img:nth-of-type(2) {
@@ -295,6 +275,8 @@
     top: clamp(1px, 1.7vw, 25px);
     left: clamp(1px, 29.5vw, 425px);
     z-index: -1;
+    user-select: none;
+    pointer-events: none;
   }
 
   /* Third project */
@@ -308,6 +290,8 @@
     position: absolute;
     top: clamp(1px, 2.7vw, 40px);
     width: clamp(1px, 26vw, 373px);
+    user-select: none;
+    pointer-events: none;
   }
 
   .thirdProject > img:nth-of-type(2) {
@@ -317,6 +301,8 @@
     top: clamp(1px, 7vw, 100px);
     right: clamp(1px, 0.7vw, 10px);
     z-index: -1;
+    user-select: none;
+    pointer-events: none;
   }
 
   /* Fourth project */
@@ -331,6 +317,8 @@
     top: clamp(1px, 4.1vw, 60px);
     left: clamp(1px, 32.6vw, 470px);
     height: clamp(1px, 49.3vw, 710px);
+    user-select: none;
+    pointer-events: none;
   }
 
   .fourthProject > img:nth-of-type(2) {
@@ -340,6 +328,8 @@
     top: clamp(-85px, -5.9vw, -1px);
     left: clamp(1px, 16.6vw, 240px);
     z-index: -1;
+    user-select: none;
+    pointer-events: none;
   }
 
   /* Fifth project */
@@ -354,6 +344,8 @@
     top: clamp(1px, 49.3vw, 710px);
     left: clamp(1px, 0.5vw, 8px);
     width: clamp(1px, 27.6vw, 397px);
+    user-select: none;
+    pointer-events: none;
   }
 
   .fifthProject > img:nth-of-type(2) {
@@ -364,15 +356,13 @@
     right: clamp(1px, 3.5vw, 50px);
     z-index: -1;
     transform: rotate(-15deg);
+    user-select: none;
+    pointer-events: none;
   }
 
   /* Sixth project */
 
-  /* .sixthProject {
-    position: relative;
-    display: none;
-  }
-
+  /* 
   .sixthProject .projectImg {
     width: clamp(1px, 81vw, 1180px);
     height: clamp(1px, 54.6vw, 786px);
@@ -399,7 +389,11 @@
     filter: grayscale(1);
   }
 
-  .hover {
+  .secondProject img:nth-of-type(1):hover,
+  .thirdProject img:nth-of-type(1):hover,
+  .fourthProject img:nth-of-type(1):hover,
+  .fifthProject img:nth-of-type(1):hover,
+  .sixthProject img:nth-of-type(1):hover {
     animation: colorImage 0.5s;
     filter: grayscale(0);
     transform: scale(1.1) rotate(2deg);
@@ -413,23 +407,6 @@
     100% {
       filter: grayscale(0);
       transform: scale(1.1) rotate(2deg);
-    }
-  }
-
-  .unhover {
-    animation: uncolorImage 0.5s;
-    filter: grayscale(1);
-    transform: scale(1) rotate(0deg);
-  }
-
-  @keyframes uncolorImage {
-    0% {
-      filter: grayscale(0);
-      transform: scale(1.1) rotate(2deg);
-    }
-    100% {
-      filter: grayscale(1);
-      transform: scale(1) rotate(0deg);
     }
   }
 }

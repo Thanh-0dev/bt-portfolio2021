@@ -2,29 +2,9 @@ import styles from "./Banner.module.css";
 import ActiveLink from "/components/ActiveLink";
 
 function Banner(props) {
-  const mouseEnter = (id) => {
-    document.getElementById(id).classList.add(styles.hover);
-    document.getElementById(id).classList.remove(styles.unhover);
-  };
-
-  const mouseLeave = (id) => {
-    document.getElementById(id).classList.add(styles.unhover);
-    document.getElementById(id).classList.remove(styles.hover);
-  };
   return (
     <section className={styles.banner}>
       <div className={styles.bannerContainer}>
-        <ActiveLink href="/project/1/" className="discover">
-          <div
-            className={styles.projectAction}
-            onMouseEnter={() => {
-              mouseEnter("projectBanner");
-            }}
-            onMouseLeave={() => {
-              mouseLeave("projectBanner");
-            }}
-          ></div>
-        </ActiveLink>
         <img
           className={styles.glassOne}
           src="/Icons habillage/Glass/Glass-1.svg"
@@ -47,12 +27,14 @@ function Banner(props) {
           />
           <div className={styles.bannerColumn}>
             <div className={styles.projectDiv}>
-              <img
-                src="/Image Home/1.jpeg"
-                alt="Project banner image"
-                className={styles.projectImg}
-                id="projectBanner"
-              />
+              <ActiveLink href="/project/1/" className="discover">
+                <img
+                  src="/Image Home/1.jpeg"
+                  alt="Project banner image"
+                  className={styles.projectImg}
+                  id="projectBanner"
+                />
+              </ActiveLink>
             </div>
             <ActiveLink href="/project/1">
               <h3 className={styles.title}>{props.projects[0]["name"]}</h3>
