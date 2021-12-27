@@ -167,11 +167,15 @@ h6 {
 }
 
 @media (hover: none) {
-  .cursor {
-    opacity: 0;
-  }
-
-  .cursorFollow {
+  .cursor,
+  .cursor.hover,
+  .cursorFollow,
+  .cursorFollow.hover::after,
+  .cursorFollow.hoverSlider::after,
+  .cursorFollow.hoverGo::after,
+  .cursorFollow.hover::before,
+  .cursorFollow.hoverSlider::before,
+  .cursorFollow.hoverGo::before {
     opacity: 0;
   }
 }

@@ -9,72 +9,74 @@ import "/styles/globals.css";
 function MyApp({Component, pageProps}) {
   /* Cursor */
   useEffect(() => {
-    const cursor = document.querySelector(".cursor");
-    const cursorFollow = document.querySelector(".cursorFollow");
-    const a = document.querySelectorAll("a.discover");
-    const slider = document.querySelectorAll(".splide");
-    const go = document.querySelectorAll(".go");
+    document.addEventListener("mouseover", () => {
+      const cursor = document.querySelector(".cursor");
+      const cursorFollow = document.querySelector(".cursorFollow");
+      const a = document.querySelectorAll("a.discover");
+      const slider = document.querySelectorAll(".splide");
+      const go = document.querySelectorAll(".go");
 
-    document.addEventListener(
-      "mousemove",
-      () => {
-        setTimeout(() => {
-          cursor.classList.add("active");
-          cursorFollow.classList.add("active");
-        }, 300);
-      },
-      {once: true}
-    );
+      document.addEventListener(
+        "mousemove",
+        () => {
+          setTimeout(() => {
+            cursor.classList.add("active");
+            cursorFollow.classList.add("active");
+          }, 300);
+        },
+        {once: true}
+      );
 
-    document.addEventListener("mousemove", (e) => {
-      let clientX = e.clientX;
-      let clientY = e.clientY;
-      cursorFollow.style.transform = `translate3d(calc(${clientX}px - 50%), calc(${clientY}px - 50%), 0)`;
-    });
-
-    document.addEventListener("mousemove", (e) => {
-      let x = e.clientX;
-      let y = e.clientY;
-      cursor.style.left = x + "px";
-      cursor.style.top = y + "px";
-    });
-
-    a.forEach((item) => {
-      item.addEventListener("mouseover", () => {
-        cursor.classList.add("hover");
-        cursorFollow.classList.add("hover");
+      document.addEventListener("mousemove", (e) => {
+        let clientX = e.clientX;
+        let clientY = e.clientY;
+        cursorFollow.style.transform = `translate3d(calc(${clientX}px - 50%), calc(${clientY}px - 50%), 0)`;
       });
-      item.addEventListener("mouseleave", () => {
-        cursor.classList.remove("hover");
-        cursorFollow.classList.remove("hover");
-      });
-    });
 
-    if (slider !== null) {
-      slider.forEach((item) => {
+      document.addEventListener("mousemove", (e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+      });
+
+      a.forEach((item) => {
         item.addEventListener("mouseover", () => {
           cursor.classList.add("hover");
-          cursorFollow.classList.add("hoverSlider");
+          cursorFollow.classList.add("hover");
         });
         item.addEventListener("mouseleave", () => {
           cursor.classList.remove("hover");
-          cursorFollow.classList.remove("hoverSlider");
+          cursorFollow.classList.remove("hover");
         });
       });
-    }
 
-    if (go !== null) {
-      go.forEach((item) => {
-        item.addEventListener("mouseover", () => {
-          cursor.classList.add("hover");
-          cursorFollow.classList.add("hoverGo");
+      if (slider !== null) {
+        slider.forEach((item) => {
+          item.addEventListener("mouseover", () => {
+            cursor.classList.add("hover");
+            cursorFollow.classList.add("hoverSlider");
+          });
+          item.addEventListener("mouseleave", () => {
+            cursor.classList.remove("hover");
+            cursorFollow.classList.remove("hoverSlider");
+          });
         });
-        item.addEventListener("mouseleave", () => {
-          cursor.classList.remove("hover");
-          cursorFollow.classList.remove("hoverGo");
+      }
+
+      if (go !== null) {
+        go.forEach((item) => {
+          item.addEventListener("mouseover", () => {
+            cursor.classList.add("hover");
+            cursorFollow.classList.add("hoverGo");
+          });
+          item.addEventListener("mouseleave", () => {
+            cursor.classList.remove("hover");
+            cursorFollow.classList.remove("hoverGo");
+          });
         });
-      });
-    }
+      }
+    });
   });
 
   /* Loading screen */
