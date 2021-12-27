@@ -99,6 +99,8 @@
     );
     top: 55px;
     left: clamp(1px, 70.5vw, 1016px);
+    pointer-events: none;
+    user-select: none;
   }
 
   .blur {
