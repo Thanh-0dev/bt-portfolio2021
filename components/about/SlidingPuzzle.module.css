@@ -12,7 +12,7 @@
     width: 1135px;
   }
 
-  .slidingPuzzle img:nth-of-type(2) {
+  #slidingPuzzleAnimation {
     width: 100%;
     margin-top: -34px;
   }
@@ -36,7 +36,7 @@
     top: clamp(-144px, -10vw, -1px);
   }
 
-  .slidingPuzzle img:nth-of-type(2) {
+  #slidingPuzzleAnimation {
     width: clamp(1px, 54.4vw, 783px);
     height: clamp(1px, 36.5vw, 526px);
   }

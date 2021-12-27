@@ -1,6 +1,7 @@
 import Head from "next/head";
 import {useEffect} from "react";
 import styles from "./Loader.module.css";
+import lottie from "lottie-web";
 
 function Loader(props) {
   useEffect(() => {
@@ -31,6 +32,17 @@ function Loader(props) {
         }
       }, 150);
     }, 400);
+
+    /* Lottie Animation */
+    const loaderAnimation = document.querySelector("#loaderAnimation");
+
+    lottie.loadAnimation({
+      container: loaderAnimation, // the dom element that will contain the animation
+      renderer: "svg",
+      loop: false,
+      autoplay: true,
+      path: "/Loader/Animation/data.json", // the path to the animation json
+    });
   }, []);
   return (
     <section
@@ -64,7 +76,7 @@ function Loader(props) {
         </div>
         <div className={styles.loadingDiv}>
           <div>
-            <img src="/Loader/loading-image.jpeg" alt="Loading image" />
+            <div id="loaderAnimation"></div>
             <div className={styles.loadingText}>
               <p id="loaderBuild">.tram/digital-designer/building </p>
               <p id="loaderPercent">loader::0%</p>
@@ -72,6 +84,7 @@ function Loader(props) {
           </div>
         </div>
       </div>
+      <script src="/components/lottie.js" type="text/javascript"></script>
     </section>
   );
 }
