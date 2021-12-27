@@ -1,4 +1,4 @@
-import {useEffect} from "react/cjs/react.development";
+import {useEffect} from "react";
 import styles from "./SlidingPuzzle.module.css";
 import lottie from "lottie-web";
 
