@@ -1,7 +1,7 @@
 import {useRouter} from "next/router";
 import Link from "next/link";
 
-function ActiveLink({children, href}) {
+function ActiveLink({children, href, className = ""}) {
   const router = useRouter();
 
   const handleClick = (event) => {
@@ -13,7 +13,11 @@ function ActiveLink({children, href}) {
 
   return (
     <Link href={href}>
-      <a style={{width: "fit-content"}} onClick={handleClick}>
+      <a
+        className={className}
+        style={{width: "fit-content"}}
+        onClick={handleClick}
+      >
         {children}
       </a>
     </Link>

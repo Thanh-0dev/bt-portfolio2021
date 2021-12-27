@@ -2,7 +2,7 @@
   position: fixed;
   display: block;
   top: 0;
-  z-index: 9999;
+  z-index: 9998;
   height: 100%;
   width: 100vw;
   user-select: none;

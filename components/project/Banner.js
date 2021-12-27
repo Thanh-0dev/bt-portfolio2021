@@ -48,7 +48,7 @@ function Banner(props) {
             <p>{props.project.desc}</p>
             {props.project.link ? (
               <a
-                className="noTransition"
+                className="noTransition go"
                 href={props.project.link}
                 target="_blank"
                 rel="noreferrer noopener nofollow"

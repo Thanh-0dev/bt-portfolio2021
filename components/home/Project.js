@@ -31,7 +31,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/2/">
+              <ActiveLink href="/project/2/" className="discover">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard1");
@@ -55,7 +55,7 @@ function Project(props) {
             </div>
             <img src="/Icons habillage/Cadre-1.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-3.svg" alt="Glass" />
-            <ActiveLink href="/project/2">
+            <ActiveLink href="/project/2" className="discover">
               <h3 className={styles.projectTitle}>
                 {props.projects[1]["name"]}
               </h3>
@@ -74,7 +74,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/4/">
+              <ActiveLink href="/project/4/" className="discover">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard3");
@@ -98,7 +98,7 @@ function Project(props) {
             </div>
             <img src="/Icons habillage/Cadre-3.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-5.svg" alt="Glass" />
-            <ActiveLink href="/project/4">
+            <ActiveLink href="/project/4" className="discover">
               <h3 className={styles.projectTitle}>
                 {props.projects[3]["name"]}
               </h3>
@@ -117,7 +117,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/6/">
+              <ActiveLink href="/project/6/" className="discover">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard5");
@@ -141,7 +141,7 @@ function Project(props) {
             </div>
             <img src="/Icons habillage/Cadre-5.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-7.svg" alt="Glass" />
-            <ActiveLink href="/project/6">
+            <ActiveLink href="/project/6" className="discover">
               <h3 className={styles.projectTitle}>{props.projects[5]["name"]}</h3>
               <p>
                 {props.projects[5]["job"]}
@@ -166,7 +166,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/3/">
+              <ActiveLink href="/project/3/" className="discover">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard2");
@@ -190,7 +190,7 @@ function Project(props) {
             </div>
             <img src="/Icons habillage/Cadre-2.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-4.svg" alt="Glass" />
-            <ActiveLink href="/project/3">
+            <ActiveLink href="/project/3" className="discover">
               <h3 className={styles.projectTitle}>
                 {props.projects[2]["name"]}
               </h3>
@@ -209,7 +209,7 @@ function Project(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <ActiveLink href="/project/5/">
+              <ActiveLink href="/project/5/" className="discover">
                 <path
                   onMouseEnter={() => {
                     mouseEnter("projectCard4");
@@ -233,7 +233,7 @@ function Project(props) {
             </div>
             <img src="/Icons habillage/Cadre-4.svg" alt="Arrow" />
             <img src="/Icons habillage/Glass/Glass-6.svg" alt="Glass" />
-            <ActiveLink href="/project/5">
+            <ActiveLink href="/project/5" className="discover">
               <h3 className={styles.projectTitle}>
                 {props.projects[4]["name"]}
               </h3>
