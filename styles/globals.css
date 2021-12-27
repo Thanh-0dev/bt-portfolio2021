@@ -8,7 +8,6 @@
   font-family: "UntitledSans";
   padding: 0;
   margin: 0;
-  cursor: none;
 }
 
 html {
@@ -43,120 +42,126 @@ h6 {
   font-size: 100%;
 }
 
-.cursor {
-  opacity: 0;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  background-image: url("/Icons habillage/cursor/crosshair.svg");
-  position: fixed;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
+@media only screen and (min-width: 650px) {
+  * {
+    cursor: none;
+  }
 
-.cursorFollow {
-  opacity: 0;
-  transition: all 200ms ease-out;
-  position: fixed;
-  z-index: 9999;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  transform: translate(calc(-50% + 20px), -50%);
-}
+  .cursor {
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-image: url("/Icons habillage/cursor/crosshair.svg");
+    position: fixed;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
 
-.active {
-  opacity: 1;
-}
+  .cursorFollow {
+    opacity: 0;
+    transition: all 200ms ease-out;
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 20px), -50%);
+  }
 
-.cursor.hover {
-  animation: opacity-out 0.2s ease-out;
-  opacity: 0;
-}
-
-@keyframes opacity-out {
-  0% {
+  .active {
     opacity: 1;
   }
-  100% {
+
+  .cursor.hover {
+    animation: opacity-out 0.2s ease-out;
     opacity: 0;
   }
-}
 
-.cursorFollow::before {
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  border: 1px solid rgb(146, 146, 146);
-  transform: translate(-50%, -50%);
-}
-
-.cursorFollow.hover::before,
-.cursorFollow.hoverSlider::before,
-.cursorFollow.hoverGo::before {
-  position: absolute;
-  content: "";
-  animation: scale 0.5s ease-out;
-  transform: scale(2.2) translate(-25%, -25%);
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  border: 1px solid rgb(146, 146, 146);
-}
-
-@keyframes scale {
-  0% {
-    transform: scale(1) translate(-25%, -25%);
+  @keyframes opacity-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
-  100% {
+
+  .cursorFollow::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid rgb(146, 146, 146);
+    transform: translate(-50%, -50%);
+  }
+
+  .cursorFollow.hover::before,
+  .cursorFollow.hoverSlider::before,
+  .cursorFollow.hoverGo::before {
+    position: absolute;
+    content: "";
+    animation: scale 0.5s ease-out;
     transform: scale(2.2) translate(-25%, -25%);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid rgb(146, 146, 146);
   }
-}
 
-.cursorFollow.hover::after {
-  position: absolute;
-  content: "Discover";
-  animation: scale-opacity-in 0.5s ease-out;
-  transform: scale(2) translate(-25%, -25%);
-  font-size: 8px;
-  top: -2px;
-  left: -2px;
-  background-color: white;
-}
-
-@keyframes scale-opacity-in {
-  0% {
-    transform: scale(1) translate(-25%, -25%);
-    opacity: 0;
+  @keyframes scale {
+    0% {
+      transform: scale(1) translate(-25%, -25%);
+    }
+    100% {
+      transform: scale(2.2) translate(-25%, -25%);
+    }
   }
-  100% {
+
+  .cursorFollow.hover::after {
+    position: absolute;
+    content: "Discover";
+    animation: scale-opacity-in 0.5s ease-out;
     transform: scale(2) translate(-25%, -25%);
-    opacity: 1;
+    font-size: 8px;
+    top: -2px;
+    left: -2px;
+    background-color: white;
   }
-}
 
-.cursorFollow.hoverSlider::after {
-  position: absolute;
-  content: "Scroll/Drag";
-  animation: scale-opacity-in 0.5s ease-out;
-  transform: scale(2) translate(-25%, -25%);
-  font-size: 7px;
-  top: -2px;
-  left: -2px;
-  background-color: white;
-}
+  @keyframes scale-opacity-in {
+    0% {
+      transform: scale(1) translate(-25%, -25%);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(2) translate(-25%, -25%);
+      opacity: 1;
+    }
+  }
 
-.cursorFollow.hoverGo::after {
-  position: absolute;
-  content: "Go Go Go!";
-  white-space: nowrap;
-  animation: scale-opacity-in 0.5s ease-out;
-  transform: scale(2) translate(-25%, -25%);
-  font-size: 8px;
-  top: -2px;
-  left: -2px;
-  background-color: white;
+  .cursorFollow.hoverSlider::after {
+    position: absolute;
+    content: "Scroll/Drag";
+    animation: scale-opacity-in 0.5s ease-out;
+    transform: scale(2) translate(-25%, -25%);
+    font-size: 7px;
+    top: -2px;
+    left: -2px;
+    background-color: white;
+  }
+
+  .cursorFollow.hoverGo::after {
+    position: absolute;
+    content: "Go Go Go!";
+    white-space: nowrap;
+    animation: scale-opacity-in 0.5s ease-out;
+    transform: scale(2) translate(-25%, -25%);
+    font-size: 8px;
+    top: -2px;
+    left: -2px;
+    background-color: white;
+  }
 }
