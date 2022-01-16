@@ -26,10 +26,13 @@
   .bonusPannel img {
     width: clamp(1px, 28vw, 403px);
     height: clamp(1px, 49.6vw, 714px);
+  }
+
+  .bonusPannel div:nth-of-type(1) {
     margin-top: clamp(-117px, -8.1vw, -1px);
   }
 
-  .bonusPannel img:nth-of-type(2) {
+  .bonusPannel div:nth-of-type(2) {
     margin-top: clamp(1px, 4.1vw, 59px);
   }
 }

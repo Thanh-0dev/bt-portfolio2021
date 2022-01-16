@@ -6,7 +6,7 @@
     position: relative;
   }
 
-  .info > img {
+  .arrow {
     position: absolute;
     height: 198px;
     width: 17.5px;
@@ -19,7 +19,7 @@
     position: relative;
   }
 
-  .flex > img {
+  .glass {
     position: absolute;
     z-index: -1;
     width: 364px;
@@ -77,7 +77,7 @@
     flex-direction: row;
   }
 
-  .info > img {
+  .arrow {
     height: clamp(1px, 33vw, 484px);
     width: 20px;
     margin: 20px clamp(1px, 7vw, 100px) 0 0;
@@ -91,7 +91,7 @@
     width: 100%;
   }
 
-  .flex > img {
+  .glass {
     position: absolute;
     z-index: -1;
     width: clamp(1px, 66vw, 951px);
@@ -134,7 +134,7 @@
     margin-top: 128px;
     display: flex;
     flex-direction: column;
-    max-width: 580px;
+    max-width: 579px;
   }
 
   .desc > h2 {

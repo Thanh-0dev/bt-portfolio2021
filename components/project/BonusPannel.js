@@ -1,16 +1,21 @@
 import styles from "./BonusPannel.module.css";
+import FadeInOnView from "/components/FadeInOnView";
 
 function BonusPannel(props) {
   return (
     <section className={styles.bonusPannel}>
-      <img
-        src={`/Projets/${props.project.id}/Pannel3.png`}
-        alt="Project pannel 1"
-      />
-      <img
-        src={`/Projets/${props.project.id}/Pannel4.png`}
-        alt="Project pannel 2"
-      />
+      <FadeInOnView>
+        <img
+          src={`/Projets/${props.project.id}/Pannel3.png`}
+          alt="Project pannel 1"
+        />
+      </FadeInOnView>
+      <FadeInOnView>
+        <img
+          src={`/Projets/${props.project.id}/Pannel4.png`}
+          alt="Project pannel 2"
+        />
+      </FadeInOnView>
     </section>
   );
 }

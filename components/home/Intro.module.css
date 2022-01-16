@@ -2,12 +2,12 @@
   .intro {
     display: flex;
     justify-content: center;
+    margin-bottom: 64px;
   }
 
   .introContainer {
     position: relative;
     margin-top: 12px;
-    margin-bottom: 64px;
   }
 
   .blur {
@@ -53,12 +53,12 @@
   .intro {
     display: flex;
     justify-content: center;
+    margin-bottom: 132px;
   }
 
   .introContainer {
     position: relative;
     margin-top: 32px;
-    margin-bottom: 132px;
   }
 
   .blur {

@@ -259,7 +259,7 @@
     height: clamp(1px, 88.7vw, 1277px);
   }
 
-  .secondProject > img:nth-of-type(1) {
+  .secondProject > div > img:nth-of-type(1) {
     position: absolute;
     height: clamp(1px, 48.4vw, 697px);
     top: clamp(1px, 2.4vw, 35px);
@@ -268,7 +268,7 @@
     pointer-events: none;
   }
 
-  .secondProject > img:nth-of-type(2) {
+  .secondProject img:nth-of-type(2) {
     height: clamp(1px, 16vw, 230px);
     width: clamp(1px, 9.3vw, 134px);
     position: absolute;
@@ -286,7 +286,7 @@
     height: clamp(1px, 54.4vw, 784px);
   }
 
-  .thirdProject > img:nth-of-type(1) {
+  .thirdProject > div > img:nth-of-type(1) {
     position: absolute;
     top: clamp(1px, 2.7vw, 40px);
     width: clamp(1px, 26vw, 373px);
@@ -294,7 +294,7 @@
     pointer-events: none;
   }
 
-  .thirdProject > img:nth-of-type(2) {
+  .thirdProject img:nth-of-type(2) {
     height: clamp(1px, 18.2vw, 263px);
     width: clamp(1px, 17.4vw, 251px);
     position: absolute;
@@ -312,7 +312,7 @@
     height: clamp(1px, 54.6vw, 786px);
   }
 
-  .fourthProject > img:nth-of-type(1) {
+  .fourthProject > div > img:nth-of-type(1) {
     position: absolute;
     top: clamp(1px, 4.1vw, 60px);
     left: clamp(1px, 32.6vw, 470px);
@@ -321,7 +321,7 @@
     pointer-events: none;
   }
 
-  .fourthProject > img:nth-of-type(2) {
+  .fourthProject img:nth-of-type(2) {
     height: clamp(1px, 22vw, 316px);
     width: clamp(1px, 20.8vw, 300px);
     position: absolute;
@@ -339,7 +339,7 @@
     height: clamp(1px, 54.4vw, 783px);
   }
 
-  .fifthProject > img:nth-of-type(1) {
+  .fifthProject > div > img:nth-of-type(1) {
     position: absolute;
     top: clamp(1px, 49.3vw, 710px);
     left: clamp(1px, 0.5vw, 8px);
@@ -348,7 +348,7 @@
     pointer-events: none;
   }
 
-  .fifthProject > img:nth-of-type(2) {
+  .fifthProject img:nth-of-type(2) {
     height: clamp(1px, 17.1vw, 246px);
     width: clamp(1px, 12.8vw, 185px);
     position: absolute;
@@ -368,14 +368,14 @@
     height: clamp(1px, 54.6vw, 786px);
   }
 
-  .sixthProject > img:nth-of-type(1) {
+  .sixthProject > div > img:nth-of-type(1) {
     position: absolute;
     top: clamp(1px, 2.8vw, 40px);
     left: clamp(1px, 4.2vw, 60px);
     height: clamp(1px, 49.4vw, 711px);
   }
 
-  .sixthProject > img:nth-of-type(2) {
+  .sixthProject img:nth-of-type(2) {
     height: clamp(1px, 22vw, 316px);
     width: clamp(1px, 20.8vw, 300px);
     position: absolute;
