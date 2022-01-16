@@ -198,9 +198,7 @@ function MyApp({Component, pageProps}) {
       <div className="cursorFollow"></div>
       {firstTime ? <Loader {...[firstTime, leave]} /> : null}
       {loading ? <Transition /> : null}
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Layout>{!firstTime ? <Component {...pageProps} /> : null}</Layout>
     </>
   );
 }

@@ -19,10 +19,14 @@ function Info(props) {
         />
       </FadeInOnView>
       <div className={styles.flex}>
-        <FadeInOnView>
-          <div className={styles.title}>
+        <div className={styles.title}>
+          <FadeInOnView>
             <h1>{props.about[0].title}</h1>
+          </FadeInOnView>
+          <FadeInOnView>
             <p>{props.about[0].type}</p>
+          </FadeInOnView>
+          <FadeInOnView>
             <div>
               {Array(props.recap.length)
                 .fill(null)
@@ -30,10 +34,10 @@ function Info(props) {
                   <p key={`recap-${i + 1}`}>{props.recap[i].text}</p>
                 ))}
             </div>
-          </div>
-        </FadeInOnView>
-        <FadeInOnView>
-          <div className={styles.desc}>
+          </FadeInOnView>
+        </div>
+        <div className={styles.desc}>
+          <FadeInOnView>
             <h2>
               Hi there.
               <br />I like to add flavor to every{" "}
@@ -41,14 +45,16 @@ function Info(props) {
               work on, and have a sweet tooth for anything related to{" "}
               <span className={styles.underline}>interface</span>.
             </h2>
+          </FadeInOnView>
+          <FadeInOnView>
             <p>
               {props.about[0].moreInfo1}
               <br />
               <br />
               {props.about[0].moreInfo2}
             </p>
-          </div>
-        </FadeInOnView>
+          </FadeInOnView>
+        </div>
       </div>
     </section>
   );

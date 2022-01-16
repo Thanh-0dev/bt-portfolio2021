@@ -1,18 +1,22 @@
 .initial {
+  visibility: hidden;
   opacity: 0;
   z-index: -1;
 }
 
 .fadeIn {
-  animation: fadeIn 1s ease-in;
+  visibility: visible;
+  animation: fadeIn 0.7s ease-in;
   opacity: 1;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }

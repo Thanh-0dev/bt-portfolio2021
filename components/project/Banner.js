@@ -50,17 +50,21 @@ function Banner(props) {
               </div>
             </div>
           </FadeInOnView>
-          <FadeInOnView>
-            <div className={styles.desc}>
+          <div className={styles.desc}>
+            <FadeInOnView>
               <h2>{props.project.descTitle}</h2>
+            </FadeInOnView>
+            <FadeInOnView>
               <p>{props.project.desc}</p>
-              {props.project.link ? (
-                <a
-                  className="noTransition go"
-                  href={props.project.link}
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                >
+            </FadeInOnView>
+            {props.project.link ? (
+              <a
+                className="noTransition go"
+                href={props.project.link}
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+              >
+                <FadeInOnView>
                   <div className={styles.link}>
                     <p>see live</p>
                     <img
@@ -72,10 +76,10 @@ function Banner(props) {
                       alt="Underline"
                     />
                   </div>
-                </a>
-              ) : null}
-            </div>
-          </FadeInOnView>
+                </FadeInOnView>
+              </a>
+            ) : null}
+          </div>
         </div>
       </div>
     </section>

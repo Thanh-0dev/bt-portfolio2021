@@ -7,18 +7,22 @@ function Experiences(props) {
       <FadeInOnView>
         <img src="/Image About/about-2.png" alt="Photo of France" />
         <img src="/Image About/about-3.png" alt="Photo of Japan" />
-        <div className={styles.flex}>
+      </FadeInOnView>
+      <div className={styles.flex}>
+        <FadeInOnView>
           <h3>Experiences</h3>
-          {Array(props.exp.length)
-            .fill(null)
-            .map((e, i) => (
+        </FadeInOnView>
+        {Array(props.exp.length)
+          .fill(null)
+          .map((e, i) => (
+            <FadeInOnView key={`exp-${i + 1}`}>
               <div className={styles.exp} key={`exp-${i + 1}`}>
                 <p>{props.exp[i].role}</p>
                 <p>{props.exp[i].detail}</p>
               </div>
-            ))}
-        </div>
-      </FadeInOnView>
+            </FadeInOnView>
+          ))}
+      </div>
     </section>
   );
 }

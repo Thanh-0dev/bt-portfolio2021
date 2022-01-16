@@ -106,25 +106,19 @@
     width: 400px;
   }
 
-  .title > h1 {
+  .title > div > h1 {
     font-size: 30px;
     white-space: nowrap;
   }
 
-  .title > p {
+  .title > div > p {
     text-transform: uppercase;
     line-height: 20px;
     margin-top: 20px;
     margin-bottom: 60px;
   }
 
-  .title div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .title div p {
+  .title > div > div > p {
     font-size: 32px;
     line-height: 46px;
     color: #585858;
@@ -137,13 +131,13 @@
     max-width: 579px;
   }
 
-  .desc > h2 {
+  .desc > div > h2 {
     font-size: 40px;
     margin-bottom: 56px;
     line-height: 48px;
   }
 
-  .desc > p {
+  .desc > div > p {
     font-size: 24px;
     line-height: 36px;
   }

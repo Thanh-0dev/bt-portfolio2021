@@ -62,7 +62,6 @@ function Loader(props) {
           type="font/otf"
           crossOrigin="anonymous"
         />
-        <link rel="preload" href="/Loader/loading-image.jpeg" as="image" />
         <link rel="preload" href="/Loader/loading-line.svg" as="image" />
       </Head>
       <div className={styles.loaderContainer}>
