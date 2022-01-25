@@ -85,6 +85,10 @@ function MyApp({Component, pageProps}) {
   const [firstTime, setFirstTime] = useState(true);
   const [leave, setLeave] = useState(false);
   useEffect(() => {
+    setFirstTime(true);
+    setLeave(false);
+  }, []);
+  useEffect(() => {
     window.addEventListener("load", () => {
       setTimeout(() => {
         setLeave(true);
