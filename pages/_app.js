@@ -84,6 +84,13 @@ function MyApp({Component, pageProps}) {
   const [leave, setLeave] = useState(false);
   useEffect(() => {
     if (document.readyState === "complete") {
+      setTimeout(() => {
+        setLeave(true);
+        setTimeout(() => {
+          setFirstTime(false);
+          return;
+        }, 400);
+      }, 2100);
     } else {
       window.addEventListener("load", () => {
         setTimeout(() => {
