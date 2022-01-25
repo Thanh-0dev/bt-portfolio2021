@@ -5,7 +5,6 @@ import Layout from "/components/layout/Layout";
 import Loader from "/components/Loader";
 import Transition from "/components/Transition";
 import "/styles/globals.css";
-import {useRouter} from "next/router";
 
 function MyApp({Component, pageProps}) {
   /* Cursor */
@@ -81,15 +80,10 @@ function MyApp({Component, pageProps}) {
   });
 
   /* Loading screen */
-  const router = useRouter();
   const [firstTime, setFirstTime] = useState(true);
   const [leave, setLeave] = useState(false);
   useEffect(() => {
-    setFirstTime(true);
-    setLeave(false);
-  }, []);
-  useEffect(() => {
-    window.addEventListener("load", () => {
+    window.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         setLeave(true);
         setTimeout(() => {
@@ -97,7 +91,7 @@ function MyApp({Component, pageProps}) {
         }, 400);
       }, 2100);
     });
-  }, [router]);
+  }, []);
 
   /* Page transition effect */
   const [loading, setLoading] = useState(false);
@@ -204,7 +198,7 @@ function MyApp({Component, pageProps}) {
       <div className="cursorFollow"></div>
       {firstTime ? <Loader {...[firstTime, leave]} /> : null}
       {loading ? <Transition /> : null}
-      <Layout>{leave ? <Component {...pageProps} /> : null}</Layout>
+      <Layout>{!firstTime ? <Component {...pageProps} /> : null}</Layout>
     </>
   );
 }
