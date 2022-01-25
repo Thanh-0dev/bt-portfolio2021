@@ -83,13 +83,23 @@ function MyApp({Component, pageProps}) {
   const [firstTime, setFirstTime] = useState(true);
   const [leave, setLeave] = useState(false);
   useEffect(() => {
-    window.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("load", () => {
       setTimeout(() => {
         setLeave(true);
         setTimeout(() => {
           setFirstTime(false);
+          return;
         }, 400);
       }, 2100);
+      if (document.readyState === "complete") {
+        setTimeout(() => {
+          setLeave(true);
+          setTimeout(() => {
+            setFirstTime(false);
+            return;
+          }, 400);
+        }, 2100);
+      }
     });
   }, []);
 
@@ -198,7 +208,7 @@ function MyApp({Component, pageProps}) {
       <div className="cursorFollow"></div>
       {firstTime ? <Loader {...[firstTime, leave]} /> : null}
       {loading ? <Transition /> : null}
-      <Layout>{!firstTime ? <Component {...pageProps} /> : null}</Layout>
+      <Layout>{leave ? <Component {...pageProps} /> : null}</Layout>
     </>
   );
 }
