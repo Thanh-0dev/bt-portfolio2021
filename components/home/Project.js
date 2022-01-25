@@ -168,10 +168,18 @@ function Project(props) {
           </div>
         </div>
         <div className={styles.mobile}>
-          <img src="/Mobile/mobile-cadre.svg" alt="Mobile project line" />
-          <img src="/Mobile/mobile-cadre-2.svg" alt="Mobile project line" />
-          <img src="/Mobile/mobile-cadre.svg" alt="Mobile project line" />
-          <img src="/Mobile/mobile-cadre-2.svg" alt="Mobile project line" />
+          <FadeInOnView>
+            <img src="/Mobile/mobile-cadre.svg" alt="Mobile project line" />
+          </FadeInOnView>
+          <FadeInOnView>
+            <img src="/Mobile/mobile-cadre-2.svg" alt="Mobile project line" />
+          </FadeInOnView>
+          <FadeInOnView>
+            <img src="/Mobile/mobile-cadre.svg" alt="Mobile project line" />
+          </FadeInOnView>
+          <FadeInOnView>
+            <img src="/Mobile/mobile-cadre-2.svg" alt="Mobile project line" />
+          </FadeInOnView>
         </div>
       </div>
     </section>
