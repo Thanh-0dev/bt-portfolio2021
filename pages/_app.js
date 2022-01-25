@@ -91,15 +91,6 @@ function MyApp({Component, pageProps}) {
           return;
         }, 400);
       }, 2100);
-      if (document.readyState === "complete") {
-        setTimeout(() => {
-          setLeave(true);
-          setTimeout(() => {
-            setFirstTime(false);
-            return;
-          }, 400);
-        }, 2100);
-      }
     });
   }, []);
 
@@ -208,7 +199,7 @@ function MyApp({Component, pageProps}) {
       <div className="cursorFollow"></div>
       {firstTime ? <Loader {...[firstTime, leave]} /> : null}
       {loading ? <Transition /> : null}
-      <Layout>{leave ? <Component {...pageProps} /> : null}</Layout>
+      <Layout>{!firstTime ? <Component {...pageProps} /> : null}</Layout>
     </>
   );
 }
