@@ -86,11 +86,11 @@
     margin: 64px 0 40px 0px;
   }
 
-  .desc > h2 {
+  .desc > div > h2 {
     font-size: 24px;
   }
 
-  .desc > p {
+  .desc > div > p {
     font-size: 14px;
     line-height: 22px;
     margin-top: 20px;

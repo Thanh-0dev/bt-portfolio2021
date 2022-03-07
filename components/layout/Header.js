@@ -39,6 +39,7 @@ function Header() {
 
   useEffect(() => {
     const menuLinks = document.querySelectorAll("#menu a");
+    console.log(menuLinks);
     for (let link = 0; link < menuLinks.length; link++) {
       if (menuLinks[link].href === window.location.href) {
         menuLinks[link].classList.add(styles.underline);
@@ -59,60 +60,66 @@ function Header() {
     }, 1000);
   });
   return (
-    <header className={styles.header}>
-      <div className={styles.burgerMenu} id="menu">
+    <header>
+      <nav className={styles.nav}>
+        <div className={styles.burgerMenu} id="menu">
+          <ul>
+            <ActiveLink href="/">
+              <li>/workshop</li>
+            </ActiveLink>
+            <ActiveLink href="/about">
+              <li>/statistics</li>
+            </ActiveLink>
+          </ul>
+          <ul>
+            <a
+              className="noTransition"
+              href="mailto:bichtrampham.design@gmail.com"
+              rel="noreferrer noopener nofollow"
+            >
+              <li>/email</li>
+            </a>
+            <a
+              className="noTransition"
+              href="https://www.linkedin.com/in/bichtrampham/"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+            >
+              <li>/linkedIn</li>
+            </a>
+            <a
+              className="noTransition"
+              href="https://www.instagram.com/tram.inprogress/"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+            >
+              <li>/instagram</li>
+            </a>
+          </ul>
+        </div>
         <ul>
-          <ActiveLink href="/">
-            <li>/workshop</li>
-          </ActiveLink>
-          <ActiveLink href="/about">
-            <li>/statistics</li>
-          </ActiveLink>
+          <li>
+            <ActiveLink href="/">.tram/workshop</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink href="/about">/statistics</ActiveLink>
+          </li>
+          <li>
+            <a>
+              <img
+                id="burger"
+                src="/Mobile/burger-menu.svg"
+                alt="burger menu"
+              />
+            </a>
+          </li>
         </ul>
-        <ul>
-          <a
-            className="noTransition"
-            href="mailto:bichtrampham.design@gmail.com"
-            rel="noreferrer noopener nofollow"
-          >
-            <li>/email</li>
-          </a>
-          <a
-            className="noTransition"
-            href="https://www.linkedin.com/in/bichtrampham/"
-            target="_blank"
-            rel="noreferrer noopener nofollow"
-          >
-            <li>/linkedIn</li>
-          </a>
-          <a
-            className="noTransition"
-            href="https://www.instagram.com/tram.inprogress/"
-            target="_blank"
-            rel="noreferrer noopener nofollow"
-          >
-            <li>/instagram</li>
-          </a>
-        </ul>
-      </div>
-      <ul>
-        <li>
-          <ActiveLink href="/">.tram/workshop</ActiveLink>
-        </li>
-        <li>
-          <ActiveLink href="/about">/statistics</ActiveLink>
-        </li>
-        <li>
-          <a>
-            <img id="burger" src="/Mobile/burger-menu.svg" alt="burger menu" />
-          </a>
-        </li>
-      </ul>
-      <div className={styles.info}>
-        <span>.actually in France</span>
-        <span>.open to opportunities</span>
-        <span id="time"></span>
-      </div>
+        <div className={styles.info}>
+          <span>.actually in France</span>
+          <span>.open to opportunities</span>
+          <span id="time"></span>
+        </div>
+      </nav>
     </header>
   );
 }
