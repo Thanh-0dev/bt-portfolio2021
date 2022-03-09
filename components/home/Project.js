@@ -2,10 +2,12 @@ import ActiveLink from "/components/ActiveLink";
 import styles from "./Project.module.css";
 import FadeInOnView from "/components/FadeInOnView";
 
+/* Project section of the homepage */
 function Project(props) {
   return (
     <section className={styles.project}>
       <div className={styles.projectContainer}>
+        {/* Background decoration */}
         <div className={styles.blur}>
           <img src="/Icons habillage/Blur.png" alt="Blur" />
         </div>
@@ -19,6 +21,7 @@ function Project(props) {
             <FadeInOnView>
               <p className={styles.projectId}>02</p>
               <div className={styles.projectCard}>
+                {/* Clickable image card */}
                 <ActiveLink href="/project/2" className="discover">
                   <img
                     src="/Image Home/2.jpeg"
@@ -28,11 +31,13 @@ function Project(props) {
                   />
                 </ActiveLink>
               </div>
+              {/* Foreground decoration */}
               <img src="/Icons habillage/Cadre-1.svg" alt="Arrow" />
               <img src="/Icons habillage/Glass/Glass-3.svg" alt="Glass" />
             </FadeInOnView>
             <FadeInOnView>
               <ActiveLink href="/project/2" className="discover">
+                {/* Modulable content within Prisma Studio */}
                 <h3 className={styles.projectTitle}>
                   {props.projects[1]["name"]}
                 </h3>
@@ -48,6 +53,7 @@ function Project(props) {
             <FadeInOnView>
               <p className={styles.projectId}>04</p>
               <div className={styles.projectCard}>
+                {/* Clickable image card */}
                 <ActiveLink href="/project/4" className="discover">
                   <img
                     src="/Image Home/4.jpeg"
@@ -57,11 +63,13 @@ function Project(props) {
                   />
                 </ActiveLink>
               </div>
+              {/* Foreground decoration */}
               <img src="/Icons habillage/Cadre-3.svg" alt="Arrow" />
               <img src="/Icons habillage/Glass/Glass-5.svg" alt="Glass" />
             </FadeInOnView>
             <FadeInOnView>
               <ActiveLink href="/project/4" className="discover">
+                {/* Modulable content within Prisma Studio */}
                 <h3 className={styles.projectTitle}>
                   {props.projects[3]["name"]}
                 </h3>
@@ -112,6 +120,7 @@ function Project(props) {
             <FadeInOnView>
               <p className={styles.projectId}>03</p>
               <div className={styles.projectCard}>
+                {/* Clickable image card */}
                 <ActiveLink href="/project/3" className="discover">
                   <img
                     src="/Image Home/3.jpeg"
@@ -121,11 +130,13 @@ function Project(props) {
                   />
                 </ActiveLink>
               </div>
+              {/* Foreground decoration */}
               <img src="/Icons habillage/Cadre-2.svg" alt="Arrow" />
               <img src="/Icons habillage/Glass/Glass-4.svg" alt="Glass" />
             </FadeInOnView>
             <FadeInOnView>
               <ActiveLink href="/project/3" className="discover">
+                {/* Modulable content within Prisma Studio */}
                 <h3 className={styles.projectTitle}>
                   {props.projects[2]["name"]}
                 </h3>
@@ -140,6 +151,7 @@ function Project(props) {
           <div className={styles.fifthProject}>
             <FadeInOnView>
               <p className={styles.projectId}>05</p>
+              {/* Clickable image card */}
               <div className={styles.projectCard}>
                 <ActiveLink href="/project/5" className="discover">
                   <img
@@ -150,11 +162,13 @@ function Project(props) {
                   />
                 </ActiveLink>
               </div>
+              {/* Foreground decoration */}
               <img src="/Icons habillage/Cadre-4.svg" alt="Arrow" />
               <img src="/Icons habillage/Glass/Glass-6.svg" alt="Glass" />
             </FadeInOnView>
             <FadeInOnView>
               <ActiveLink href="/project/5" className="discover">
+                {/* Modulable content within Prisma Studio */}
                 <h3 className={styles.projectTitle}>
                   {props.projects[4]["name"]}
                 </h3>
@@ -168,6 +182,7 @@ function Project(props) {
           </div>
         </div>
         <div className={styles.mobile}>
+          {/* Mobile decoration of the project section */}
           <FadeInOnView>
             <img src="/Mobile/mobile-cadre.svg" alt="Mobile project line" />
           </FadeInOnView>

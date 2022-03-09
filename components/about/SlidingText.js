@@ -1,8 +1,10 @@
 import styles from "./SlidingText.module.css";
 
+/* Sliding text animation section of the about page */
 function SlidingText() {
   return (
     <section className={styles.slidingText}>
+      {/* Background decoration */}
       <div className={styles.fade}></div>
       <div className={styles.fade}></div>
       <img
@@ -10,6 +12,7 @@ function SlidingText() {
         src="/Image About/habillage/about-lines.svg"
         alt="About lines"
       />
+      {/* Text scrolling horizontally */}
       <div className={styles.scroll}>
         <div>
           <p>
@@ -32,6 +35,7 @@ function SlidingText() {
           </p>
         </div>
       </div>
+      {/* Background decoration */}
       <img
         className={styles.lines}
         src="/Image About/habillage/about-lines-2.svg"

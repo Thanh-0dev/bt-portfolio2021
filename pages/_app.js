@@ -7,7 +7,7 @@ import Transition from "/components/Transition";
 import "/styles/globals.css";
 
 function MyApp({Component, pageProps}) {
-  /* Cursor */
+  /* Custom cursor */
   useEffect(() => {
     document.addEventListener("mouseover", () => {
       const cursor = document.querySelector(".cursor");

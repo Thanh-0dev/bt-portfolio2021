@@ -1,8 +1,10 @@
 import styles from "./Footer.module.css";
 
+/* Footer section of the homepage */
 function Footer(props) {
   return (
     <section className={styles.footer}>
+      {/* Background decoration */}
       <img
         className={styles.footerLine}
         src="/Icons habillage/Footer-line.svg"
@@ -23,9 +25,11 @@ function Footer(props) {
         <div className={styles.blur}>
           <img src="/Icons habillage/Blur.png" alt="Blur" />
         </div>
+        {/* Modulable content within Prisma Studio */}
         <p>{props.footer[0].firstP}</p>
         <p>{props.footer[0].secondP}</p>
         <div className={styles.contact}>
+          {/* Links / Mails */}
           <a
             className="noTransition"
             href="mailto:bichtrampham.design@gmail.com"

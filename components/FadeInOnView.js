@@ -1,6 +1,7 @@
 import {InView} from "react-intersection-observer";
 import styles from "./FadeInOnView.module.css";
 
+/* Make the element appear when it is in the viewport once per page change */
 function FadeInOnView(props) {
   return (
     <InView

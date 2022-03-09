@@ -10,6 +10,7 @@ import Footer from "/components/project/Footer";
 import FirstMockup from "/components/project/FirstMockup";
 import SideBySide from "/components/project/SideBySide";
 
+/* Get content from Prisma Studio */
 export async function getStaticProps({params}) {
   const theProject = await prisma.project.findUnique({
     where: {
@@ -41,6 +42,7 @@ export async function getStaticProps({params}) {
   };
 }
 
+/* Get the project ID */
 export async function getStaticPaths() {
   return {
     paths: new Array(5).fill(null).map((_, index) => ({
@@ -50,6 +52,7 @@ export async function getStaticPaths() {
   };
 }
 
+/* Project page */
 function ProjectPage(props) {
   return (
     <>
@@ -58,6 +61,7 @@ function ProjectPage(props) {
       </Head>
       <Banner {...props} />
       <Flag {...props} />
+      {/* Modulable sections */}
       {Array(props.page.info)
         .fill(null)
         .map((e, i) => (

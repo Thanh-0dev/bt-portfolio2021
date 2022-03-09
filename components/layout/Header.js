@@ -3,10 +3,12 @@ import {useRouter} from "next/router";
 import {useEffect} from "react";
 import styles from "./Header.module.css";
 
+/* Header of the site */
 function Header() {
   /* Burger menu */
   const router = useRouter();
   useEffect(() => {
+    /* Open mobile menu on burger menu click and disable scrolling */
     const burgerMenu = document.getElementById("burger");
     const menu = document.getElementById("menu");
     const html = document.documentElement;
@@ -25,6 +27,7 @@ function Header() {
     });
     const menuLinks = document.querySelectorAll("#menu a");
     for (let link = 0; link < menuLinks.length; link++) {
+      /* Close mobile menu on page change */
       if (menuLinks[link].href !== router.pathname) {
         menuLinks[link].addEventListener("click", () => {
           menuIsOpen = false;
@@ -38,6 +41,7 @@ function Header() {
   }, [router.pathname]);
 
   useEffect(() => {
+    /* Get all links and show an underline under it if we're already on the page */
     const menuLinks = document.querySelectorAll("#menu a");
     console.log(menuLinks);
     for (let link = 0; link < menuLinks.length; link++) {
@@ -49,7 +53,7 @@ function Header() {
     }
   });
 
-  /* Time */
+  /* Show time */
   useEffect(() => {
     setInterval(() => {
       let date = new Date();
@@ -64,6 +68,7 @@ function Header() {
       <nav className={styles.nav}>
         <div className={styles.burgerMenu} id="menu">
           <ul>
+            {/* Mobile links */}
             <ActiveLink href="/">
               <li>/workshop</li>
             </ActiveLink>
@@ -72,6 +77,7 @@ function Header() {
             </ActiveLink>
           </ul>
           <ul>
+            {/* Social media links and mail */}
             <a
               className="noTransition"
               href="mailto:bichtrampham.design@gmail.com"
@@ -98,6 +104,7 @@ function Header() {
           </ul>
         </div>
         <ul>
+          {/* Links */}
           <li>
             <ActiveLink href="/">.tram/workshop</ActiveLink>
           </li>
@@ -115,6 +122,7 @@ function Header() {
           </li>
         </ul>
         <div className={styles.info}>
+          {/* Information */}
           <span>.actually in France</span>
           <span>.open to opportunities</span>
           <span id="time"></span>

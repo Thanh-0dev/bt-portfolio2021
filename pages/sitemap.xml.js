@@ -1,5 +1,6 @@
 import prisma from "/components/client";
 
+/* Automatic sitemap for SEO */
 const Sitemap = () => {};
 
 export const getServerSideProps = async ({res}) => {

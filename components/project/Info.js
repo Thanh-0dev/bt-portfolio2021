@@ -1,6 +1,7 @@
 import styles from "./Info.module.css";
 import FadeInOnView from "/components/FadeInOnView";
 
+/* Info section of any project page */
 function Info(props) {
   return (
     <FadeInOnView>

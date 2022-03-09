@@ -3,8 +3,11 @@ import {useEffect} from "react";
 import styles from "./Loader.module.css";
 import lottie from "lottie-web";
 
+/* Page loader on hard / first load */
 function Loader(props) {
+  /* Load animation */
   useEffect(() => {
+    /* Changing dots and loading percent */
     const buildText = document.getElementById("loaderBuild");
     const percentText = document.getElementById("loaderPercent");
     let percent = 0;
@@ -65,6 +68,7 @@ function Loader(props) {
         <link rel="preload" href="/Loader/loading-line.svg" as="image" />
       </Head>
       <div className={styles.loaderContainer}>
+        {/* Moving decoration */}
         <div className={styles.loadingLine}>
           <div>
             <img src="/Loader/loading-line.svg" alt="Loading line" />
@@ -74,6 +78,7 @@ function Loader(props) {
           </div>
         </div>
         <div className={styles.loadingDiv}>
+          {/* Loader animation */}
           <div>
             <div id="loaderAnimation"></div>
             <div className={styles.loadingText}>

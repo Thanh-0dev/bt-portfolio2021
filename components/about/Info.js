@@ -1,9 +1,11 @@
 import styles from "./Info.module.css";
 import FadeInOnView from "/components/FadeInOnView";
 
+/* Info section of the about page */
 function Info(props) {
   return (
     <section className={styles.info}>
+      {/* Background decoration */}
       <FadeInOnView>
         <img
           className={styles.arrow}
@@ -19,6 +21,7 @@ function Info(props) {
         />
       </FadeInOnView>
       <div className={styles.flex}>
+        {/* Modulable info within Prisma Studio */}
         <div className={styles.title}>
           <FadeInOnView>
             <h1>{props.about[0].title}</h1>

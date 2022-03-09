@@ -1,6 +1,7 @@
 import styles from "./Flag.module.css";
 import FadeInOnView from "/components/FadeInOnView";
 
+/* Flag section of any project page */
 function Flag(props) {
   return (
     <section className={styles.flag}>

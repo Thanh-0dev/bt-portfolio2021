@@ -1,6 +1,7 @@
 import {useRouter} from "next/router";
 import Link from "next/link";
 
+/* Give the Link next module a class and activate the page transition on click */
 function ActiveLink({children, href, className = ""}) {
   const router = useRouter();
 

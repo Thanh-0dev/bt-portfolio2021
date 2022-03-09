@@ -1,15 +1,18 @@
 import styles from "./Intro.module.css";
 import FadeInOnView from "/components/FadeInOnView";
 
+/* Intro section of the homepage */
 function Intro() {
   return (
     <section className={styles.intro}>
       <FadeInOnView>
         <div className={styles.introContainer}>
+          {/* Background decoration */}
           <div className={styles.blur}>
             <img src="/Icons habillage/Blur.png" alt="Blur" />
           </div>
           <div className={styles.flexRow}>
+            {/* Presentation text */}
             <h1>Bich Trâm Pham</h1>
             <div>
               <p>

@@ -6,6 +6,7 @@ import SlidingText from "/components/about/SlidingText";
 import Experiences from "/components/about/Experiences";
 import Footer from "/components/home/Footer";
 
+/* Get content from Prisma Studio */
 export async function getStaticProps() {
   const about = await prisma.about.findMany();
   const recap = await prisma.recap.findMany();
@@ -21,6 +22,7 @@ export async function getStaticProps() {
   };
 }
 
+/* About page */
 function About(props) {
   return (
     <>

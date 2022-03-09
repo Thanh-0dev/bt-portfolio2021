@@ -3,6 +3,7 @@ import styles from "./SlidingPuzzle.module.css";
 import lottie from "lottie-web";
 import FadeInOnView from "/components/FadeInOnView";
 
+/* Sliding puzzle animation section of the about page */
 function SlidingPuzzle() {
   useEffect(() => {
     /* Lottie Animation */
@@ -18,6 +19,7 @@ function SlidingPuzzle() {
   }, []);
   return (
     <section className={styles.slidingPuzzle}>
+      {/* Lottie animation */}
       <FadeInOnView>
         <img src="/Icons habillage/Blur.png" alt="Blur" />
         <div id="slidingPuzzleAnimation"></div>

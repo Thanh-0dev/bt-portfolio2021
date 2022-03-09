@@ -1,26 +1,31 @@
 import styles from "./Banner.module.css";
 import FadeInOnView from "/components/FadeInOnView";
 
+/* Banner section of any project page */
 function Banner(props) {
   return (
     <section className={styles.banner}>
       <FadeInOnView>
+        {/* Foreground decoration */}
         <img
           className={styles.upperArrow}
           src="/Icons habillage/little-ship-arrow.svg"
           alt="Upper arrow"
         />
+        {/* Main banner of the project */}
         <img
           className={styles.bannerImg}
           src={`/Image Home/${props.project.id}.jpeg`}
           alt="Banner image"
         />
+        {/* Background decoration */}
         <div className={styles.blur}>
           <img src="/Icons habillage/Blur.png" alt="Blur" />
         </div>
       </FadeInOnView>
       <div className={styles.underBanner}>
         <FadeInOnView>
+          {/* Foreground decoration */}
           <img
             className={styles.arrow}
             src="/Icons habillage/Arrow.svg"
@@ -33,6 +38,7 @@ function Banner(props) {
           />
         </FadeInOnView>
         <div className={styles.flex}>
+          {/* Modulable content within Prisma Studio */}
           <FadeInOnView>
             <div className={styles.title}>
               <h1>{props.project.name}</h1>
@@ -57,6 +63,7 @@ function Banner(props) {
             <FadeInOnView>
               <p>{props.project.desc}</p>
             </FadeInOnView>
+            {/* Links */}
             {props.project.link ? (
               <a
                 className="noTransition go"
@@ -67,6 +74,7 @@ function Banner(props) {
                 <FadeInOnView>
                   <div className={styles.link}>
                     <p>see live</p>
+                    {/* Link decoration */}
                     <img
                       src="/Icons habillage/link/arrow-up-right.svg"
                       alt="Arrow up"

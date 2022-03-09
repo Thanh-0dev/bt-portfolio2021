@@ -3,9 +3,11 @@ import ActiveLink from "/components/ActiveLink";
 import {Splide, SplideSlide} from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
+/* Footer section of any project page */
 function Footer(props) {
   return (
     <section className={styles.footer}>
+      {/* Background decoration */}
       <img
         src="/Icons habillage/0-glass-projet/projet-glass-3.svg"
         alt="Glass footer"
@@ -17,6 +19,7 @@ function Footer(props) {
         <div className={styles.blur}>
           <img src="/Icons habillage/Blur.png" alt="Blur" />
         </div>
+        {/* Slider with all projects */}
         <Splide
           options={{
             type: "loop",

@@ -5,6 +5,7 @@ import Banner from "/components/home/Banner";
 import Project from "/components/home/Project";
 import Footer from "/components/home/Footer";
 
+/* Get content from Prisma Studio */
 export async function getStaticProps() {
   const allProject = await prisma.project.findMany({
     select: {name: true, job: true, detail: true},
@@ -18,6 +19,7 @@ export async function getStaticProps() {
   };
 }
 
+/* Homepage */
 function HomePage(props) {
   return (
     <>
