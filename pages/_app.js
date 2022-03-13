@@ -189,6 +189,7 @@ function MyApp({Component, pageProps}) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        {firstTime ? <title>Bich Trâm Cynthia PHAM | Portfolio</title> : null}
       </Head>
       {/* Global site tag (gtag.js) - Google Analytics */}
       <script
