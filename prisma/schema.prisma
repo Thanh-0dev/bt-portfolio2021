@@ -1,0 +1,83 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Project {
+  id        Int    @id @default(autoincrement())
+  name      String
+  job       String
+  detail    String
+  role      Role[]
+  descTitle String
+  desc      String @db.VarChar(1000)
+  link      String
+  infoAdj   Adj[]
+  info      String @db.VarChar(1000)
+  aside     String @db.VarChar(1000)
+  page      Page[]
+}
+
+model Role {
+  id        Int      @id @default(autoincrement())
+  Project   Project? @relation(fields: [projectId], references: [id])
+  projectId Int?
+  role      String
+}
+
+model Adj {
+  id        Int      @id @default(autoincrement())
+  Project   Project? @relation(fields: [projectId], references: [id])
+  projectId Int?
+  adj       String
+}
+
+model Page {
+  id           Int      @id @default(autoincrement())
+  Project      Project? @relation(fields: [projectId], references: [id])
+  projectId    Int?
+  info         Int
+  firstMockup  Int
+  mockup       Int
+  sidebyside   Int
+  bannerPannel Int
+  bonusPannel  Int
+}
+
+model Footer {
+  id      Int    @id @default(autoincrement())
+  firstP  String
+  secondP String
+}
+
+model About {
+  id        Int     @id @default(autoincrement())
+  title     String
+  type      String
+  Recap     Recap[]
+  moreInfo1 String
+  moreInfo2 String
+  Exp       Exp[]
+}
+
+model Recap {
+  id      Int    @id @default(autoincrement())
+  About   About? @relation(fields: [aboutId], references: [id])
+  aboutId Int?
+  text    String
+}
+
+model Exp {
+  id      Int    @id @default(autoincrement())
+  About   About? @relation(fields: [aboutId], references: [id])
+  aboutId Int?
+  role    String
+  detail  String
+}
