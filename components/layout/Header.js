@@ -43,7 +43,6 @@ function Header() {
   useEffect(() => {
     /* Get all links and show an underline under it if we're already on the page */
     const menuLinks = document.querySelectorAll("#menu a");
-    console.log(menuLinks);
     for (let link = 0; link < menuLinks.length; link++) {
       if (menuLinks[link].href === window.location.href) {
         menuLinks[link].classList.add(styles.underline);
