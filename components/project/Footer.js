@@ -29,10 +29,9 @@ function Footer(props) {
             speed: 1000,
             autoWidth: true,
             wheel: true,
-            classes: {
-              arrows: `${styles.none}`,
-              pagination: `${styles.none}`,
-            },
+            releaseWheel: true,
+            arrows: false,
+            pagination: false,
           }}
         >
           <SplideSlide>
