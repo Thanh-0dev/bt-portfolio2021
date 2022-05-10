@@ -82,8 +82,11 @@ function MyApp({Component, pageProps}) {
   /* Loading screen */
   const [firstTime, setFirstTime] = useState(true);
   const [leave, setLeave] = useState(false);
+  const [loaderIsLoaded, setLoaderIsLoaded] = useState(false);
+  const [pageIsLoaded, setPageIsLoaded] = useState(false);
   useEffect(() => {
     if (document.readyState === "complete") {
+      setPageIsLoaded(true);
       setTimeout(() => {
         setLeave(true);
         setTimeout(() => {
@@ -92,6 +95,7 @@ function MyApp({Component, pageProps}) {
       }, 2100);
     } else {
       window.addEventListener("load", () => {
+        setPageIsLoaded(true);
         setTimeout(() => {
           setLeave(true);
           setTimeout(() => {
@@ -188,6 +192,12 @@ function MyApp({Component, pageProps}) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         {firstTime ? <title>Bich Trâm Cynthia PHAM | Portfolio</title> : null}
+        <link
+          rel="preload"
+          href="/Image Home/background.png"
+          as="image"
+          fetchpriority="high"
+        />
       </Head>
       {/* Global site tag (gtag.js) - Google Analytics */}
       <script
@@ -206,11 +216,20 @@ function MyApp({Component, pageProps}) {
       />
       <div className="cursor"></div>
       <div className="cursorFollow"></div>
-      {firstTime ? <Loader firstTime={firstTime} leave={leave} /> : null}
+      {firstTime ? (
+        <Loader
+          firstTime={firstTime}
+          leave={leave}
+          setLoaderIsLoaded={setLoaderIsLoaded}
+          pageIsLoaded={pageIsLoaded}
+        />
+      ) : null}
       {loading ? <Transition /> : null}
-      <Layout leave={leave}>
-        <Component {...pageProps} />
-      </Layout>
+      {loaderIsLoaded ? (
+        <Layout leave={leave}>
+          <Component {...pageProps} />
+        </Layout>
+      ) : null}
     </>
   );
 }

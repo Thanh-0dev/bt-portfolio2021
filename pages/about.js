@@ -28,6 +28,29 @@ function About(props) {
     <>
       <Head>
         <title>Bich Trâm Cynthia PHAM | About</title>
+        {Array(12)
+          .fill(0)
+          .map((_, index) => (
+            <link
+              rel="preload"
+              href={`/Loader/Animation/images/img_${index}.png`}
+              as="image"
+              fetchpriority="high"
+              key={index}
+            />
+          ))}
+        <link
+          rel="preload"
+          href="/Loader/Animation/images/img_12.jpg"
+          as="image"
+          fetchpriority="high"
+        />
+        <link
+          rel="preload"
+          href="/Loader/Animation/images/img_13.png"
+          as="image"
+          fetchpriority="high"
+        />
       </Head>
       <SlidingPuzzle />
       <Info {...props} />
