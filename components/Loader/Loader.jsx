@@ -88,7 +88,6 @@ function Loader({firstTime, leave}) {
           </div>
         </div>
       </div>
-      <script src="/components/lottie.js" type="text/javascript"></script>
     </section>
   );
 }
