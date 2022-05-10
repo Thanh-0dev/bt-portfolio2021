@@ -1,5 +1,5 @@
 import styles from "./Banner.module.css";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Banner section of any project page */
 function Banner(props) {

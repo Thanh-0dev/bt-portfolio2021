@@ -1,6 +1,6 @@
 import styles from "./Banner.module.css";
 import ActiveLink from "/components/ActiveLink";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Banner section of the homepage */
 function Banner(props) {

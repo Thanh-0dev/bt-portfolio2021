@@ -1,5 +1,5 @@
 import styles from "./Experiences.module.css";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Experiences section of the about page */
 function Experiences(props) {

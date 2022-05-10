@@ -2,8 +2,8 @@ import Head from "next/head";
 import Script from "next/script";
 import {useState, useEffect} from "react";
 import Layout from "/components/layout/Layout";
-import Loader from "/components/Loader";
-import Transition from "/components/Transition";
+import Loader from "/components/Loader/Loader";
+import Transition from "/components/Transition/Transition";
 import "/styles/globals.css";
 
 function MyApp({Component, pageProps}) {

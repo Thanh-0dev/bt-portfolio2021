@@ -1,5 +1,5 @@
 import styles from "./BannerPannel.module.css";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Banner pannel with modulable images of any project page */
 function BannerPannel(props) {

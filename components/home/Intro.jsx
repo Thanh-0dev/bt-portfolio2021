@@ -1,5 +1,5 @@
 import styles from "./Intro.module.css";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Intro section of the homepage */
 function Intro() {

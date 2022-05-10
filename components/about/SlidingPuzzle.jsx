@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 import styles from "./SlidingPuzzle.module.css";
 import lottie from "lottie-web";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Sliding puzzle animation section of the about page */
 function SlidingPuzzle() {

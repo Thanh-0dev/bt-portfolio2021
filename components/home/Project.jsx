@@ -1,6 +1,6 @@
 import ActiveLink from "/components/ActiveLink";
 import styles from "./Project.module.css";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Project section of the homepage */
 function Project(props) {

@@ -1,5 +1,5 @@
 import styles from "./BonusPannel.module.css";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Bonus pannel with modulable images of any project page */
 function BonusPannel(props) {

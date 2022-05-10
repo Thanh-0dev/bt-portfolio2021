@@ -1,5 +1,5 @@
 import styles from "./Mockup.module.css";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Mockup of any project page */
 function Mockup(props) {

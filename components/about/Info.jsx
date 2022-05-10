@@ -1,5 +1,5 @@
 import styles from "./Info.module.css";
-import FadeInOnView from "/components/FadeInOnView";
+import FadeInOnView from "/components/FadeInOnView/FadeInOnView";
 
 /* Info section of the about page */
 function Info(props) {
