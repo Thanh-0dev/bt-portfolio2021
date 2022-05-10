@@ -75,7 +75,6 @@ function Loader({firstTime, leave, setLoaderIsLoaded, pageIsLoaded}) {
           ? `${styles.loader} ${styles.leave}`
           : styles.none
       }
-      id="loader"
     >
       <Head>
         <link

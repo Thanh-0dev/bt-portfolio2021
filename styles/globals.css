@@ -42,6 +42,10 @@ h6 {
   font-size: 100%;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 @media (hover: hover) {
   * {
     cursor: none;

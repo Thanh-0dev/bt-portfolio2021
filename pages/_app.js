@@ -106,6 +106,15 @@ function MyApp({Component, pageProps}) {
     }
   }, []);
 
+  useEffect(() => {
+    const html = document.documentElement;
+    if (firstTime) {
+      html.classList.add("noScroll");
+    } else {
+      html.classList.remove("noScroll");
+    }
+  }, [firstTime]);
+
   /* Page transition effect */
   const [loading, setLoading] = useState(false);
   useEffect(() => {

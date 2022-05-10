@@ -17,10 +17,10 @@ function Header() {
       setTimeout(() => {
         if (!menuIsOpen) {
           menu.classList.add(styles.active);
-          html.classList.add(styles.noScroll);
+          html.classList.add("noScroll");
         } else {
           menu.classList.remove(styles.active);
-          html.classList.remove(styles.noScroll);
+          html.classList.remove("noScroll");
         }
         menuIsOpen = !menuIsOpen;
       }, 550);
@@ -32,7 +32,7 @@ function Header() {
         menuLinks[link].addEventListener("click", () => {
           menuIsOpen = false;
           menu.classList.remove(styles.active);
-          html.classList.remove(styles.noScroll);
+          html.classList.remove("noScroll");
         });
       } else {
         menuIsOpen = true;
