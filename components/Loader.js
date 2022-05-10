@@ -4,7 +4,7 @@ import styles from "./Loader.module.css";
 import lottie from "lottie-web";
 
 /* Page loader on hard / first load */
-function Loader(props) {
+function Loader({firstTime, leave}) {
   /* Load animation */
   useEffect(() => {
     /* Changing dots and loading percent */
@@ -50,10 +50,10 @@ function Loader(props) {
   return (
     <section
       className={
-        !props[1]
+        !leave
           ? styles.loader
-          : props[0]
-          ? [styles.loader, styles.leave].join(" ")
+          : firstTime
+          ? `${styles.loader} ${styles.leave}`
           : styles.none
       }
     >

@@ -1,17 +1,13 @@
-import {useState, useEffect} from "react";
 import Header from "./Header";
 
 /* Layout of the site */
-function Layout(props) {
-  /* Show the layout after it is loaded */
-  const [firstLoad, setFirstLoad] = useState(true);
-  useEffect(() => {
-    setFirstLoad(false);
-  }, []);
+function Layout({children, leave}) {
   return (
     <>
-      {!firstLoad ? <Header /> : null}
-      <main {...props} />
+      <Header />
+      <main style={!leave ? {transform: "translateY(100vh)"} : null}>
+        {children}
+      </main>
     </>
   );
 }
