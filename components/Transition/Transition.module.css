@@ -6,10 +6,6 @@
   width: 100vw;
 }
 
-.none {
-  display: none;
-}
-
 .blur {
   z-index: 9999;
   position: absolute;

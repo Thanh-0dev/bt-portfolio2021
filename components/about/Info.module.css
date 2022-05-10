@@ -33,12 +33,12 @@
     flex-direction: column;
   }
 
-  .title > h1 {
+  .title > div > h1 {
     font-size: 16px;
     white-space: nowrap;
   }
 
-  .title > p {
+  .title > div > p {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 22px;
@@ -46,7 +46,7 @@
     margin-bottom: 16px;
   }
 
-  .title div p {
+  .title > div > div > p {
     font-size: 16px;
     line-height: 26px;
     color: #585858;
@@ -58,14 +58,20 @@
     flex-direction: column;
   }
 
-  .desc > h2 {
+  .desc > div > h2 {
     font-size: 24px;
     margin-bottom: 20px;
   }
 
-  .desc > p {
+  .desc > div > p {
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .underline {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
   }
 }
 
@@ -150,7 +156,7 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .desc > h2 {
+  .desc h2 {
     font-size: 50px;
     line-height: 62px;
   }
