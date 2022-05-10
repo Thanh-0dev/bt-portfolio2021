@@ -88,7 +88,6 @@ function MyApp({Component, pageProps}) {
         setLeave(true);
         setTimeout(() => {
           setFirstTime(false);
-          return;
         }, 400);
       }, 2100);
     } else {
@@ -97,7 +96,6 @@ function MyApp({Component, pageProps}) {
           setLeave(true);
           setTimeout(() => {
             setFirstTime(false);
-            return;
           }, 400);
         }, 2100);
       });
