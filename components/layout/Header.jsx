@@ -96,7 +96,7 @@ function Header() {
 						</a>
 						<a
 							className="noTransition"
-							href="https://www.instagram.com/b.aroundesign/"
+							href="https://www.instagram.com/ginja.studio/"
 							target="_blank"
 							rel="noreferrer noopener nofollow"
 						>
